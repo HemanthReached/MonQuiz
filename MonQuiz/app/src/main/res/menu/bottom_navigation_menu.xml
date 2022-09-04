@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_profile"
+        android:icon="@drawable/profile_icon_selector"
+        android:title="@string/profile" />
+
+    <item
+        android:id="@+id/action_play"
+        android:enabled="true"
+        android:icon="@drawable/monkey_headnav_selector"
+        android:title="@string/play" />
+
+    <item
+        android:id="@+id/action_wallet"
+        android:icon="@drawable/wallet_icon_selector"
+        android:title="@string/wallet"
+        />
+
+</menu>

@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#E8EFF2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="20dp">
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvFragWalletWalletTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/text_my_wallet"
+        android:textColor="#E8EFF2"
+        android:textSize="@dimen/font_size_of_value_twenty"
+        android:visibility="gone"
+        fonts:custom_font="@string/rubik_regular" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluebg_curved"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp">
+
+            <TextView
+                android:id="@+id/total_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:text="\u20B9 0.00"
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                android:fontFamily="@font/rubik_light"/>
+
+            <ImageView
+                android:id="@+id/arrow_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/arrowview_white"
+                app:layout_constraintTop_toTopOf="@id/total_balance"
+                app:layout_constraintBottom_toBottomOf="@id/total_balance"
+                app:layout_constraintStart_toEndOf="@id/total_balance"
+                android:layout_marginStart="12dp"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/total_balance_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/total_balance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Total Wallet Balance"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:fontFamily="@font/rubik_light"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/balanceDetails_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/total_balance_desc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/game_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:text="\u20B9 0.00"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/rubik_light"/>
+
+                <TextView
+                    android:id="@+id/redeem_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/game_balance"
+                    app:layout_constraintBottom_toBottomOf="@id/game_balance"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="15dp"
+                    android:text="Redeem"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/rubik_light"/>
+
+                <TextView
+                    android:id="@+id/game_balance_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/game_balance"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Game Wallet"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/rubik_light"/>
+
+
+                <TextView
+                    android:id="@+id/bonus_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/game_balance_desc"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="30dp"
+                    android:text="\u20B9 0.00"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/rubik_light"/>
+
+                <TextView
+                    android:id="@+id/play_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/bonus_balance"
+                    app:layout_constraintBottom_toBottomOf="@id/bonus_balance"
+                    app:layout_constraintStart_toStartOf="@id/redeem_view"
+                    app:layout_constraintEnd_toEndOf="@id/redeem_view"
+                    android:text="Play"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/rubik_light"/>
+
+                <TextView
+                    android:id="@+id/bonus_balance_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/bonus_balance"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Bonus Wallet"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/rubik_light" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintTop_toBottomOf="@id/bonus_balance_desc"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="#50FFFFFF"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.monquiz.customviews.CustomButton
+                android:id="@+id/btnFragWalletAddMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_btn_white"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="@string/add_money"
+                android:textColor="@color/colorBlue"
+                android:textSize="14sp"
+                android:textAllCaps="true"
+                android:fontFamily="@font/rubik_regular"
+                app:layout_constraintTop_toBottomOf="@id/balanceDetails_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="30dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+     <!--   <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/app_name"
+                            android:padding="10dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_played_white" />
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/tvProfileStatsPlayed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:visibility="visible"
+                            android:fontFamily="@font/rubik_regular" />
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Games"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/rubik_regular" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="#507E7E7E"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/size_of_value_five"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/app_name"
+                            android:padding="10dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_won_white" />
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/tvProfileStatsWon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:visibility="visible"
+                            android:fontFamily="@font/rubik_regular"/>
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Total Earnings"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/rubik_regular"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:background="#507E7E7E"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/size_of_value_five"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/app_name"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_earned_white" />
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/tvProfileStatsEarned"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:visibility="visible"
+                            android:fontFamily="@font/rubik_regular" />
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/winorlosetextview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="This Week"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/rubik_regular" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvFragWalletRecentTransaction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/your_transactions"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubik_medium" />
+
+                    <ImageView
+                        android:id="@+id/filter_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/noun_filter"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/transaction_history_bg_clr"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/size_of_value_ten">
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/tvGameId"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="35"
+                            android:gravity="center"
+                            android:text="TXN. ID"
+                            android:textAlignment="center"
+                            android:textColor="@color/white_87"
+                            android:textSize="@dimen/font_size_of_value_fourteen"
+                            fonts:custom_font="@string/rubik_medium" />
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/tvGameDate"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="25"
+                            android:gravity="center"
+                            android:text="TXN"
+                            android:textAlignment="center"
+                            android:textColor="@color/white_87"
+                            android:textSize="@dimen/font_size_of_value_fourteen"
+                            fonts:custom_font="@string/rubik_medium" />
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="15"
+                            android:text="STATUS"
+                            android:textAlignment="center"
+                            android:textColor="@color/white_87"
+                            android:textSize="@dimen/font_size_of_value_fourteen"
+                            fonts:custom_font="@string/rubik_medium" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewRecentTransactions"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/size_of_value_ten"
+                        android:layout_marginRight="@dimen/size_of_value_ten"
+                        android:visibility="visible"
+                        android:nestedScrollingEnabled="false"
+                        tools:listitem="@layout/layout_transation_history_item"
+                        android:paddingBottom="10dp" />
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvFragWalletError"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/no_recent_transactions"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_of_value_twenty"
+                        android:visibility="gone"
+                        android:fontFamily="@font/rubik_regular"
+                        fonts:custom_font="@string/rubik_regular" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+      <!--  </androidx.core.widget.NestedScrollView>-->
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_sheet_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="@null"
+            app:behavior_skipCollapsed="true"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:paddingTop="30dp"
+            android:background="#40000000"
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addmoney_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/whitebg_topradius1"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/header_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/size_of_value_sixteen"
+                    android:orientation="vertical"
+                    android:padding="@dimen/size_of_value_sixteen">
+
+                    <ImageView
+                        android:id="@+id/ivAddMoneyClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_close_black"
+                        android:contentDescription="@string/app_name" />
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:text="@string/add_money"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:fontFamily="@font/rubik_semibold"
+                        tools:ignore="RtlSymmetry" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/balance_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="35dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/header_layout">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/tvAddMoneyWalletBalance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Rs0"
+                            android:textColor="@color/black"
+                            android:textSize="36sp"
+                            android:fontFamily="@font/rubik_light" />
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Game Wallet Balance"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/rubik_light" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAddMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="@dimen/size_of_value_twenty"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:gravity="center">
+
+                    <com.monquiz.customviews.CustomEditText
+                        android:id="@+id/etAddMoneyAddedMoney"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionGo"
+                        android:inputType="number"
+                        android:maxLength="7"
+                        android:gravity="center"
+                        android:padding = "14dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:hint="Enter amount to add"
+                        android:fontFamily="@font/rubik_regular"
+                        android:backgroundTint="@color/black"
+                        android:singleLine="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="40dp"
+                    app:layout_constraintTop_toBottomOf="@id/llAddMoney"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.monquiz.customviews.CustomButton
+                            android:id="@+id/tvAddMoneyRs100"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_btn_border_blue"
+                            android:text="@string/Rs100"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlue"
+                            android:fontFamily="@font/rubik_regular" />
+
+                        <com.monquiz.customviews.CustomButton
+                            android:id="@+id/tvAddMoneyRs50"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:layout_marginStart="20dp"
+                            android:background="@drawable/bg_btn_border_blue"
+                            android:text="@string/Rs50"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlue"
+                            android:fontFamily="@font/rubik_regular"  />
+
+                        <com.monquiz.customviews.CustomButton
+                            android:id="@+id/tvAddMoneyRs30"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_btn_border_blue"
+                            android:text="@string/Rs30"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlue"
+                            android:fontFamily="@font/rubik_regular"  />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="0.5"/>
+
+                        <com.monquiz.customviews.CustomButton
+                            android:id="@+id/tvAddMoneyRs20"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_btn_border_blue"
+                            android:text="@string/Rs20"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlue"
+                            android:fontFamily="@font/rubik_regular"  />
+
+                        <com.monquiz.customviews.CustomButton
+                            android:id="@+id/tvAddMoneyRs10"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:layout_marginStart="20dp"
+                            android:background="@drawable/bg_btn_border_blue"
+                            android:text="@string/Rs10"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlue"
+                            android:fontFamily="@font/rubik_regular"  />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="60dp"
+                    android:gravity="center">
+
+                    <com.monquiz.customviews.CustomButton
+                        android:id="@+id/btnAddMoneyNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bluebg_curved"
+                        android:paddingStart="40dp"
+                        android:paddingEnd="40dp"
+                        android:enabled="false"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:text="@string/next"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_of_value_eighteen"
+                        fonts:custom_font="@string/rubik_bold"
+                        android:alpha="0.5"/>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pandetais_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/whitebg_topradius1"
+                android:padding="15dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/close_popup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_close_black"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/popupheadingtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/close_popup"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="PAN Card Details"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    fonts:custom_font="@string/rubik_bold"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/popupdesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/popupheadingtv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/pan_card_desc"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="12sp"
+                    fonts:custom_font="@string/rubik_medium"
+                    android:layout_marginEnd="80dp"/>
+
+                <TextView
+                    android:id="@+id/namedesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/popupdesctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="45dp"
+                    android:text="@string/full_name_card"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    fonts:custom_font="@string/rubik_bold"
+                    android:layout_marginEnd="80dp"/>
+
+                <EditText
+                    android:id="@+id/nameet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/namedesctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:hint="Full Name"
+                    android:textColorHint="#BEBEBE"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    fonts:custom_font="@string/rubik_bold"
+                    android:textStyle="bold"
+                    android:background="@drawable/edittextbg1"
+                    android:padding="12dp"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/cardnumberdesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/nameet"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="PAN Card Number"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    fonts:custom_font="@string/rubik_bold"
+                    android:layout_marginEnd="80dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/cardnumberlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/cardnumberdesctv"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittextbg1"
+                    android:padding="12dp">
+
+                    <EditText
+                        android:id="@+id/cardnumberet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Card Number"
+                        android:textColorHint="#BEBEBE"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        fonts:custom_font="@string/rubik_bold"
+                        android:textStyle="bold"
+                        android:background="@color/transparent"
+                        android:maxLength="10"
+                        android:digits="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:inputType="textCapCharacters"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"/>
+
+                    <ImageView
+                        android:id="@+id/card_Iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        app:srcCompat="@drawable/card_icon"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/submit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/cardnumberlayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="Confirm"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    fonts:custom_font="@string/rubik_regular"
+                    android:background="@drawable/bluebg_curved"/>
+
+                <LinearLayout
+                    android:id="@+id/saved_layout"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:clickable="false"
+                    app:layout_constraintTop_toBottomOf="@id/popupdesctv">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animationView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="100dp"
+                        android:visibility="visible"
+                        android:layout_gravity="center"
+                        app:lottie_rawRes="@raw/check"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="false"
+                        android:layout_marginBottom="0dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:text="Card details saved."
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginEnd="80dp"
+                        android:gravity="center"
+                        android:text="Post verification you will be able to withdraw cash."
+                        android:textColor="#70000000"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="120dp"
+                        android:text="You can check the status under"
+                        android:textColor="#AEAEAE"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="40dp"
+                        android:text="Profile / Settings / Personal Details"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/redeem_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/whitebg_topradius1"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/close_popup_redeem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_close_black"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/popupheadingtv_redeem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/close_popup_redeem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="Account Details"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    fonts:custom_font="@string/rubik_bold"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/popupdesctv_redeem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/popupheadingtv_redeem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/account_desc"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="12sp"
+                    fonts:custom_font="@string/rubik_medium"
+                    android:layout_marginEnd="80dp"/>
+
+                <TextView
+                    android:id="@+id/amountdesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/popupdesctv_redeem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="Redeem Amount"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    fonts:custom_font="@string/rubik_bold"
+                    android:layout_marginEnd="80dp"/>
+
+                <EditText
+                    android:id="@+id/amountet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/amountdesctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:hint="Enter Amount"
+                    android:textColorHint="#BEBEBE"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    fonts:custom_font="@string/rubik_bold"
+                    android:textStyle="bold"
+                    android:background="@drawable/edittextbg1"
+                    android:padding="10dp"
+                    android:inputType="number"
+                    android:digits="1234567890"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/accnumberdesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/amountet"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="Account Number"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    fonts:custom_font="@string/rubik_bold"
+                    android:layout_marginEnd="80dp"/>
+
+                <EditText
+                    android:id="@+id/accnumberet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/accnumberdesctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:hint="Account Number"
+                    android:textColorHint="#BEBEBE"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    fonts:custom_font="@string/rubik_bold"
+                    android:textStyle="bold"
+                    android:background="@drawable/edittextbg1"
+                    android:padding="10dp"
+                    android:inputType="number"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/ifscnumberdesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/accnumberet"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="Bank IFSC Code"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    fonts:custom_font="@string/rubik_bold"
+                    android:layout_marginEnd="80dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/ifscnumberlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/ifscnumberdesctv"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittextbg1"
+                    android:padding="10dp">
+
+                    <EditText
+                        android:id="@+id/ifscnumberet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="IFSC Code"
+                        android:textColorHint="#BEBEBE"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        fonts:custom_font="@string/rubik_bold"
+                        android:textStyle="bold"
+                        android:background="@color/transparent"
+                        android:maxLength="11"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"/>
+
+                    <ImageView
+                        android:id="@+id/card_Iv_redeem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/card_icon"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"/>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/submit_btn_redeem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="30dp"
+                    android:text="Confirm"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    fonts:custom_font="@string/rubik_regular"
+                    android:background="@drawable/bluebg_curved"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/filter_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/whitebg_topradius1"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/filters_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/size_of_value_sixteen"
+                    android:orientation="vertical"
+                    android:padding="@dimen/size_of_value_sixteen">
+
+                    <ImageView
+                        android:id="@+id/ivFiltersClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_close_black"
+                        android:contentDescription="@string/app_name" />
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="34dp"
+                        android:gravity="center"
+                        android:text="Filter by"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:fontFamily="@font/rubik_semibold"
+                        tools:ignore="RtlSymmetry" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="24dp">
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/date_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Date"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/rubik_medium"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/transaction_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Transaction"
+                            android:textColor="@color/black_40"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/rubik_medium"
+                            tools:ignore="RtlSymmetry" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/date_filter_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@id/filters_header"
+                    android:padding="16dp">
+
+                    <RadioGroup
+                        android:id="@+id/datefilter_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/last_month_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_regular"
+                            android:buttonTint="@color/colorBlue"
+                            android:singleLine="true"
+                            android:text="Last Month"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:paddingStart="24dp"
+                            tools:ignore="RtlSymmetry"
+                            android:padding="12dp"/>
+
+                        <RadioButton
+                            android:id="@+id/last_3_month_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_regular"
+                            android:buttonTint="@color/colorBlue"
+                            android:singleLine="true"
+                            android:text="Last 3 Months"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:paddingStart="24dp"
+                            tools:ignore="RtlSymmetry"
+                            android:padding="12dp"/>
+
+                        <RadioButton
+                            android:id="@+id/custom_date_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_regular"
+                            android:buttonTint="@color/colorBlue"
+                            android:singleLine="true"
+                            android:text="Date Range"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:paddingStart="24dp"
+                            tools:ignore="RtlSymmetry"
+                            android:padding="12dp"/>
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/date_selection_layout"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:layout_marginEnd="56dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/start_date_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="01-01-2022"
+                            android:textColorHint="#60000000"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/rubik_regular"
+                            android:paddingVertical="20dp"
+                            android:paddingHorizontal="12dp"
+                            android:background="@drawable/graybg_rectangled"/>
+
+                        <TextView
+                            android:id="@+id/end_date_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:hint="01-01-2022"
+                            android:textColorHint="#60000000"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/rubik_regular"
+                            android:paddingVertical="20dp"
+                            android:paddingHorizontal="12dp"
+                            android:background="@drawable/graybg_rectangled"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/transaction_filter_layout"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/filters_header"
+                    android:padding="16dp">
+
+                    <RadioGroup
+                        android:id="@+id/trns_filter_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/money_added_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_regular"
+                            android:buttonTint="@color/colorBlue"
+                            android:singleLine="true"
+                            android:text="Money Added"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:paddingStart="24dp"
+                            tools:ignore="RtlSymmetry"
+                            android:padding="12dp"/>
+
+                        <RadioButton
+                            android:id="@+id/trns_refund_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_regular"
+                            android:buttonTint="@color/colorBlue"
+                            android:singleLine="true"
+                            android:text="Refund"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:paddingStart="24dp"
+                            tools:ignore="RtlSymmetry"
+                            android:padding="12dp"/>
+
+                        <RadioButton
+                            android:id="@+id/trns_redeemed_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_regular"
+                            android:buttonTint="@color/colorBlue"
+                            android:singleLine="true"
+                            android:text="Redeemed"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:paddingStart="24dp"
+                            tools:ignore="RtlSymmetry"
+                            android:padding="12dp"/>
+
+                        <RadioButton
+                            android:id="@+id/promo_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_regular"
+                            android:buttonTint="@color/colorBlue"
+                            android:singleLine="true"
+                            android:text="Monquiz Promo"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:paddingStart="24dp"
+                            tools:ignore="RtlSymmetry"
+                            android:padding="12dp"/>
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="60dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.monquiz.customviews.CustomButton
+                        android:id="@+id/btnApplyFilters"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bluebg_curved"
+                        android:paddingStart="40dp"
+                        android:paddingEnd="40dp"
+                        android:text="Apply Filters"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginBottom="24dp"/>
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/filter_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="28dp"
+                        android:gravity="center"
+                        android:text="CANCEL"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/rubik_regular"/>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

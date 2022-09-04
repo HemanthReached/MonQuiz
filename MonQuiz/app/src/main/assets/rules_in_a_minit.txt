@@ -1,0 +1,33 @@
+
+
+IN A MINUTE
+
+1.	There can be maximum 10 People in one table 
+2.	Pooled amount at the table will be the total winnings
+3.	Pooled amount will depend on the number of players at a table, so if there are 5 Players at Rs 10 Table then the pooled amount will be Rs 50
+
+4.	Number of winners per game & the winnings
+ 	One Winner between 02 - 04 Players; 					
+Winner will get 100% of the Pooled Amount after game fee deduction
+
+ 	Two winners between 05 - 07 Players; 						      
+First winner gets 60% and the second winner gets 40% of the winning after deducting the game fee
+
+ 	Three Winners between 08 - 10 Players;
+First winner gets 50% and the second winner gets 30% and the third winner get 20% of the winning after deducting the game fee
+
+5.	Only four types of amount a user can play with Rs 10, Rs 20, Rs 50 & Rs 100
+6.	Every user will get 5 questions to answer and 30 seconds time, Winners will be selected on the basis of number of correct answers and the least time taken
+
+7.	User can only participate at the selected stakes table. If a user is at Rs 10 table, everyone else has paid the same amount at that table
+
+8.	Rs 500 is the daily limit for any user to Transact in a day / 24 HRS
+9.	You"ll not be charged any Payment Gateway charges while putting stakes in the game
+10.	monquiz will charge 10% of your Winnings as the Game/Service Fee
+11.	Users can redeem their winnings whenever they want
+
+12.	Once you redeem your winnings the amount will be transferred to your PayTm wallet after 24 HRS as per the online banking rules and the RBI guidelines
+
+13.	Every user will get 30 secs to answer the question
+14.	It won"t move to next question until user answers the current one
+15.	monquiz will charge 10% of the pool amount

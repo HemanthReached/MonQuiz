@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/tools"
+    android:background="@drawable/bg_white_curve"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/close_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_close_black"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/popupheadingtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/close_popup"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp"
+        android:text="PAN Card Details"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        fonts:custom_font="@string/rubik_bold"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/popupdesctv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/popupheadingtv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp"
+        android:text="@string/pan_card_desc"
+        android:textColor="@color/textcolor1"
+        android:textSize="12sp"
+        fonts:custom_font="@string/rubik_medium"
+        android:layout_marginEnd="80dp"/>
+
+    <TextView
+        android:id="@+id/namedesctv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/popupdesctv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="45dp"
+        android:text="@string/full_name_card"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        fonts:custom_font="@string/rubik_bold"
+        android:layout_marginEnd="80dp"/>
+
+    <EditText
+        android:id="@+id/nameet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/namedesctv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:hint="Full Name"
+        android:textColorHint="#BEBEBE"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        fonts:custom_font="@string/rubik_bold"
+        android:textStyle="bold"
+        android:background="@drawable/edittextbg1"
+        android:padding="12dp"/>
+
+    <TextView
+        android:id="@+id/cardnumberdesctv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nameet"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp"
+        android:text="PAN Card Number"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        fonts:custom_font="@string/rubik_bold"
+        android:layout_marginEnd="80dp"/>
+
+    <RelativeLayout
+        android:id="@+id/cardnumberlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardnumberdesctv"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittextbg1"
+        android:padding="12dp">
+
+        <EditText
+            android:id="@+id/cardnumberet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Card Number"
+            android:textColorHint="#BEBEBE"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            fonts:custom_font="@string/rubik_bold"
+            android:textStyle="bold"
+            android:background="@color/transparent"
+            android:maxLength="10"
+            android:digits="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:inputType="textCapCharacters"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/card_Iv"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            app:srcCompat="@drawable/card_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/submit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        android:text="Confirm"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textAllCaps="true"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        fonts:custom_font="@string/rubik_regular"
+        android:background="@drawable/bluebg_curved"/>
+
+    <LinearLayout
+        android:id="@+id/saved_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:clickable="false"
+        app:layout_constraintTop_toBottomOf="@id/popupdesctv">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="100dp"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            app:lottie_rawRes="@raw/check"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            android:layout_marginBottom="0dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="Card details saved."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/rubik_regular" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:gravity="center"
+            android:text="Post verification you will be able to withdraw cash."
+            android:textColor="#70000000"
+            android:textSize="14sp"
+            android:fontFamily="@font/rubik_regular" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="120dp"
+            android:text="You can check the status under"
+            android:textColor="#AEAEAE"
+            android:textSize="14sp"
+            android:fontFamily="@font/rubik_regular" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="40dp"
+            android:text="Profile / Settings / Personal Details"
+            android:textColor="@color/colorBlue"
+            android:textSize="14sp"
+            android:fontFamily="@font/rubik_regular" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

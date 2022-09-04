@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="395dp"
+        android:layout_marginStart="@dimen/size_of_value_eight"
+        android:layout_marginLeft="@dimen/size_of_value_eight"
+        android:layout_marginTop="@dimen/size_of_value_eight"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/bg_white_curve" />
+
+    <ImageView
+        android:id="@+id/rlDialogGameUserProfile"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:scaleType="fitXY"
+        fonts:srcCompat="@drawable/pro_ic_dialog_pro_user_profile_bg"
+        android:contentDescription="@string/app_name" />
+
+    <LinearLayout
+        android:id="@+id/llText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_of_value_seventy">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="80"
+            android:orientation="vertical">
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvDialogGameUserProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/black_100"
+                android:textSize="@dimen/font_size_of_value_sixteen"
+                android:textStyle="bold"
+                fonts:custom_font="@string/rubik_medium" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvGameUserRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_of_value_eight"
+                android:singleLine="true"
+                android:textColor="@color/black_87"
+                android:textSize="@dimen/font_size_of_value_thirteen"
+                android:textStyle="bold"
+                fonts:custom_font="@string/rubik_light" />
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivUserProfilePicture"
+            android:layout_width="120dp"
+            android:layout_height="140dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="20"
+            android:background="@drawable/pro_ic_dialog_profile_circle"
+            android:padding="10dp"
+            fonts:srcCompat="@drawable/ic_default_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDialogGameUserProfileStatsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                fonts:srcCompat="@drawable/ic_played_blue" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                fonts:srcCompat="@drawable/ic_won_blue" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                fonts:srcCompat="@drawable/ic_earned_blue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/played"
+                android:textAlignment="center"
+                android:textColor="@color/black_100"
+                android:textSize="@dimen/font_size_of_value_thirteen"
+                fonts:custom_font="@string/rubik_light" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/won"
+                android:textAlignment="center"
+                android:textColor="@color/black_100"
+                android:textSize="@dimen/font_size_of_value_thirteen"
+                fonts:custom_font="@string/rubik_light" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/earned"
+                android:textAlignment="center"
+                android:textColor="@color/black_100"
+                android:textSize="@dimen/font_size_of_value_thirteen"
+                fonts:custom_font="@string/rubik_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvGameUserProfilePlayed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="0.2"
+                android:textAlignment="center"
+                android:textColor="@color/black_100"
+                android:textSize="@dimen/font_size_of_value_thirteen"
+                android:textStyle="bold"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvGameUserProfileWonGames"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="0.2"
+                android:textAlignment="center"
+                android:textColor="@color/black_100"
+                android:textSize="@dimen/font_size_of_value_thirteen"
+                android:textStyle="bold"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvGameUserProfileEarnedMoney"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="0.2"
+                android:textAlignment="center"
+                android:textColor="@color/black_100"
+                android:textSize="@dimen/font_size_of_value_thirteen"
+                android:textStyle="bold"
+                fonts:custom_font="@string/rubik_regular" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="420dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="20" />
+
+                <Button
+                    android:id="@+id/btnDialogGameUserProfileGoodToKnow"
+                    style="@style/Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="60"
+                    android:text="@string/good_to_know" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="20" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

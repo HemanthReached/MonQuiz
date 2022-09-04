@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gamedashboard">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/ic_bg_symbols"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_menu_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/userdesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Hello User"
+        android:gravity="start"
+        android:textColor="@color/colorgray1"
+        android:textSize="22sp"
+        fonts:custom_font="@string/rubik_medium"
+        app:layout_constraintBottom_toTopOf="@+id/tvdescview"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvdescview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:text="What's your game today ?"
+        android:gravity="start"
+        android:textColor="@color/colorgray1"
+        android:textSize="22sp"
+        fonts:custom_font="@string/rubik_medium"
+        app:layout_constraintBottom_toTopOf="@+id/gdhOption2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvgamedesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:text="6 balls of cricketing questions."
+        app:layout_constraintTop_toBottomOf="@+id/tvgamename"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/colorgray1"
+        android:textSize="14sp"
+        fonts:custom_font="@string/rubik_light"/>
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvgamename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="SuperOver"
+        app:layout_constraintTop_toBottomOf="@+id/gdhOption1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/colorgray1"
+        android:textSize="26sp"
+        fonts:custom_font="@string/rubik_regular"/>
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvgameinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:text="Learn how to play"
+        app:layout_constraintTop_toBottomOf="@+id/tvgamedesc"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlue"
+        android:textSize="12sp"
+        fonts:custom_font="@string/rubik_light"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/gdhOption2"
+        app:layout_constraintBottom_toTopOf="@+id/gdhOption1">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/gameviewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhOption1"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.80"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhOption2"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.22"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

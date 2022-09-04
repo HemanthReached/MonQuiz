@@ -1,0 +1,249 @@
+                            MonQuiz " Terms of Use
+
+By visiting and/or accessing our website www.MonQuiz.in ("Website"), or the MonQuiz/ MonQuiz Pro mobile applications ("Apps", together "Platforms"), you agree to be bound by these Terms of USE ("Terms"). These Terms must be read with our Privacy Policy available at https://www.MonQuiz.in/terms.html.
+
+The terms "we", "us", "our", "Company" shall mean ESTD Techventures Private Limited ("Company", which expression shall, wherever the context permits, admits or requires, be deemed to mean and include its successors in interest and permitted assigns) which operates the Platforms. The Company offers you a platform via the Platforms through which you can play the games offered by the Company as per the Terms. The terms "you", "your" or "user" refers to any natural or legal person who has agreed to become a registered user on the Platforms by creating your account ("Account") or who accesses/visits the Platforms. We reserve the right to update and change, from time to time, these Terms, the Privacy Policy, and all other documents incorporated herein by reference without any notice to or re-acceptance from the user.
+
+1.	General
+
+1.1.	Acceptance of Terms. These Terms set forth a legally binding contract between you and us. By using or logging in the Platforms, you agree to be bound by these Terms. Even if you only visit the Platforms or review any of the services offered by us, you will be bound by these Terms. If you do not accept these Terms you must not use the Platforms.
+
+1.2.	MonQuiz only provides a gaming platform via the Platforms for users to utilize their skills to participate in the quizzes and contests available on the Platform ( "Contests"). The user hereby specifically understands and agrees to the following:
+
+(i)	MonQuiz has in no way induced or lured the user into opening an Account with MonQuiz to participate in the Contests;
+(ii)	games of skill are legal, as they are excluded from the ambit of Indian gambling legislations. The Supreme Court of India, in various cases, has held that a game in which success depends predominantly upon the superior knowledge, training, attention, experience and adroitness of the player shall be classified as a game of skill;
+(iii)	the Contest(s) on the Platform are games of skill as success of users depends primarily on their superior knowledge of various issues, attention and dedication towards the Contest(s) and adroitness in playing the Contest(s). Each user acknowledges and agrees that he/she is participating in a game of skill;
+(iv)	all information provided by the user to MonQuiz including all identity and personal information as well as any documents that may be provided are true and accurate in all respects;
+(v)	the user shall use the Account with MonQuiz only for non commercial activities;
+(vi)	the user is above 18 years of age and has the legal and mental capacity to enter into legally binding contracts with third parties; 
+(vii)	the user is a citizen of India; and
+(viii)	the user is aware that MonQuiz may change these Terms and Conditions at any time and the user hereby gives consent in advance to such change.
+
+2.	Registration
+
+2.1.	General: The user hereby agrees and warrants that all information and particulars provided by the user has been provided voluntarily without any inducement or pressure and is true to the best of his/her knowledge and belief. In case of any particulars provided by the user being incorrect or fraudulent, MonQuiz shall be at liberty to terminate the user"s account. MonQuiz further reserves the right, at its sole discretion, to deny the user access to the Platforms or any portion thereof without notice for the following reasons: (a) any unauthorized or illegal access or use by the user; (b) any assignment or transfer (or attempt to do the same) of any rights granted to the user under these Terms; (c) any violation of these Terms.
+
+2.2.	Eligibility. The registrations are open for anyone that is 18 years of age or older at the time of registration and are of sound mind and able to make legally enforceable decisions. [Residents of Assam, Nagaland, Sikkim, Odisha and Telangana shall not be eligible to participate in the paid version of the Contest(s) on the Platform, as the laws of these states bar persons from participating in games of skill where participants are required to pay to enter.
+
+2.3.	Using Google ID: users may be given the option of signing in using their Google IDs. Logging on to MonQuiz with the Gmail account gives the user the convenience of not having to remember yet another password - without compromising on privacy, or the safety of the individual email account. MonQuiz does not store the user"s Google password information. The password of every user who chooses to log in using the Google ID is sent to Google for verification, and is not saved on our systems.
+
+2.4.	Single Registration: Each individual is allowed to register only once and no person is allowed to create multiple Accounts. If any user is found to be using or registered with multiple Accounts, such user"s access to the Platform may be terminated. The use of scripts or any automated system to register is strictly prohibited. MonQuiz assumes no responsibility for lost, late, incomplete, incorrect, or misdirected registrations. MonQuiz is not responsible for technical, hardware or software malfunctions, misdirected entries, lost or unavailable network connections, or other communications or other technical problems related to the registration.
+
+2.5.	No Inducement of the User: The user hereby expressly acknowledges and agrees that the user has initiated the act of registering on MonQuiz entirely of his/her own free will and MonQuiz has not caused, induced, urged, prompted, instigated, drawn, compelled, persuaded or engendered the user to open an Account and participate in the Contest(s) on the Platform in any manner or form. 
+
+3.	Payment and Recharge Terms
+	
+3.1.	MonQuiz shall accept deposits from a user only through a valid Paytm account of the user. All monies transacted on the Platforms shall be denominated in Indian Rupees only. Users of MonQuiz Pro shall be entitled to charge their user Account with virtual currency by transferring actual amounts through their Paytm wallets by following the link specified in their Account on the Platform. The charged amount shall reflect in the account balance of the Account of the user ("MonQuiz Account") once Paytm informs MonQuiz that the transfer has been carried out. The exchange rate shall be 1 Indian Rupee = 1 Unit. Users shall not be charged any Payment Gateway fees for charging their MonQuiz Account using Paytm.
+
+3.2.	Any user using MonQuiz Pro shall be entitled to redeem the virtual currency standing to the credit of the MonQuiz Account of the user upon request. Due to operational limitations arising out of RBI guidelines, any redemption request so made shall reflect in the Paytm wallet only 24 hours after the request has been made. The exchange rate shall be 1 Unit = 1 Indian Rupee.
+
+3.3.	In order to conduct promotional activities, MonQuiz may gratuitously issue bonus virtual currency ("Bonus Points") to the user solely for the purpose of participation in any Contest(s). The usage of any Bonus Points issued shall be subject to the limitations and restrictions, including without limitation, restrictions as to time within which such points must be used, as applied by MonQuiz and notified to the user at the time of issue of such amount. The issue of any Bonus Points to the user is subject to the sole discretion of MonQuiz and cannot be demanded by any user as a matter of right. The issue of any such amount by MonQuiz on any day shall not entitle the user to demand the issuance of such amount at any subsequent period in time nor create an expectation of recurring issue of such amount by MonQuiz to such user. The Bonus Points granted to the user may be used by such user for the purpose of setting off against the contribution to prize pool in any Contest, in accordance with these Terms. The Bonus Points shall not be withdraw-able or transferrable to any other account of the user, including the Paytm or bank account of such user, or of any other user or person. In case the user terminates his/her account with MonQuiz or such account if terminated by MonQuiz, all Bonus Points granted to the user shall return to MonQuiz and the user shall not have any right or interest on such points.
+
+3.4.	MonQuiz expressly disclaims all responsibility for any loss caused to the user due to the transfer of funds to the user"s MonQuiz Account from the user"s Paytm account or while executing any trades using MonQuiz, for whatever reason, unless the same has been caused due to the gross negligence of MonQuiz.
+
+3.5.	Directing the funds of a user"s account to a third party is expressly prohibited and will result in immediate suspension of the Account. A third party is any party other than the user and MonQuiz. The user is expressly prohibited from opening an account under a third party or fictitious name for the purpose of using this service to pay a third party. Users are expressly prohibited from registering a payment method for a third party in their MonQuiz Account for the purpose of using this service to pay a third party. Third party transactions are expressly prohibited and will result in immediate suspension and termination of the Account.
+
+4.	Rules for Contests
+	
+4.1.	There are two different versions of games available on the Platforms:
+ 
+(i)	"MonQuiz", which is the free version wherein users shall be allowed to participate in the Contest(s) only with virtual cash which shall not be eligible to be exchanged for money in their Paytm wallet or bank account. The free version can be downloaded from the PlayStore;
+
+(ii)	"MonQuiz Pro" which is the version wherein users shall be allowed to participate in Contest(s) with actual money which can freely be exchanged for money in their Paytm wallet.  MonQuiz Pro shall be available in both Android and iOS compatible versions. The Android compatible version can be downloaded from www.MonQuiz.in and the iOS compatible version can be downloaded from the AppStore.
+
+4.2.	Currently, three different kind of Contests are available on MonQuiz: In a minute, One Shot  and Quiz Master; and two Contests are available on MonQuiz Pro: In a minute and One Shot. The rules of the Contests shall be as specified in these Terms. In case of any scenarios which are not specified herein, the decision taken by MonQuiz shall be final and binding on all users. In the event we introduce new Contests, we shall notify the users of such contests along with the rules applicable to them as and when such Contests are introduced.
+
+4.3.	A user may choose participate in a Contest wherein the user has to contribute a pre-specified amount towards the prize money pool of such Contest, which will be passed on to the winner(s) of the Contest after the completion of the Contest as per the terms and conditions of such Contest. It is clarified that MonQuiz has no right or interest in this prize money pool, and only acts as an intermediary engaged in collecting and distributing the prize money pool in accordance with the rules of the Contest. The amount to be contributed by the user towards the prize money pool would be debited from the user"s account balance maintained with MonQuiz. Conversely, any prize money winnings shall be credited to the user"s account balance maintained with MonQuiz. No user shall be allowed to transact for more than Rs. 500 per day, net of pooled in amount and total winnings. As of now a User shall only be able to transact Rs 500 from his/her Wallet in the game in a day.
+
+4.4.	In a Minute 
+
+A.	In the In a Minute Contest users will pool in their money in a single group (called a "Table"). Every user in the Table shall pool (put in) in a pre-specified amount of money before the start of the game. There will be four different grades of Tables, requiring pool-in amounts of Rs. 10, Rs. 20, Rs. 50 and Rs. 100 respectively. Each user at a Table shall pool in the same amount. A user can choose to participate in any Table.
+
+B.	The maximum capacity for each Table shall be 10 users, however a a Contest may start without a Table being filled to its maximum capacity. Each user shall be asked three (3) questions. The winner shall be determined based the maximum number of questions answered correctly. If two or more users have answered the same number of questions correctly, then the winner shall be the user who has taken the least amount of time to answer all the questions (calculated in seconds).
+
+C.	Subject to the service fees of MonQuiz as specified in these Terms, the distribution of the winning prize-money shall be dependent upon the number of users on the Table in the following manner: (x) Table consisting of 2 - 4 users: there shall be a single winner who shall be entitled to 100% of the winning money pooled by all the users on the Table; (y) Table consisting of 5 - 7 users: the winner shall get 60% of the money pooled by all the users on the Table and the runner up shall get the remaining 40% of the pooled money; (iii) Table consisting of 8 " 10 users: the winner shall get 50% of the money pooled by all the users on the Table, the first runner up shall get 30% of the money pooled and the second runner up shall get the remaining 20% of the money pooled.
+
+D.	In case of a tie for a particular spot, the winnings for that particular spot shall be distributed amongst the users tied equally.
+
+E.	Any disputes regarding the correctness of any answers shall be decided by MonQuiz and the decision of MonQuiz in this regard shall be final and binding upon all users.
+
+
+4.5.	One Shot
+
+
+A.	The One Shot Contest is the daily quiz on the Platform which will be conducted by MonQuiz in which each user shall be entitled to participate only once every day after which it shall be disabled for the next 24 hours.
+
+B.	One Shot quiz shall consist of 15 questions and all users shall be entitled to participate in this quiz once every 24 hours. The winners shall be determined based on which user answers the maximum number of questions correctly. If two or more users have answered the same number of questions correctly, then the winner shall be the user who has taken the least amount of time to answer all the questions.
+C.	There will be three winners of the One Shot quiz every day. The prize-money for the One Shot quiz shall be distributed in the following manner: winner = Rs. 300, First runner up = Rs. 200; and second runner up = Rs. 100.
+
+D.	In case of a tie for a particular spot, the winnings for that particular spot shall be distributed amongst the users tied equally.
+
+E.	Any disputes regarding the correctness of any answers shall be decided by MonQuiz and the decision of MonQuiz in this regard shall be final and binding upon all users.
+
+
+4.6.	Quizmaster
+
+A.	In the Quizmaster Contest users shall be entitled to ask other users questions from a pack of pre-selected questions provided by the game. Users can pool in money in a single "Table". Every user in the Table shall pool (put in) in a pre-specified amount of money before the start of the game. There will be four different grades of Tables, requiring pool-in amounts of Rs. 10, Rs. 20, Rs. 30 and Rs. 50 respectively. Each user at a Table shall pool in the same amount. A user can choose to participate in any Table.
+
+B.	The maximum capacity for each Table shall be 10 users, however a a Contest may start without a Table being filled to its maximum capacity. Each user of a Table will become the quiz master for one round ("Quizmaster) and ask one question to the other users at the Table from a pre-selected pack of 3 questions available to such user. Thus, each round shall have one question asked by the Quizmaster to all the other users. The number of rounds in each Quizmaster Contest shall depend upon the number of users at the Table, for eg. if there are three users there shall be only three rounds; if there are seven users there shall be seven rounds, and so on.
+
+C.	Each round (single question) in the Quizmaster Contest shall be worth the amount pooled in by each user at the Table, i.e. at the Rs. 10 Table each round shall be worth Rs. 10, at the Rs. 50 Table each round shall be worth Rs. 50, and so on. In each round the user giving the correct answer shall be entitled to the prize money of that round. In case more than one user give the correct answer then the winning prize money shall be distributed equally amongst all the users who have given the correct answer. For instance, if there are five users at the Rs. 10 Table then the pooled amount shall be Rs 50. There will five rounds of the Contest where every user will ask a question worth Rs. 10 to the other four users. Accordingly, in every round the winning pool of Rs. 10 will be divided equally among the users who have given the right answer. And the points or the amount for every wrong answer will go to the Quizmaster except for his/her wrong answer.  
+
+
+D.	Any disputes regarding the correctness of any answers shall be decided by MonQuiz and the decision of MonQuiz in this regard shall be final and binding upon all users.
+
+5.	Fees
+
+The participation by the user in the exchange platform does not in any way constitute any gambling, betting, wager, speculation, lottery, raffle, sweepstakes, etc. in any form whatsoever. MonQuiz does not and will never collect any money, cash, or any other items exchangeable into money from users for any such purpose. As consideration for providing the Contests on the Platform MonQuiz charges a service fee of 10% of the total prize money won by a user. The fee is subject to change from time to time at the sole discretion of MonQuiz. 
+
+6.	General Conditions 
+
+6.1.	MonQuiz may prohibit any user, if MonQuiz is of the opinion that the user is showing a disregard for these Terms, or acts (x) in an unfair or fraudulent manner; (y) with an intent to annoy, abuse, threaten, or harass any other user or MonQuiz; or (x) in any other disruptive manner.
+
+6.2.	The use of software, machines, computers, scripts or any automated system is strictly prohibited. If any user tries to influence the Contest(s) or gain an unfair advantage in any manner whatsoever, such user shall be liable to be prohibited from conducting any further transactions on the Platform and may be reported to the appropriate authorities. Any decision in this regard shall be taken at the sole discretion of MonQuiz and shall be final.
+
+6.3.	Any attempt by a user or any other individual to deliberately damage the Platform or undermine the legitimate operation of MonQuiz is a violation of criminal and civil laws and should such an attempt be made, MonQuiz reserves the right to seek damages from any such user to the fullest extent permitted by law.
+
+6.4.	Completion of a transaction may be stopped by MonQuiz at any time if MonQuiz, in good faith, believes that such transaction may be fraudulent or may adversely impact the Platform, or may adversely impact the faith of other users on the Platform, etc. 
+
+6.5.	The MonQuiz Platform is for the exclusive purpose of transactions to be carried out within the territorial jurisdiction of India and all such transactions shall be governed by the laws in India. Notice is hereby given that non-resident Indians and foreign nationals accessing the Platforms and opting to transact thereon shall do so after due verification at their end of their eligibility to do so. MonQuiz undertakes no responsibility for such pre-eligibility of qualification on part of non-resident Indians and foreign nationals to transact on its Platform.
+	
+6.6.	Each user is responsible for maintaining the confidentiality of information on his/her Account, including, but not limited to the password, email, wallet address, wallet balance, and of all activity including transactions made through the Account. Users shall bear all responsibility of keeping their password secure. MonQuiz is not responsible for the loss or misuse of the password. MonQuiz shall not be responsible for any technical failure or malfunction of the software or delays of any kind, or for non-receipt of registration details or e-mails. If there is suspicious activity related to the user"s Account, MonQuiz may request additional information from the user, including authenticating documents, and freeze the Account for the review time. The user is obligated to comply with these security requests, or accept termination of the Account.
+
+6.7.	When you upload or submit any information on the Platforms, you give us a worldwide license to use, host, store and reproduce such information. The rights you grant in this license are for the limited purpose of providing, promoting, and improving our services, and to develop new ones. In case of a contest or a promotion scheme, MonQuiz reserves the right to share the user profiles with the sponsors, with prior notice to you. In the event of necessary credit checks and collection of payments, MonQuiz may disclose such information to other authorities in good faith. 
+
+6.8.	MonQuiz reserves the right to cancel unconfirmed Accounts or Accounts that have been inactive for a period of six (6) months or more, and/or to modify or discontinue the Platform. The user agrees that MonQuiz will not be liable to them or to any third party for termination of their Account or access to the Platform. The suspension of an Account shall not affect the payment of the fees due for past transactions. Upon termination, users shall communicate a valid Paytm account to allow for the transfer of any amounts remaining to their credit. 
+
+6.9.	MonQuiz may, at its sole and absolute discretion:
+"	restrict, suspend, or terminate any user"s access to all or any part of the Platform;
+"	change, suspend, or discontinue all or any parts of the Platform;
+"	reject, move, or remove any material that may be submitted by a user;
+"	move or remove any content that is available on the Platform;
+"	deactivate or delete a user"s Account and all related information and files on the Account;
+"	establish general practices and limits concerning use of the Platforms;
+"	assign its rights and liabilities to all user Accounts hereunder to any entity (post such assignment intimation of such assignment shall be sent to all users to their registered email ids).
+
+6.10.	Acceptance of a prize by the winner constitutes permission for MonQuiz, and its affiliates to use the winner"s name, likeness, voice and comments for advertising and promotional purposes in any media worldwide for purposes of advertising and trade without any further permissions or consents and / or additional compensation whatsoever. The winners further undertake that they will be available for promotional purposes as planned and desired by MonQuiz without any charge. The exact dates for such promotional activities remain the sole discretion of MonQuiz. Promotional activities may include but not be limited to press events, internal meetings and ceremonies/functions.
+
+6.11.	The prize money won by the users on the Platform may be liable to taxation under the Income Tax Act or other relevant taxation statutes. Users are advised to consult their tax attorneys and chartered accountants to determine any tax liability arising out of their winnings on the Platform.
+
+6.12.	MonQuiz may, at its sole discretion, disqualify any user from a Contest, refuse to award benefits or prizes and require the return of any prizes, if the user engages in conduct which MonQuiz deems to be improper, unfair or otherwise adverse to the operation of the Platform or is in any way detrimental to other users which includes, but is not limited to:
+
+(a)	falsifying ones" own personal information (including, but not limited to, name, email address, bank account details and/or any other information or documentation as may be requested by MonQuiz to enter a contest and/or claim a prize/winnings;
+(b)	engaging in any type of financial fraud or misrepresentation including unauthorized use of credit/debit instruments, payment wallet accounts, etc. to enter a Contest or claim a prize. It is expressly clarified that the onus to prove otherwise shall solely lie on the user;
+(c)	colluding with any other user(s) or engaging in any type of syndicate play;
+(d)	any violation of Contest rules or these Terms;
+(e)	accumulating points or prizes through unauthorized methods such as automated bots, or other automated means;
+(f)	using automated means (including but not limited to harvesting bots, robots, parser, spiders or screen scrapers) to obtain, collect or access any information on the Platform or of any user for any purpose;
+(g)	any type of bonus misuse, misuse of any Invite Friends program, or misuse of any other offers or promotions;
+(h)	tampering with the administration of a Contest or trying to in any way tamper with the computer programs or any security measure associated with a Contest;
+(i)	obtaining other users" information without their express consent and/or knowledge;
+(j)	users expressly agree not to do any of the following acts:
+"	access the Platform via anonymous networks;
+"	use anonymous service, networks such as TOR to do business with MonQuiz;
+"	defame, abuse, harass, stalk, threaten or otherwise violate the legal rights (such as rights of privacy and publicity) of others;
+"	institute, assist or become involved in any type of attack, including without limitation to distribution of a virus, denial of service, or other attempts to disrupt the Platform or any other person"s use or enjoyment of the Platform;
+"	upload files that contain software or other material protected by intellectual property laws (or by rights of privacy of publicity) unless user owns or controls the rights thereto or has received all necessary consents;
+"	upload files that contain viruses, corrupted files, or any other similar software or programs that may damage the operation of another"s computer or the Platform;
+"	take any action that imposes an unreasonable or disproportionately large load on MonQuiz"s infrastructure; or detrimentally interfere with, intercept, or expropriate any system, data, or information;
+"	open multiple Accounts with MonQuiz or use any Account other than his/her own, or access the Account of any other user at any time, or assist others in obtaining unauthorized access;
+"	indulge in any illegal or unauthorized activities on the Platform;
+"	not to host, display, upload, modify, publish, transmit, update or share any information that:
+i.	belongs to another person and to which the user does not have any right to; 
+ii.	is grossly harmful, harassing, blasphemous defamatory, obscene, pornographic, paedophilic, libellous, invasive of another's privacy, hateful, or racially, ethnically objectionable, disparaging, relating or encouraging money laundering or gambling, or otherwise unlawful in any manner whatever; 
+iii.	harm minors in any way; 
+iv.	infringes any patent, trademark, copyright or other proprietary rights; 
+v.	violates any law for the time being in force; 
+vi.	deceives or misleads the addressee about the origin of such messages or communicates any information which is grossly offensive or menacing in nature; 
+vii.	impersonates another person; 
+viii.	contains software viruses or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer resource;
+
+ 
+ix.	threatens the unity, integrity, defence, security or sovereignty of India, friendly relations with foreign states, or public order or causes incitement to the commission of any cognizable offence or prevents investigation of any offence or is insulting any other nation;
+
+"	conduct or forward surveys, contests, or chain letters; or
+"	download any file posted by another user of a forum that you know, or reasonably should know, cannot be legally distributed in such manner.
+
+7.	Intellectual Property
+
+7.1.	The Platforms includes a combination of content created by MonQuiz, its partners, affiliates, licensors, associates and/or users. The intellectual property rights ("Intellectual Property Rights") in all software underlying the Platform and material published on it, including (but not limited to) games, Contests, designs, text, graphics, graphs, images, information, logos, button icons, software, advertisements, illustrations, marks, logos, audio or video files, Flash animation, and any other content ("Content"), is owned by MonQuiz, its partners, licensors and/or associates and is our exclusive and sole property.
+
+7.2.	All icons and logos are trademarks of and proprietary to us. The unauthorized copying, modification, use or publication of these marks is strictly prohibited.
+
+7.3.	Users may not modify, publish, transmit, participate in the transfer or sale of, reproduce, create derivative works of, distribute, publicly perform, publicly display, or in any way exploit any of the materials or content on the Platform either in whole or in part without express written consent from MonQuiz.
+
+7.4.	All Content on the Platforms, including images, illustrations, audio clips, and video clips, are protected by copyrights, trademarks, and other intellectual property rights. The Content on the Platforms is solely for your personal, non-commercial use. You must not copy, reproduce, republish, upload, post, transmit or distribute such Content in any way, including by email or other electronic means and whether directly or indirectly and you must not assist any other person to do so. Without our prior written consent, modification of the Content, use of the Content on any other website, application or networked computer environment or use of the Content for any purpose other than personal, non-commercial use is a violation of the copyrights, trademarks and other proprietary rights, and is prohibited. Any use for which you receive any remuneration, whether in money or otherwise, is commercial use for the purposes of these Terms. We reserve the right to terminate the accounts of users who violate the proprietary rights, in addition to necessary legal action.
+
+7.5.	We respect the intellectual property of others. It is our policy to respond to any claim that Content posted on our Platforms infringes on the copyright or other intellectual property rights of any person or entity. In case you feel that your trademark or copyright has been infringed, you can write to us at support@MonQuiz.in
+
+7.6.	All information and data collected from the users and their activities on the Platform shall be dealt with in accordance with the Privacy Policy.
+
+
+
+
+8.	Indemnity and Other Disclaimer
+	
+8.1.	By registering and creating an account the users assume sole liability for and agree to indemnify and hold MonQuiz, its affiliates, officers, directors, employees and agents, harmless from and against any and all claims, damages, obligations, losses, injuries, costs or debt, and expenses (including but not limited to attorney"s fees) whether or not actually incurred from usage of the Platform or the acceptance, possession and handling, loss, use or misuse of any money or virtual currency in their Account or any breach of these Terms.
+
+8.2.	MonQuiz is not responsible for any incorrect or inaccurate registrations, whether caused by the user or by any of the equipment or programming associated with or utilized in the Platform or by any technical or human error which may occur in the operation of the Platform. The user expressly understands and agrees that under no circumstances shall MonQuiz be liable to any user on account of that user"s use or misuse of and reliance on the MonQuiz Platform. Such limitation of liability shall apply to prevent recovery of direct, indirect, incidental, consequential, special, exemplary, and punitive damages (even if MonQuiz has been advised of the possibility of such damages), whether the damages arises from use or misuse of or reliance on the Platform, from inability to use the Platform, or from the interruption, suspension, of the Platform (including such damages incurred by third parties), or any technical failure or hacking attacks on the MonQuiz Servers, or any change in law or regulatory framework in India.
+
+8.3.	The user specifically agrees that MonQuiz shall not be liable for any loss, actual or perceived, caused directly or indirectly by government restriction, exchange or market regulation, war, strike, equipment failure, communication line failure, system failure, security failure on the Internet, unauthorized access, theft, or any problem, technological or otherwise, or other condition beyond the control of MonQuiz. The user further agrees that it will not be compensated by MonQuiz for "lost opportunity", i.e., notional profits on any Contest(s) which could not be completed.
+
+8.4.	All information is provided on an "as is" basis, with no warranties whatsoever. A possibility exists that the Platform could include inaccuracies or errors. Additionally, a possibility exist that unauthorized additions, deletions or alterations could be made by third parties to the Platform. Although MonQuiz attempts to ensure the integrity, correctness and authenticity of the Platform, it makes no guarantees whatsoever as to its completeness, correctness or accuracy. In the event, that such an inaccuracy arises, please inform MonQuiz so that it can be corrected. All express, implied, and statutory warranties, including, without limitation, the warranties of merchantability, fitness for a particular purpose, and non-infringement of proprietary rights, are expressly disclaimed to the fullest extent permitted by la w. To the fullest extent permitted by law, MonQuiz disclaims any warranties for (i) the security, reliability, timeliness, and performance of the Platform; (ii) other services or goods, as well as for any information or advice received through MonQuiz or through any links provided herein.
+
+8.5.	The user agrees that MonQuiz and shall not be liable for: 
+"	the deletion, failure to store, misdelivery, or untimely delivery of any information or material;
+"	any harm resulting from downloading or accessing any information or material through MonQuiz;
+"	financial loss due to Account being "Bruteforced";
+"	financial loss due to server failure or data loss;
+"	financial loss due to forgotten passwords;
+"	financial loss due to corrupted files;
+"	financial loss due to incorrectly constructed transactions or mistyped wallet addresses;
+"	financial loss due to "phishing" or other websites masquerading as MonQuiz
+
+8.6.	MonQuiz cannot and does not guarantee or warrant that the files available for downloading through the Platform or the Platform itself will be free from infection by software viruses or other harmful computer code, files or programs. MonQuiz shall not be responsible for any software viruses or other harmful computer code, files or programs that the user may encounter due to your visiting this Platform.
+
+8.7.	If the user has a dispute with one or more users, the user hereby releases MonQuiz (and our parent, officers, directors, agents, joint ventures, employees and suppliers) from any and all claims, demands and damages (actual and consequential) of every kind and nature arising out of or in any way connected with such disputes. 
+
+8.8.	Any events or Contest(s) being hosted or provided, or intended to be hosted on the Platform and requiring specific permission or authority from any statutory authority or any state or the central government, or the board of directors shall be deemed cancelled or terminated, if such permission or authority is either not obtained or denied either before or after the availability of the relevant Platform, events or Contest(s) are hosted or provided.
+
+8.9.	MonQuiz and its owners/affiliates are not liable for any damages caused by any performance, failure of performance, error, omission, interruption, deletion, defect, delay in transmission or operations, computer virus, communications line failure, and unauthorized access to the personal accounts of the user. 
+
+8.10.	MonQuiz reserves the right to cancel, suspend the Platform, or any part of it, if any fraud, technical failures, computer virus, bug, tampering, or any other factor impairs the integrity or proper functioning of the promotion, as determined by MonQuiz in its sole discretion. 
+
+8.11.	MonQuiz expressly also disclaims responsibly for content of any of the linked sites. By providing access to other websites, MonQuiz neither recommends nor endorses the content available on the linked websites.
+
+8.12.	To the extent permitted under law, MonQuiz shall not be responsible for any harm resulting from downloading or accessing any information or material, the quality of servers, games, products, Contests or Platforms, cancellation of competition and prizes. MonQuiz disclaims any responsibility for, and if a user pays for access to one of the Contests the user will not be entitled to a refund as a result of, any inaccessibility that is caused by MonQuiz"s maintenance on the servers or the technology that underlies our Platforms, failures of MonQuiz"s service providers (including telecommunications, hosting, and power providers), computer viruses, natural disasters or other destruction or damage of our facilities, acts of nature, war, civil disturbance, or any other cause beyond our reasonable control. In addition, MonQuiz does not provide any warranty as to the content on the Platform, the content is distributed on an "as is" basis.
+
+8.13.	In the event MonQuiz discovers any error, including any error in the determination of winners or in the transfer of amounts to a user"s account, MonQuiz reserves the right (exercisable at its discretion) to rectify the error in such manner as it deems fit, including through a set-off of the erroneous payment from amounts due to the user or deduction from the user"s account of the amount of erroneous payment. In case of exercise of remedies in accordance with this clause, MonQuiz agrees to notify the user of the error and of the exercise of the remedy(ies) to rectify the same.
+	
+8.14.	Price and availability of products and services offered on the Platforms are subject to change without prior notice. MonQuiz may provide information about the availability of products or services to a certain extent but the users should not rely on such information. MonQuiz will not be liable for any lack of availability of products and services the user may order through the Platforms. 
+
+8.15.	Regardless of any statute or law to the contrary, any claim or cause of action arising out of or related to use of the Platform or these must be filed within thirty (30) days of such claim or cause of action arising or be forever barred.
+
+9.	Security Components: You understand that the Platforms and software embodied within the Platforms may include security components that permit digital materials to be protected, and that use of these digital materials is subject to usage rules set by the Company. You shall not attempt to reverse engineer, override, disable, circumvent or otherwise interfere with any such security components and usage rules embedded into the Platforms.
+
+
+10.	Downtime:  MonQuiz shall have no liability to the users for any downtime to the Platform for any reason whatsoever, nor for any downtime caused by general Internet failure, the failure of any Internet connection or the failure of any user equipment.
+
+11.	No Waiver. No omission or delay on the part of MonQuiz in enforcing any of its rights or powers hereunder shall be deemed to constitute a waiver of any of MonQuiz"s rights to exercise such rights and powers and, in any event, shall not constitute or be construed as a continuing waiver.
+
+12.	Third-party Gateway. All financial transactions to make a deposit into your account on MonQuiz, using any financial instrument like credit card, debit card, cash card or any other bank card/s are made through third-party payment gateways. The third party payment gateway is responsible to accept or deny such a transaction/s and all such transactions made by you will be subject to the terms and condition of the third-party payment gateway and MonQuiz will not be held responsible for any such denial by the third party.
+ 
+13.	Requests for Refunds. A refund request will only be processed in cases of accidental or erroneous amount credit. MonQuiz will independently address to such a request for refund. A refund process will only be executed for genuine cases of accidental or erroneous cash credit. MonQuiz will individually investigate such a request and refund for the same will be made within two weeks. All such refund will be remitted to the financial instrument used by you while making the transaction/s.
+ 
+13.1.	Questions Integrity; MonQuiz attempts to keep the database of questions up to date and check that answers registered in the system as the "right" answers are correct. However, these databases are sourced and provided by third parties and even after thoroughly checking them sometimes there are questions that have answers that are incorrect according to some sources, in those scenarios, MonQuiz does not hold any responsibility for the outcome of the Challenge. However, in these scenarios we have given an option to the users to report a question and claim a refund for that round or question. Once we have received the request, we will verify it and in legitimate requests we will notify the User and commence the process of refund.
+
+14.	Termination
+
+14.1.	These Terms of Use shall remain in full force and effect for so long as you use the Platforms. If you wish to terminate your account at any time, you may simply discontinue using our services and inform us and we shall delete your account.
+
+14.2.	We may terminate or suspend your account and bar access to the Platforms immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to breach of any of these Terms, the Privacy Policy, or any false or misleading information, or interference with use of the Platforms by others. The Company reserves the right to terminate or suspend your account, if it believes the same has been compromised, or is being used fraudulently, at its discretion. 
+
+14.3.	All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.
+
+15.	Changes. We reserve the right, at our sole discretion, to modify or replace these Terms at any time. By continuing to access or use our Platforms after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Platforms.
+
+16.	Controlling Law and Jurisdiction. These Terms and any action related hereto will be governed by the laws of India without regard to its conflict of laws provisions. The exclusive jurisdiction and venue of any action with respect to the subject matter of these Terms will be the courts in Hyderabad, India and you hereby waive any objection to jurisdiction and venue in such courts.
+
+17.	Grievance Redressal. In case of any grievance or complaints with the Platform or its performance please contact MonQuiz at support@MonQuiz.in. Once a complaint has been received, all endeavors will be made to address the complaint as soon as possible.

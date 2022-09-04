@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:padding="@dimen/size_of_value_eight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvSpinnerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_of_value_eight"
+            android:textColor="@color/dark_orange"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imgLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_arrow_drop_down_white"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+
+</LinearLayout>

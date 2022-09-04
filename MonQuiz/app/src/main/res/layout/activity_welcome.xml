@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.monquiz.utils.CustomViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/llDots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/btnGetStarted"
+        android:orientation="horizontal" />
+
+    <Button
+        android:id="@+id/btnGetStarted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_orange"
+        android:gravity="center"
+        android:padding="@dimen/size_of_value_ten"
+        android:text="@string/getStarted"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_of_value_eighteen" />
+</RelativeLayout>

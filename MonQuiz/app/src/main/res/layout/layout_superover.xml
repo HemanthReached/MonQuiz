@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="@dimen/size_of_value_sixteen">
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvGameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Super Over"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_bold"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/ivSuperOverBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back_black"
+                android:contentDescription="@string/app_name"
+                android:padding="1dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E1E2"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RULES"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="40dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1.  Maximum 2 players can compete in the game"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2.  Players will be matched with other players playing for same stakes"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3.  The winner will take the complete pot of the game after deduction of Game fee"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4.  In case of a tie pot will be divided equally after deduction of Game fee"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5.  In total, 6 questions will be given to the players just like in an over"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="6.  0 points for every wrong answer"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="POINTS SYSTEM"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="40dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1.  8 seconds will be assigned to each question."
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2.  Score Calculation will be as per the following points system."
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:showDividers="middle|end"
+                        android:divider="@color/black"
+                        android:stretchColumns="1">
+
+                        <TableRow
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:weightSum="2"
+                            android:background="@color/black">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.1"
+                                android:text="Answer Time"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.9"
+                                android:text="Points/Runs"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:weightSum="2"
+                            android:background="@color/black">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.1"
+                                android:text="0 - 2 Seconds"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.9"
+                                android:text="6"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:weightSum="2"
+                            android:background="@color/black">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.1"
+                                android:text="2 - 4 Seconds"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.9"
+                                android:text="4"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:weightSum="2"
+                            android:background="@color/black">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.1"
+                                android:text="4 - 6 Seconds"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.9"
+                                android:text="2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:weightSum="2"
+                            android:background="@color/black">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.1"
+                                android:text="6 - 8 Seconds"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.9"
+                                android:text="1"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

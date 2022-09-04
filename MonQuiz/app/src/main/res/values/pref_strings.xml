@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="is_first_time_welcome_screen">isFirstTimeWelcomeScreen</string>
+    <string name="is_first_time_login">isFirstTimeLogin</string>
+
+    <string name="intent_referral_code">intent Referral Code</string>
+    <string name="intent_mobile_number">intent Mobile Number</string>
+
+
+    <string name="user_id">User Id</string>
+
+    <string name="user_profile_pic">User Profile Picture</string>
+    <string name="user_name">User Name</string>
+    <string name="user_full_name">User FullName</string>
+    <string name="user_mobile_number">User Mobile Number</string>
+    <string name="user_dob">User DOB</string>
+    <string name="user_gender">User Gender</string>
+    <string name="user_pan_number">User Pan Number</string>
+    <string name="user_wallet_balance">User Wallet Balance</string>
+    <string name="user_wallet_credits">User Wallet Credits</string>
+    <string name="user_referral_code">User Referral Code</string>
+
+    <string name="user_ifsc_code">User IFSC Code</string>
+    <string name="user_branch">User Bank Branch Name</string>
+
+    <string name="user_daily_play_limit">User Daily Play Limit</string>
+
+    <string name="is_valid_referral">is Valid Referral</string>
+
+    <string name="is_reward_collected">is Reward Collected</string>
+    <string name="is_daily_limit_changed">is Daily Limit Changed</string>
+
+    <string name="current_game_id">Current Game Number</string>
+
+    <string name="user_overall_rank">User OverAll Rank</string>
+
+    <string name="user_stats_played_games">UserStats games Played</string>
+    <string name="user_stats_won_games">UserStats Games Won</string>
+    <string name="user_stats_earned">UserStats Earned</string>
+
+    <string name="overall_stats_summary_games_won">overAll Stats Summary Games Won</string>
+    <string name="overall_stats_summary_games_played">overAll Stats Summary Games Played</string>
+    <string name="overall_stats_summary_earned">overAll Stats Summary Earned</string>
+
+    <string name="today_stats_summary_games_won">today Stats Summary Games won</string>
+    <string name="today_stats_summary_games_played">today Stats Summary Games played</string>
+    <string name="today_stats_summary_earned"> today Stats Summary Earned</string>
+
+    <string name="join_table">Joint table</string>
+    <string name="normalquiz_table_id">Table Id</string>
+
+    <string name="play_selected_amount">Play Selected Amount</string>
+    <string name="play_selected_category_number">Play Selected Category Number</string>
+    <string name="play_selected_category_name">Play Selected Category Name</string>
+
+    <string name="is_audio_mode_enable">isAudioModeEnable</string>
+    <string name="user_account_number">User Account Number</string>
+    <string name="user_bank_name">User Bank Name</string>
+    <string name="updateDialogTime">Update Dialog show time</string>
+
+</resources>

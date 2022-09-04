@@ -1,0 +1,488 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">MonQuiz</string>
+
+    <!-- Custom Fonts -->
+    <string name="rubik_bold">rubik_bold.ttf</string>
+    <string name="rubik_light">rubik_light.ttf</string>
+    <string name="rubik_medium">rubik_medium.ttf</string>
+    <string name="rubik_regular">rubik_regular.ttf</string>
+    <string name="question_answer_font">Sansation-Bold.ttf</string>
+    <string name="cheeseburger_font">cheeseburger.ttf</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="login_hint_email">Email Address</string>
+    <string name="login_hint_password">Password</string>
+
+    <string name="login_btn_login_label">LOGIN</string>
+    <string name="login_msg_invalid_email">Valid email required</string>
+    <string name="login_msg_invalid_password">Valid password required</string>
+    <string name="dont_have_account">Dont have an account ? Sign Up</string>
+
+    <string name="title_activity_signup">SignupActivity</string>
+
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="signup_btn_signp_label">SIGN UP</string>
+    <string name="signup_msg_invalid_mobile">Valid mobile number required</string>
+
+    <string name="title_activity_categories">CategoriesActivity</string>
+
+    <string name="categories_title">Choose Category</string>
+    <string name="title_activity_pricelist">PriceListActivity</string>
+
+    <string name="title_msg_pricelist">where you want to go?</string>
+    <string name="subtitle_msg_pricelist">You can choose your price range. Based on your choice one table will allow you to join. </string>
+
+    <string name="category_one_shot">One Shot</string>
+    <string name="category_in_a_minute">In a Minute</string>
+    <string name="category_team_up">Team Up</string>
+    <string name="category_super_over">SuperOver</string>
+    <string name="category_quiz_master">Quizmasters</string>
+
+    <string name="Rupee">\u20B9</string>
+    <string name="Rs0">\u20B9 0</string>
+    <string name="Rs10">\u20B9 10</string>
+    <string name="Rs20">\u20B9 20</string>
+    <string name="Rs30">\u20B9 30</string>
+    <string name="Rs40">\u20B9 40</string>
+    <string name="Rs50">\u20B9 50</string>
+    <string name="Rs60">\u20B9 60</string>
+    <string name="Rs100">\u20B9 100</string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+
+    <string name="_10">10</string>
+    <string name="_20">20</string>
+    <string name="_30">30</string>
+    <string name="_40">40</string>
+    <string name="_50">50</string>
+    <string name="_60">60</string>
+    <string name="_100">100</string>
+    <string name="_200">200</string>
+    <string name="_500">500</string>
+    <string name="_1000">1000</string>
+
+    <string name="Rs10_buy">\u20B910 - BUY</string>
+    <string name="Rs20_buy">\u20B920 - BUY</string>
+    <string name="Rs50_buy">\u20B950 - BUY</string>
+    <string name="Rs100_buy">\u20B9100 - BUY</string>
+
+    <string name="insufficient_balance2">Insufficient Wallet Balance</string>
+    <string name="insufficient_balance">Insufficient Game Wallet Balance</string>
+    <string name="insufficient_balance1">Insufficient Bonus Wallet Balance</string>
+    <string name="min_balance">\u20B930</string>
+    <string name="password">Password</string>
+    <string name="logging_in_please_wait">Logging in please wait..</string>
+
+    <string name="please_enter_valid_mobile_number">Please enter valid mobile number</string>
+    <string name="please_enter_valid_email_address">Please enter valid email address</string>
+    <string name="invalid_password_error_message">Password must contain at least one number and one uppercase and lowercase letter,and one symbol and at least 6 or more characters</string>
+    <string name="users">users</string>
+    <string name="account_created_successfully">Account created successfully</string>
+    <string name="verification_mail_is_sent_to_your_account">Verification mail is sent to your account</string>
+    <string name="creating_account_please_wait">Creating account please wait..</string>
+    <string name="sign_up">SignUp</string>
+    <string name="Are_you_sure_do_you_want_to_exit">Are you sure do you want to exit?</string>
+
+
+    <string name="categories">Categories</string>
+    <string name="price">Price</string>
+    <string name="no_table_found">No table found</string>
+    <string name="start">Start</string>
+    <string name="getStarted">Get Started</string>
+    <string name="sign_in_to_play">Sign In to Play</string>
+    <string name="otp_will_be_sent_to_this_number">OTP will be sent to this number \n for verification</string>
+    <string name="registration_desc">Enter your mobile number to receive a verification code.</string>
+    <string name="onboarding_desc">Well you have thus come this far! \n We are glad to have you onboarded</string>
+    <string name="have_a_referral_code">Have a referral code?</string>
+    <string name="next">Next</string>
+    <string name="get_code">Get Code</string>
+    <string name="verify_code">Verify Code</string>
+    <string name="country_code">Country Code</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="call_me">Call me</string>
+    <string name="can_retry_in">Retry in</string>
+    <string name="verification_code_text">Please enter verification code sent\n to</string>
+    <string name="not_a_valid_referral_code">Not a valid referral code</string>
+
+    <string name="name">Name</string>
+    <string name="please_enter_valid_otp">Please enter valid otp</string>
+
+    <string name="welcome_aboard">Welcome Aboard!</string>
+    <string name="upload_profile_photo">Upload Profile Photo</string>
+    <string name="enter_real_name">Enter Your Real Name</string>
+    <string name="enter_user_name">Choose your screen name</string>
+    <string name="confirm">CONFIRM</string>
+
+    <string name="enter_referral_code">Enter referral code</string>
+
+    <string name="done">Done</string>
+    <string name="intent_coming_from_PlayersJoined">Coming From</string>
+    <string name="add_profile_pic">Add Profile Pic</string>
+    <string name="photo">Photo</string>
+    <string name="from_screen">fromScreen</string>
+    <string name="gallery">Gallery</string>
+    <string name="unable_to_select_image">Unable to select image</string>
+    <string name="enter_full_name">Enter your name</string>
+    <string name="please_enter_valid_user_name">Please enter valid userName</string>
+    <string name="please_enter_valid_full_name">Please enter valid full name</string>
+    <string name="please_enter_valid_full_name1">Full name must be minimum of 4 characters</string>
+    <string name="picture_taken">Picture Taken</string>
+    <string name="no_images_found">No images found</string>
+    <string name="no_data_available">No data available</string>
+    <string name="loading_please_wait" tools:ignore="TypographyEllipsis">Loading ...</string>
+    <string name="user_name_already_exists">UserName Already exists</string>
+    <string name="profile_pic">Profile Pic</string>
+
+    <string name="full_name">Full Name</string>
+    <string name="sign_in_successful">Sign In Successful</string>
+    <string name="profile">Profile</string>
+    <string name="play">Play</string>
+    <string name="wallet">Wallet</string>
+    <string name="played">Played</string>
+    <string name="won">Won</string>
+    <string name="earned">Earned</string>
+    <string name="refer_a_friend">Refer a friend and get a game free</string>
+    <string name="congrats">Congrats!</string>
+    <string name="daily_reward">You have just earned your daily claim</string>
+    <string name="claim_now">claim now</string>
+
+    <string name="invitation_message_free">Join me on MonQuiz, the ultimate quiz game. Download now! %s put my Referral Code </string>
+    <string name="invitation_message_pro">Join me on MonQuiz, the ultimate quiz game. Download now! %s or %s put my Referral Code </string>
+    <string name="to_get_bonus">to get bonus</string>
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="audio_effects">Audio Effects</string>
+    <string name="notifications">Notifications</string>
+    <string name="rule_book">Rule Book</string>
+    <string name="feed_back">Game Feedback</string>
+    <string name="logout">Logout</string>
+    <string name="hello_user">Hello User</string>
+
+    <string name="select_an_amount">Select your stake</string>
+    <string name="free">Free</string>
+    <string name="select">Select</string>
+    <string name="play_game">Play Game</string>
+    <string name="select_category">Select Category</string>
+
+    <string name="please_select_a_category">Please select a category</string>
+    <string name="you_are_already_in_the_game">You are already in the game</string>
+    <string name="paying">PAYING</string>
+    <string name="game_money_deduction">\u0020will be deducted from your\nwallet for this game</string>
+    <string name="game_credit_deduction">You will be using up %s free credits\nRemaining Credits - %s</string>
+    <string name="game_credit_and_money_deduction">You will be using up %s free credits\n%s will be deducted from your wallet</string>
+    <string name="dailyquiz_score">Score %s</string>
+    <string name="dailyquiz_your_score">Your Score %s</string>
+    <string name="dailyquiz_time_taken">In %d seconds</string>
+    <string name="dailyquiz_average_stat">Avg number of questions attempted by \n others in 60 seconds is 13</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="food">Food</string>
+
+    <!--// http callback functions-->
+    <string name="get_server_time">getServerTime</string>
+    <string name="get_paytm_checksum">getPaytmChecksum</string>
+    <string name="verify_paytm_transaction">verifyPaytmTransaction</string>
+
+
+    <string name="wait_for_next_game">WAIT FOR NEXT GAME</string>
+    <string name="your_daily_limit_exceeds_500_points">Your daily limit exceeds 1000 points</string>
+    <string name="waiting_for_more_players_to_join">Waiting for more players to join..</string>
+    <string name="waiting_users_to_join">Waiting for opponent to join..%s</string>
+    <string name="game_starting">The Game is about to start</string>
+    <string name="category">Category</string>
+    <string name="table">Table</string>
+    <string name="player">Players</string>
+    <string name="pool">Pool</string>
+    <string name="winning_amount">Today\'s Stats</string>
+    <string name="hash_first">#First</string>
+    <string name="hash_second">#Second</string>
+    <string name="hash_third">#Third</string>
+
+
+    <string name="players">Players</string>
+    <string name="data_tab_name">datatabname</string>
+    <string name="intent_user_count_PlayersJoined">User Count</string>
+    <string name="todays_stats">Today\'s Stats</string>
+    <string name="amount_won">\n Amount won</string>
+    <string name="player_playing">\n Players</string>
+    <string name="winners">\n Winners</string>
+    <string name="players_playing">Players Playing</string>
+    <string name="pool_amount">Pool Amount</string>
+    <string name="winner_one">Winner 1st</string>
+    <string name="fifty_percentage">50%</string>
+    <string name="winner_two">Winner 2nd</string>
+    <string name="winner_three">Winner 3rd</string>
+    <string name="twenty_percentage">20%</string>
+    <string name="thirty_percentage">30%</string>
+    <string name="new_otp_send_to_your_number">New OTP sent to your number</string>
+    <string name="under_development">Under development</string>
+    <string name="invalid_otp_please_try_after_some_time">invalid OTP please try after sometime</string>
+
+    <string name="notification_on_off">NotificationOnOff</string>
+    <string name="audio_on_off">AudioOnOff</string>
+    <string name="are_you_sure_do_you_want_to_sign_out_from_application">Are you sure do you want to signout from appcalition?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="faq">FAQ</string>
+    <string name="sub_topic">SubTopic</string>
+    <string name="faq_topic_name">Topic Name</string>
+    <string name="search">Search</string>
+    <string name="text_my_wallet">My Wallet</string>
+    <string name="add_money">Add Money</string>
+    <string name="redeem_cash">Redeem Cash</string>
+    <string name="recent_transactions">Recent Transactions</string>
+    <string name="your_transactions">Your Transactions</string>
+    <string name="no_recent_transactions">No Recent Transactions</string>
+    <string name="add_money_to_wallet">Add Money to wallet</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="plus_thousand">+1000</string>
+    <string name="plus_five_hundred">+500</string>
+    <string name="plus_hundred">+100</string>
+    <string name="please_enter_valid_amount">Please enter valid amount</string>
+    <string name="get_cash_of">Get Cash of</string>
+    <string name="redeem">Redeem</string>
+    <string name="your_points">Your have \t</string>
+    <string name="are_equivalent_to">\tpoints which is equivalent to \t</string>
+    <string name="redeem_money">\t rupees in the Pro Version.</string>
+    <string name="to_redeem"> To redeem this amount please upgrade the pro version for free and enjoy &amp; earn more.</string>
+    <string name="dob">DOB</string>
+    <string name="pan_number_optional">Pan number</string>
+    <string name="sex">Sex</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="gender">Gender</string>
+    <string name="game_table">Game Table</string>
+    <string name="ten_sec">10 Sec</string>
+    <string name="get_ready_as_game">Get Ready as \n game #</string>
+    <string name="keep_your_phone_charged">Keep your phone charged!</string>
+    <string name="empty">Empty</string>
+    <string name="good_to_know">Good to know</string>
+    <string name="good_attempt_you_gave_your_best">Good Attempt!</string>
+    <string name="good_attempt_you_gave_your_best_1">Good Attempt! You gave your best.</string>
+    <string name="gave_your_best">You gave your best.</string>
+    <string name="correct_answer">Correct Answer</string>
+    <string name="dot2">2.</string>
+    <string name="question">Question</string>
+    <string name="report_a_question"><u>Report a Question!</u></string>
+    <string name="all_good">ALL GOOD!</string>
+    <string name="you_did_not_answer">You didn\'t answer</string>
+    <string name="start_typing">Start typing..</string>
+    <string name="query">Query</string>
+    <string name="submit">Submit</string>
+    <string name="leader_board">Score Board</string>
+    <string name="dashboard_leaderboard">Leaderboard</string>
+
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
+    <string name="player_3">Player 3</string>
+    <string name="no_winner_for_this_game">No winner for this game</string>
+    <string name="join_next_game_scorebaord">\u0020 JOIN NEXT GAME</string>
+    <string name="join_next_game_">YEAH, JOIN NEXT GAME</string>
+    <string name="join_next_game_in">\u0020 \u0020JOIN NEXT GAME IN\u0020</string>
+    <string name="join_next_game_in_play">JOIN NEXT GAME IN\u0020</string>
+    <string name="intent_score_board_details">ScoreBoardDetails</string>
+    <string name="you">(You)</string>
+    <string name="your_daily_limit_of_playing_for_500_points_exceeds">your daily limit of playing for 500 points exceeds.</string>
+    <string name="oops">Oops..</string>
+    <string name="next_game_starts_in">Next game starts in</string>
+    <string name="header_content_rejoin_into_table_dialog">If you continue </string>
+    <string name="paragraph_content_rejoin_into_table_dialog"> will be deducted from your wallet</string>
+    <string name="please_select_an_amount">Please select an amount</string>
+    <string name="my_game_stats">My Game Stats</string>
+    <string name="s_no">S.No.</string>
+    <string name="game_hash">Game#</string>
+    <string name="date">Date</string>
+    <string name="game_result">Result</string>
+    <string name="no_games_played">No games played</string>
+    <string name="no_players_available">No players available</string>
+    <string name="please_try_after_some_time">Please try after some time</string>
+    <string name="please_select_stake">Please select your stake</string>
+    <string name="state">State</string>
+
+    <string name="slide_1_description_1"><b>Knowledge Pays,</b></string>
+    <string name="slide_1_description_2">Use it and earn with us</string>
+    <string name="slide_2_desc">High chances of <b>Winning</b> with\n <b>High Amount</b></string>
+    <string name="slide_3_desc_1">Low stakes and</string>
+    <string name="slide_3_desc_2"><b>High Profits</b></string>
+    <string name="slide_4_desc_1">Play all day, all night long</string>
+    <string name="slide_4_desc_2">with <b>Game Every Minute</b></string>
+    <string name="slide_5_desc_1"><b>Easy game play</b> with simple</string>
+    <string name="slide_5_desc_2">multiple choice questions</string>
+    <string name="slide_5_desc"><b>Easy Game Play</b> with simple \n multiple choice question format</string>
+    <string name="paid">Paid</string>
+    <string name="number_of_players">Number of Players</string>
+    <string name="player_of_the_day">Player of the day</string>
+    <string name="smart_witted">Smart-witted!</string>
+    <string name="games_won">Games Won</string>
+    <string name="quick_witted">Quick-witted!</string>
+    <string name="games_played">Games Played</string>
+    <string name="overall_stats">Overall Stats</string>
+    <string name="your_game">Your \n Game</string>
+    <string name="new_line_pool_amount">\n Pool Amount</string>
+    <string name="point_eight_seven">0.87</string>
+    <string name="invalid_character">Invalid Character</string>
+    <string name="please_enter_valid_referral_code">Please enter valid referral code</string>
+    <string name="you_have_just_earned">You have just earned\n</string>
+    <string name="you_answered_wrong">You answered wrong</string>
+    <string name="for_tie_scenarios_please_refer_n_the_rule_book">For tie scenarios, please refer the Rule Book</string>
+    <string name="debited">Debit</string>
+    <string name="credited">Credit</string>
+    <string name="coin_shop">Coin Shop</string>
+    <string name="my_coins">My Coins</string>
+    <string name="coins">COINS</string>
+
+    <string name="upgrade">Upgrade</string>
+    <string name="coins_won">\u0020Coins</string>
+    <string name="ruppee"></string>
+    <string name="pts">\u0020</string>
+    <string name="before10sec">0:0</string>
+    <string name="after10sec">0:</string>
+    <string name="progress_value">progress_value</string>
+    <string name="victors">\nVictors</string>
+    <string name="winnings">\nWinnings</string>
+    <string name="_2to4" tools:ignore="TypographyDashes">2 - 4</string>
+    <string name="_5to7" tools:ignore="TypographyDashes">5 - 7</string>
+    <string name="_8to10" tools:ignore="TypographyDashes">8 - 10</string>
+    <string name="this_game">This Game</string>
+
+    <string name="time_left_daily_quiz">Time left:</string>
+    <string name="game_begins_in">Game begins in</string>
+    <string name="are_you_ready">Are you ready?</string>
+    <string name="decline">DECLINE</string>
+    <string name="intent_TodayStatActivity">intent_TodayStatActivity</string>
+    <string name="congratulations_text">Congratulations!! \u0020 </string>
+    <string name="congratulations_pascal_case">Congratulations!!</string>
+    <string name="game_lost_text">Ohh.. You lost. Try next Game.</string>
+    <string name="selected_category">Selected Category</string>
+    <string name="daily_limit">Daily Limit</string>
+    <string name="you_answered_in">You answered in\u0020</string>
+    <string name="title_activity_daily_quiz_summary">DailyQuizSummaryActivity</string>
+    <string name="attempted">Attempted</string>
+    <string name="did_not_attempt">Unattempted</string>
+    <string name="correct">Correct</string>
+    <string name="wrong">Wrong</string>
+    <string name="dailyquiz_question_icon_text">Q%s\n%s</string>
+    <string name="daily_quiz_results">Daily Quiz Results</string>
+    <string name="restrict_game_text">you can\'t use this app on these locations due to state laws which restrict game using money games.</string>
+    <string name="make_money_text">Download monquiz Pro and earn real money up to \u20B92500 per day</string>
+    <string name="firebase_token">token</string>
+    <string name="computing_results">Waiting for others to answer\nPlease wait..</string>
+    <string name="please_wait">please wait…</string>
+    <string name="goto_leaderboard">GO TO LEADERBOARD</string>
+    <string name="wallet_balance">Wallet Balance</string>
+    <string name="query_intent_from">from</string>
+    <string name="file_provider_authority">com.event.eventexplorer.fileprovider</string>
+    <string name="game_number">game number</string>
+    <string name="intent_paytm_claim_reference">paytmClaimReference</string>
+    <string name="intent_paytm_claim_user_mobile_number">paytmClaimUserMobile</string>
+
+    <string name="prefs_theme_key">theme</string>
+    <string name="choose_your_question">Select the question you want to ask\nbefore timer runs out</string>
+    <string name="please_check_internet">Please Check Internet connection</string>
+    <string name="quiz_master_table_id">Quiz Master Tabel Id</string>
+    <string name="super_over_table_id">Super Over Table Id</string>
+    <string name="intent_coming_from_Category">intent coming from which category</string>
+    <string name="quiz">\u0020\u0020\u0020Quiz</string>
+    <string name="master">\u0020Master</string>
+    <string name="verify">Verify</string>
+    <string name="quizmaster_picking_question">QuizMaster is picking Question</string>
+    <string name="faq_content">FAQ Content Array</string>
+    <string name="quiz_master_wait_message">Waiting for the Quiz Master %s to throw the next question</string>
+    <string name="quiz_master_round_wait_message">Round in progress..</string>
+    <string name="round_header">Round #%s</string>
+    <string name="won_super_over">by %s Runs</string>
+    <string name="lose_super_over">Lost by %s Runs</string>
+
+    <string-array name="avatars_urls">
+        <item>https://owlizz.page.link/av1</item>
+        <item>https://owlizz.page.link/av2</item>
+        <item>https://owlizz.page.link/av3</item>
+        <item>https://owlizz.page.link/av4</item>
+        <item>https://owlizz.page.link/av5</item>
+        <item>https://owlizz.page.link/av6</item>
+        <item>https://owlizz.page.link/av7</item>
+        <item>https://owlizz.page.link/av8</item>
+        <item>https://owlizz.page.link/av9</item>
+        <item>https://owlizz.page.link/av10</item>
+        <item>https://owlizz.page.link/av11</item>
+        <item>https://owlizz.page.link/av12</item>
+
+    </string-array>
+
+    <string-array name="states">
+        <item>Select State</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chhattisgarh</item>
+        <item>Goa</item>
+        <item>Gujrat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Kerala</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Punjab</item>
+        <item>Rajsthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+
+
+    </string-array>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="by_clicking_next">By clicking Next, you agree to the \u0020</string>
+    <string name="pro_apk_bucket_reference">gs://proapkupload-7207d-wktz3/</string>
+    <string name="mobile_email">Mobile &amp; Email</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_state">User State</string>
+    <string name="as_player_desc">Answer the set of questions displayed to you. Your quiz master earns the points for your wrong answer.</string>
+    <string name="as_player">As a Player</string>
+    <string name="as_a_quiz_master">As a Quiz Master</string>
+    <string name="as_quiz_master_desc">Pick a question for another player. You earn the points for player\'s wrong answer.</string>
+    <string name="before_you_play">BEFORE YOU PLAY!</string>
+    <string name="compnay_address" tools:ignore="TypographyDashes">ESTD TECHVENTURES PRIVATE LIMITED #402,\n 1-112/1/KSNR/4, 02, SHILPA PARK SERILINGAMPALLY,\n KONDAPUR,HYDERABAD,\nTELANGANA - 500081\nTEL NO - 9730674002 </string>
+    <string name="close_application">Are you sure want close application, your game progress will be lost.</string>
+    <string name="game_progress_lost">Your current game progress will be lost.</string>
+    <string name="exit_from_game">Exit from the game</string>
+    <string name="exit">EXIT</string>
+    <string name="title_activity_superover_scoreboard">SuperoverScoreboardActivity</string>
+    <string name="lost">Lost</string>
+    <string name="won_pascal_case">Won</string>
+    <string name="matchset">Match is set. Be ready.</string>
+    <string name="pan_card_desc">Disclaimer: It is mandatory to share PAN number to withdraw money as per RBI regulations. Pan Card Verification is done by a Third Party. Please read privacy policy for more details</string>
+    <string name="account_desc">Please enter your account details to redeem your winnings amount </string>
+    <string name="user_desc">Please enter your Full name and Game UserName to play Our Game </string>
+    <string name="full_name_card">Full Name On The Card</string>
+    <string name="share_desc">Share the code to at least 3 friends and get an amount of 25 bonus wallet when your friends play at least 1 game with game wallet money.</string>
+   <!-- Match is set. Be ready.-->
+    <string name="your_string_here"><u>Super Over Rules</u>.</string>
+    <string name="bwallet_hint1">Players can use a maximum of 50% of stake money from bonus wallet while playing a game. \n\nFor example: \nFor a game with stake Rs50, a maximum of Rs25 (50%) can be utilised from Bonus Wallet if available. On winning or a tie situation, the amount utilised from Bonus Wallet would be placed back on to the Bonus Wallet. \n\nFor the above example, Rs25 would go into the Bonus Wallet and the remaining winning amount would go into Game Wallet.</string>
+</resources>
+

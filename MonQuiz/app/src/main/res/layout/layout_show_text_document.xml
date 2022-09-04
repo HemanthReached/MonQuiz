@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+   <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="6"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_of_value_sixteen">
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvshowDocumentTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Terms and Conditions"
+                android:textColor="@color/white"
+                android:textSize="@dimen/layout_title_font_size"
+                fonts:custom_font="@string/rubik_regular"
+                tools:ignore="RtlSymmetry" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlshowDocumentBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_of_value_sixteen">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_back_white"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="@dimen/size_of_value_sixteen">
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvshowDocumentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Terms and Conditions"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/rubik_bold"
+            android:layout_centerVertical="true"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/rlshowDocumentBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_black"
+            android:contentDescription="@string/app_name"
+            android:padding="1dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E1E2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvshowDocumentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:padding="@dimen/size_of_value_eight"
+            android:textAlignment="textStart"
+            android:textColor="@color/white" />
+    </ScrollView>
+
+    <WebView
+        android:id="@+id/termswebview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"/>
+
+</LinearLayout>

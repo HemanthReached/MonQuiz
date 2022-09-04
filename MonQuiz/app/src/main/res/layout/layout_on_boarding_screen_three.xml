@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:alpha="0.5"
+        app:srcCompat="@drawable/ic_bg"
+        android:contentDescription="@string/app_name" />
+
+    <!--<ImageView-->
+    <!--android:id="@+id/slide3Icon"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:contentDescription="@string/imageview"-->
+    <!--android:src="@drawable/on3" />-->
+
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvTitleOne"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/slide_3_desc_1"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/font_size_of_value_twenty"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toTopOf="@id/textH2"
+        app:layout_constraintEnd_toStartOf="@id/textV2"
+        app:layout_constraintStart_toStartOf="@id/textV1"
+        app:layout_constraintTop_toBottomOf="@id/textH1"
+        fonts:custom_font="@string/rubik_regular" />
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvTitleTwo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/slide_3_desc_2"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/font_size_of_value_twenty"
+        android:gravity="top"
+        app:layout_constraintBottom_toTopOf="@id/textH2_1"
+        app:layout_constraintEnd_toStartOf="@id/textV2"
+        app:layout_constraintStart_toStartOf="@id/textV1"
+        app:layout_constraintTop_toBottomOf="@id/textH1_1"
+        fonts:custom_font="@string/rubik_regular" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeRupees"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_rupees"
+        app:layout_constraintBottom_toTopOf="@id/rupeesH2"
+        app:layout_constraintTop_toBottomOf="@id/rupeesH1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsOne"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coins1"
+        app:layout_constraintBottom_toTopOf="@id/coins1H2"
+        app:layout_constraintEnd_toStartOf="@id/coins1V2"
+        app:layout_constraintStart_toStartOf="@id/coins1V1"
+        app:layout_constraintTop_toBottomOf="@id/coins1H1" />
+
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsTwo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coins2"
+        app:layout_constraintBottom_toTopOf="@id/coins2H2"
+        app:layout_constraintEnd_toStartOf="@id/coins2V2"
+        app:layout_constraintStart_toStartOf="@id/coins2V1"
+        app:layout_constraintTop_toBottomOf="@id/coins2H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsThree"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coins3"
+        app:layout_constraintBottom_toTopOf="@id/coins3H2"
+        app:layout_constraintEnd_toStartOf="@id/coins3V2"
+        app:layout_constraintStart_toStartOf="@id/coins3V1"
+        app:layout_constraintTop_toBottomOf="@id/coins3H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear2"
+        app:layout_constraintBottom_toTopOf="@id/coinsD1H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD1V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD1V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD1H1" />
+
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear1"
+        app:layout_constraintBottom_toTopOf="@id/coinsD2H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD2V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD2V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD2H1" />
+
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear3"
+        app:layout_constraintBottom_toTopOf="@id/coinsD3H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD3V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD3V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD3H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear5"
+        app:layout_constraintBottom_toTopOf="@id/coinsD4H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD4V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD4V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD4H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear4"
+        app:layout_constraintBottom_toTopOf="@id/coinsD6H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD6V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD6V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD6H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear1"
+        app:layout_constraintBottom_toTopOf="@id/coinsD5H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD5V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD5V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD5H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear3"
+        app:layout_constraintBottom_toTopOf="@id/coinsD7H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD7V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD7V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD7H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear3"
+        app:layout_constraintBottom_toTopOf="@id/coinsD8H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD8V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD8V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD8H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear4"
+        app:layout_constraintBottom_toTopOf="@id/coinsD9H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD9V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD9V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD9H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear4"
+        app:layout_constraintBottom_toTopOf="@id/coinsD10H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD10V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD10V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD10H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear2"
+        app:layout_constraintBottom_toTopOf="@id/coinsD11H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD11V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD11V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD11H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear5"
+        app:layout_constraintBottom_toTopOf="@id/coinsD12H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD12V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD12V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD12H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeCoinsD13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_coin_disappear2"
+        app:layout_constraintBottom_toTopOf="@id/coinsD13H2"
+        app:layout_constraintEnd_toStartOf="@id/coinsD13V2"
+        app:layout_constraintStart_toStartOf="@id/coinsD13V1"
+        app:layout_constraintTop_toBottomOf="@id/coinsD13H1" />
+
+    <ImageView
+        android:id="@+id/ivSlideThreeGirl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_girl"
+        app:layout_constraintBottom_toTopOf="@id/girlH2"
+        app:layout_constraintEnd_toStartOf="@id/girlV2"
+        app:layout_constraintStart_toStartOf="@id/girlV1"
+        app:layout_constraintTop_toBottomOf="@id/girlH1" />
+
+
+    <ImageView
+        android:id="@+id/ivSlideThreePhone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_onboarding3_mobile"
+        app:layout_constraintBottom_toTopOf="@id/phoneH2"
+        app:layout_constraintEnd_toStartOf="@id/phoneV2"
+        app:layout_constraintStart_toStartOf="@id/phoneV1"
+        app:layout_constraintTop_toBottomOf="@id/phoneH1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/girlH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.385" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/girlH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/girlV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.395" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/girlV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.707" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/phoneH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.51" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/phoneH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.815" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/phoneV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/phoneV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.76" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coins1H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coins1H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.417" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coins1V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coins1V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.72" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coins2H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coins2H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.315" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coins2V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coins2V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.73" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coins3H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coins3H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.423" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coins3V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.205" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coins3V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rupeesH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rupeesH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rupeesV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rupeesV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textH1_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textH2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/textV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD1H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD1H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD1V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD1V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD2H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD2H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD2V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD2V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD3H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD3H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD3V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD3V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD4H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD4H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD4V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.42" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD4V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.51" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD5H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD5H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD5V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD5V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD6H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.56" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD6H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD6V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD6V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD7H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD7H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD7V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD7V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD8H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD8H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD8V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD8V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD9H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD9H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD9V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD9V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.77" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD10H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD10H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD10V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD10V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD11H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD11H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD11V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD11V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD12H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD12H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD12V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD12V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD13H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD13H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.19" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD13V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD13V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD14H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD14H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD14V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/coinsD14V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <!--<rmgquizustomviews.CustomTextView-->
+    <!--android:id="@+id/slide3desc"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/size_of_value_twenty"-->
+    <!--fonts:custom_font="@string/rubik_regular"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:text="@string/slide_3_desc"-->
+    <!--android:textAlignment="center"-->
+    <!--android:textColor="@color/dark_blue"-->
+    <!--android:textSize="18sp" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

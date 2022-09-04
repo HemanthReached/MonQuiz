@@ -1,0 +1,3 @@
+rootProject.name = "Owliz"
+include ':app'
+include ':library'

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/size_of_value_sixteen"
+            android:orientation="vertical"
+            android:padding="@dimen/size_of_value_sixteen">
+
+            <ImageView
+                android:id="@+id/ivAddMoneyClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_close_black"
+                android:contentDescription="@string/app_name" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="@string/add_money"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:fontFamily="@font/rubik_semibold"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/balance_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="35dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/header_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/tvAddMoneyWalletBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Rs0"
+                    android:textColor="@color/black"
+                    android:textSize="36sp"
+                    android:fontFamily="@font/rubik_light" />
+
+                <com.monquiz.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Game Wallet Balance"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/rubik_light" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llAddMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/size_of_value_twenty"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:gravity="center">
+
+            <com.monquiz.customviews.CustomEditText
+                android:id="@+id/etAddMoneyAddedMoney"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionGo"
+                android:inputType="number"
+                android:maxLength="7"
+                android:gravity="center"
+                android:padding = "14dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:hint="Enter amount to add"
+                android:fontFamily="@font/rubik_regular"
+                android:backgroundTint="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintTop_toBottomOf="@id/llAddMoney"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.monquiz.customviews.CustomButton
+                    android:id="@+id/tvAddMoneyRs100"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_border_blue"
+                    android:text="@string/Rs100"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlue"
+                    android:fontFamily="@font/rubik_regular" />
+
+                <com.monquiz.customviews.CustomButton
+                android:id="@+id/tvAddMoneyRs50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                    android:layout_marginStart="20dp"
+                android:background="@drawable/bg_btn_border_blue"
+                android:text="@string/Rs50"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlue"
+                android:fontFamily="@font/rubik_regular"  />
+
+                <com.monquiz.customviews.CustomButton
+                android:id="@+id/tvAddMoneyRs30"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_border_blue"
+                android:text="@string/Rs30"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlue"
+                android:fontFamily="@font/rubik_regular"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.5"/>
+
+                <com.monquiz.customviews.CustomButton
+                    android:id="@+id/tvAddMoneyRs20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_border_blue"
+                    android:text="@string/Rs20"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlue"
+                    android:fontFamily="@font/rubik_regular"  />
+
+                <com.monquiz.customviews.CustomButton
+                    android:id="@+id/tvAddMoneyRs10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/bg_btn_border_blue"
+                    android:text="@string/Rs10"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlue"
+                    android:fontFamily="@font/rubik_regular"  />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="60dp"
+            android:gravity="center">
+
+            <com.monquiz.customviews.CustomButton
+                android:id="@+id/btnAddMoneyNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bluebg_curved"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:enabled="false"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_of_value_eighteen"
+                fonts:custom_font="@string/rubik_bold"
+                android:alpha="0.5"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_question"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="10"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_of_value_sixteen">
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvFAQSubItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/layout_title_font_size"
+                fonts:custom_font="@string/rubik_regular"
+                tools:ignore="RtlSymmetry" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlFAQSubBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_of_value_sixteen">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_back_white"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_border_white_faq"
+            android:orientation="horizontal"
+            android:padding="7dp"
+            tools:ignore="UselessParent">
+
+            <com.monquiz.customviews.CustomEditText
+                android:id="@+id/etFAQSubSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/size_of_value_five"
+                android:layout_marginLeft="@dimen/size_of_value_five"
+                android:layout_weight="90"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_search"
+                android:drawableLeft="@drawable/ic_search"
+                android:drawablePadding="@dimen/size_of_value_ten"
+                android:hint="@string/search"
+                android:imeOptions="actionGo"
+                android:inputType="text"
+                android:paddingStart="@dimen/size_of_value_five"
+                android:paddingLeft="@dimen/size_of_value_five"
+                android:paddingEnd="@dimen/size_of_value_five"
+                android:paddingRight="@dimen/size_of_value_five"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white_80"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <ImageView
+                android:id="@+id/ivFAQSubClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:contentDescription="@string/app_name"
+                fonts:srcCompat="@drawable/ic_close_white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFAQSub"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size_of_value_five"
+        android:layout_weight="70"
+        android:background="@color/white"
+        android:overScrollMode="never" />
+
+</LinearLayout>

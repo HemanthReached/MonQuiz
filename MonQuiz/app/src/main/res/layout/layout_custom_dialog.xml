@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlCustomDialogParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/lllview"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/rlCustomDialog"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/lllview"
+        android:background="@drawable/bg_white_curve"
+        android:orientation="vertical"
+        android:padding="5dp"
+        tools:ignore="RtlSymmetry">
+
+        <!--<ImageView
+            android:id="@+id/ivCustomDialogBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:scaleX="1.3"
+            android:scaleY="2.3"
+            app:srcCompat="@drawable/app_background_white" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvCustomDialogHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="Time for an Upgrade"
+                android:textAlignment="center"
+                android:textColor="@color/clr_bg_gradient_end"
+                android:textSize="@dimen/font_size_of_value_eighteen"
+                fonts:custom_font="@string/rubik_medium" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvCustomDialogDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="Please, update app to new version to continue play game."
+                android:textAlignment="center"
+                android:textColor="@color/black_100"
+                android:textSize="@dimen/font_size_of_value_sixteen"
+                fonts:custom_font="@string/rubik_light" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.monquiz.customviews.CustomButton
+                    android:id="@+id/btnCustomDialogCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/bg_btn_white_grey_border"
+                    android:gravity="center"
+                    android:text="Cancel"
+                    android:textColor="@color/black_54"
+                    android:visibility="visible" />
+
+                <com.monquiz.customviews.CustomButton
+                    android:id="@+id/btnCustomDialogOk"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/bg_btn_white_grey_border"
+                    android:gravity="center"
+                    android:text="OK"
+                    android:textColor="@color/clr_bg_gradient_end" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivCustomDialogIcon"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:contentDescription="@string/app_name"
+        android:scaleX="1.06"
+        app:srcCompat="@drawable/ic_logout" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/ivCustomDialogGif"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:visibility="invisible" />
+    <!--<-add this attribute after get gif image.->
+    <!-android:src="@drawable/ic_upgrade_anim3"-->
+
+</RelativeLayout>

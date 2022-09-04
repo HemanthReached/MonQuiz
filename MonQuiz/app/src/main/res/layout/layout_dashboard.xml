@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fonts="http://schemas.android.com/tools"
+    android:background="@drawable/bg_dashboard">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/dashboardFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="90"
+            android:background="@color/transparent"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="-24dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/whitebg_topradius"
+                app:itemBackground="@android:color/transparent"
+                app:itemTextColor="@drawable/bg_bottom_navigation"
+                app:menu="@menu/bottom_navigation_menu"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/whitebg_topradius"
+                android:paddingBottom="12dp"
+                android:paddingTop="15dp">
+
+                <LinearLayout
+                    android:id="@+id/profile_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        fonts:srcCompat="@drawable/profile_icon1"
+                        android:contentDescription="@string/app_name" />
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Profile"
+                        android:textColor="@color/black"
+                        android:paddingVertical="4dp"
+                        android:paddingHorizontal="20dp"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/play_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivPlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        fonts:srcCompat="@drawable/monkey_headnav"
+                        android:contentDescription="@string/app_name" />
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvPlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Play"
+                        android:textColor="@color/white"
+                        android:paddingVertical="4dp"
+                        android:paddingHorizontal="20dp"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:background="@drawable/bluebg_curved"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wallet_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivWallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        fonts:srcCompat="@drawable/wallet_icon1"
+                        android:contentDescription="@string/app_name" />
+
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvWallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Wallet"
+                        android:textColor="@color/black"
+                        android:paddingVertical="4dp"
+                        android:paddingHorizontal="20dp"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

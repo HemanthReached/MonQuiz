@@ -1,0 +1,23 @@
+
+
+QUIZMASTERS
+
+This quiz is also a part of the free version right now will be introduced in the money version Later
+
+1.	In Quizmasters, the users will ask questions to each other from the pack of selected questions provided by the game.
+ 
+2.	Maximum 10 people can participate in a game. Every user will have to place the same bet
+
+3.	Every user will become the quiz master for 1 round and ask 1 question to other present users
+
+4.	User will select your question from a pack of three questions provided to them
+
+5.	Game rounds will depend on the number of users, consider this scenario
+
+a.	If there are 5 users at the Rs 10 table then the pooled amount is Rs 50 
+b.	There will be 5 rounds of game where every user will ask 1 question worth Rs 10 to rest of the 4 players
+c.	In every round the winning of Rs 10/4 = Rs 2.5 will be awarded to everyone who answers it correctly, lets say 1 user answered correctly he will get 2.5 points and the rest 7.5 points will be awarded to quizmaster
+ 
+8.	Users can redeem their winnings whenever they want
+
+9.	Once you redeem your winnings the amount will be transferred to your PayTm Wallet after 24 HRS

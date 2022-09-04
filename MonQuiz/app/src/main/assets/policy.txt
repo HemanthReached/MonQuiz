@@ -1,0 +1,95 @@
+                             MonQuiz - Privacy Policy
+
+By visiting and/or accessing our website www.MonQuiz.in ("Website"), or the MonQuiz/ MonQuiz Pro mobile applications ("Apps", together "Platforms"), you agree to be bound by the terms of this Privacy Policy ("Policy"). This Policy is a part of the Terms of Use available at https://www.MonQuiz.in/terms.html ("Terms"). Unless otherwise defined in this Policy, terms used in this Privacy Policy have the same meanings as in our Terms of Use.
+
+The terms "we", "us", "our", "Company" shall mean ESTD Techventures Private Limited ("Company", which expression shall, wherever the context permits, admits or requires, be deemed to mean and include its successors in interest and permitted assigns) which operates the Platforms. The Company offers you a platform via the Platforms through which you can play the games offered by the Company as per the Terms. The terms "you", "your" or "user" refers to any natural or legal person who has agreed to become a registered user on the Platforms by providing information while registering on the Platforms or who accesses/visits the Platforms.
+This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our services or access the Platforms. We assure you that all personal information furnished to us whether via the Platforms or otherwise is maintained with the utmost confidentiality and is unshared under most circumstances (unless specially solicited by us and permitted by you or required by law). We respect your privacy and wish you a hassle-free experience with our Platforms. 
+
+1.	Legal Compliance
+
+The Company takes a proactive approach to user privacy and ensures that all reasonable steps are taken to protect the privacy of its users throughout their visiting experience. The Platforms comply with all relevant laws for user privacy; specifically this Policy has been made pursuant to the provisions of the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 issued by the Government of India in exercise of the powers conferred by Section 87(2)(ob) read with Section 43A of the Indian Information Technology Act, 2000.  
+
+2.	Navigating Our Platforms
+
+Most sections of our Platforms can be viewed without furnishing any of your personal information. Certain sections of the Platforms allow only restricted access and you could be asked for your personal information for identification / authentication purposes and granting access. 
+
+3.	Registration and Company services
+
+"	Users can register on the Platforms by fulfilling the information requirements. The information collected during the registration process (e.g. name, address, e-mail, contact numbers, identity proof, etc.) is used to identify you as a user and sending you requested information from time to time. Please find below the list of the Information that will be collected from the User
+o	Name
+o	Mobile Number
+o	Email Id
+o	Pan Card Details (In case of Winnings exceeding Rs 10,000) 
+o	Bank Account (In case of Direct Money Transfer Only)
+"	During the registration process, the Company indicates fields that are mandatorily required to be filled and fields that are optional. In the event the user chooses to decline to submit information on the Platforms, the Company may not be able to provide certain services and shall not be liable or responsible for non-provision of such services to the user. Any information freely available and/or accessible in the public domain will not be considered as sensitive and confidential.
+
+"	The Company may use and store information about your location if you give us permission to do so. We may also derive your approximate location from your IP address. The Company may also collect information about your mobile/hardware device, including, for example, the hardware model, your mobile device unique ID, the IP address of your mobile device, operating system and version, software and file names, preferred language, unique device identifier, advertising identifiers, serial number, device motion information, and mobile network information.
+
+"	Data with regard to the usage of resources on the Platforms also constitutes personal information and could be used for analysis of our services and to enhance the value of our offerings with time.  For instance, we will store information about your Platform visits, games played, games won and other game statistics in relation to your interactions on the Platform.
+
+"	Subscription to listed electronic communication services may result in communications from the Company. The option to unsubscribe is provided along with all online communications.
+
+4.	Use of Data 
+
+"	You acknowledge, consent and agree that the Company may use, access, preserve and disclose your account information if required to do so by law or in a good faith belief that such access, preservation or disclosure is reasonably necessary to:
+o	provide our services and maintain our Platforms
+o	allow you to participate in interactive features of our Platforms when you choose to do so
+o	gather analysis or information so we can improve our products and services and measure consumer interest in our services 
+o	if you have opted to receive, provide you with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about 
+o	detect and protect us against error, fraud and other criminal activity and to enforce the Terms of Use and this Privacy Policy
+o	resolve disputes that may arise with the use of our services
+o	protect the rights, property or personal safety of the Company, its users and the public
+o	for internal record keeping
+
+"	Further, the Company may use, retain and disclose your information to (i) comply with any applicable law or legal notice/order requiring the Company to obtain, verify, and record information that identifies each user, and (ii) evaluate the user"s eligibility for an account, which may involve disclosure to consumer reporting agencies, commercial credit bureaus, and relevant financial institutions. If the user opens an account, or becomes a member, the Company may disclose the user"s information during the course of providing such services to card associations, banks and other financial institutions that are involved in the course of processing or screening the transaction, and to third parties that have contracted with the Company to perform certain functions of our services on our behalf. In addition, the Company may use, or disclose user information to third parties for the additional purposes of facilitating and completing user-initiated or authorized transactions, complying with applicable laws, including credit reporting laws and card association rules, assisting in preventing fraud, card association rules, and industry trends, offering products and services that may be of interest to the user, or as otherwise may be permitted or required by applicable law.
+
+5.	Security of Information
+
+"	The security of your data is important to us. All information is encrypted and saved/stored on servers or our cloud database, which are secured with passwords and pins to ensure no unauthorized person has access to it. [The Platforms have added the ability to generate a keypair, address validation and easy data searches, amongst other features. Any personal or private information required for running these features is held on the server, and Company does not store or track any such information. The Platforms is certified with SSL Certificate, therefore all data is directly moved between your system and the server.]
+o	Every info or User data that we collect is securely stored within controlled database, the database is maintained on Servers secured behind a firewall, which is protected by Server"s Authentication & Security protocols which are best in Industry Standards. The access to our server and database is password-protected and strictly limited and based on need-to-know basis.
+
+"	Once your information is in our possession, we adhere to strict security guidelines, protecting it against unauthorized access. However, remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. We will inform you within 72 hours in case of any breach of security to your data. We cannot protect any information that you make available to the general public " for example, on message boards or in chat rooms. If you encounter any security breach, please inform us at support@MonQuiz.in. and our team will respond immediately and act accordingly.
+
+6.	Sharing of Information
+
+By visiting our Platforms and/or by providing your information and/or by availing our services, you consent to the collection, storage and use of the information you disclose on our Platforms in accordance with this Privacy Policy, including but not limited to, your consent for sharing your information as per this Privacy Policy. All user information collected by us through the Platforms is maintained confidentially and not consciously shared with any third parties other than in the following circumstances:
+
+(i)	Shared with the Company"s affiliate entities for marketing and advertising requirements in relation to our services;
+(ii)	transferred, sold or divulged to third parties with your specific consent; 
+(iii)	Shared with those who provide to us or affiliate entities products or services that support the services that we provide;
+(iv)	anyone we transfer our business to in respect of which you are a customer or a potential customer;
+(v)	as provided in this privacy policy;
+(vi)	if required by governmental, regulatory or law enforcement agencies.
+
+
+
+
+7.	Cookies
+
+The Website uses cookies to better the users" experience while visiting the Website. Cookies are small files saved on the user"s computer hard drive that track, save and store information about the user"s interactions and usage of the Website. This allows the Website, through its server to provide the users with a tailored experience within the Website. Users are advised that if they wish to stop the use and saving of cookies from the Website on to their computer hard drive they should take necessary steps within their own web browser"s security settings to block all cookies from the Website and its external serving vendors.
+
+Other cookies may be stored to your computer"s hard drive by external vendors when the Platforms use referral programs, sponsored links or adverts. Such cookies are used for conversion and referral tracking and typically expire after 30 days, though some may take longer. No personal information is stored, saved or collected other than with specific consent.
+
+8.	Inquiries 
+
+When the user completes and submits a form on our Platform, sends us an e-mail, or contacts us by telephone or any other means to solicit information about our services or the Company in general, the Company may store the inquiries and their contents. Information submitted by the users via an inquiry is collected only with their knowledge and active participation, and may be used by the Company to respond to inquiries, contact the user, inform the user of services of the Company or its affiliates that may be of use to the user, and for similar business purposes. 
+
+9.	Protection of Cardholder Data and Customer Data
+
+The Company has implemented various measures, including appropriate administrative, technical and physical safeguards, designed to ensure the security and confidentiality of customer data and customer financial data, protect against anticipated threats or hazards to the security or integrity of such information, and protect against unauthorized access to or use of such information. Such measures may include, among others, encryption, physical access security and other appropriate technologies. The Company continually reviews and enhances its security systems, as necessary and is subject to the detailed rules and regulations of the various payment organizations and networks (i.e. VISA, MasterCard, RuPay, Paytm, etc.), relating to the security and safeguarding of customer financial data. The Company endeavors to, but is under no obligation to, comply with all such rules at all times and pursuant thereto it is required to undergo periodic third-party assessments and periodic network scans to ensure that, among other things, the Company has installed and maintains a firewall configuration to protect data; does not use vendor-supplied defaults for system passwords and other security parameters; protects stored data; encrypts transmission of customer financial data and sensitive information across public networks; uses and regularly updates anti-virus software; develops and maintains secure systems and applications; tracks and monitors all access to network resources and customer financial data; and restricts physical access to customer financial data. 
+
+
+10.	Links to Other Sites
+
+Our Platforms may contain links to other sites that are not operated by us. Additionally, we may use third-party advertising companies to serve advertisements when you visit our Platforms based on the information shared by you. If you click on a third-party link, you will be directed to that third party's site. These companies may additionally use information about your visits to this and other platforms to provide advertisements about services of interest to you. We strongly advise you to review the privacy policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies or practices of any third-party sites or services.
+
+11.	No Liability 
+
+The Company confirms that this Privacy Policy is only a description of its policies and its endeavors regarding user information. This Policy is not intended to and does not create any legal rights in favour of the users or any other person. The Company reserves the right to amend this Policy at any time without giving prior notice. The liability of the company shall be limited to removal of sensitive personal data of the user from the system.
+
+12.	Corrections and Grievance Redressal
+
+2.	The Company shall provide you access to your information, upon request from you, and shall further ensure that any information found to be inaccurate or deficient shall be corrected upon request by you. You may at any time, download your data by contacting us. We may decline to process requests that are unreasonable or extremely impractical or jeopardize the privacy of others. Even after you delete your information, residual copies may remain in our backup systems.
+
+3.	The Company will take reasonable steps to ensure that the personal information it collects, uses or discloses is accurate, complete, up-to-date and stored in a secure environment protected from unauthorized access, modification or disclosure. In case of any concerns or grievances the privacy officer and grievance officer can be contacted at support@MonQuiz.in.
+

@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "794146196969",
+    "project_id": "monquiz-f264e",
+    "storage_bucket": "monquiz-f264e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794146196969:android:8893fdc3bb5b132c598f78",
+        "android_client_info": {
+          "package_name": "com.monquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794146196969-vb5r9u2k6vi4ois727iqnuua5rjbgg8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPbJJhAbynTvOFgumoEvQOC1C8EVFI_f0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794146196969-vb5r9u2k6vi4ois727iqnuua5rjbgg8h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794146196969:android:41c2dbf2a9b41059598f78",
+        "android_client_info": {
+          "package_name": "com.monquiz.pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794146196969-vb5r9u2k6vi4ois727iqnuua5rjbgg8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPbJJhAbynTvOFgumoEvQOC1C8EVFI_f0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794146196969-vb5r9u2k6vi4ois727iqnuua5rjbgg8h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

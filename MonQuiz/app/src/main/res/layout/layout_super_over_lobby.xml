@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lobbybackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/gdhTop"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_bg_symbols"/>
+
+    <ImageView
+        android:id="@+id/ivStumps"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gdhstumps"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_stumps_broken_big"/>
+
+    <ImageView
+        android:id="@+id/ivPitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/ic_redball_big"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        app:layout_constraintBottom_toTopOf="@id/gdhPitch"
+        app:layout_constraintTop_toBottomOf="@id/gdhPitch"
+        android:contentDescription="" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivLobbyUserPic"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintLeft_toRightOf="@id/gdvHelmet1"
+        app:layout_constraintRight_toLeftOf="@id/gdvHelmet1"
+        app:layout_constraintBottom_toBottomOf="@id/gdhImages"
+        android:src="@drawable/ic_default_icon"
+        app:civ_border_color="@color/clr_bg_gradient_start"
+        app:civ_border_width="1.5dp"
+        app:civ_fill_color="@color/white" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivLobbyOpponentPic"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintLeft_toRightOf="@id/gdvHelmet2"
+        app:layout_constraintRight_toLeftOf="@id/gdvHelmet2"
+        app:layout_constraintBottom_toBottomOf="@id/gdhImages"
+        android:src="@color/white"
+        app:civ_border_color="@color/clr_bg_gradient_start"
+        app:civ_border_width="1.5dp"
+        app:civ_fill_color="@color/white" />
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvLobbyUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/gdvHelmet1"
+        app:layout_constraintRight_toLeftOf="@id/gdvHelmet1"
+        app:layout_constraintTop_toBottomOf="@id/gdhImages"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/clr_bg_gradient_start"
+        android:textSize="16sp"
+        fonts:custom_font="@string/rubik_regular" />
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvLobbyOpponentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/gdvHelmet2"
+        app:layout_constraintRight_toLeftOf="@id/gdvHelmet2"
+        app:layout_constraintTop_toBottomOf="@id/gdhImages"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/clr_bg_gradient_start"
+        android:textSize="16sp"
+        fonts:custom_font="@string/rubik_regular" />
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvQuestionMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/ivLobbyOpponentPic"
+        app:layout_constraintRight_toLeftOf="@id/ivLobbyOpponentPic"
+        app:layout_constraintTop_toBottomOf="@id/ivLobbyOpponentPic"
+        app:layout_constraintBottom_toTopOf="@id/ivLobbyOpponentPic"
+        android:gravity="center"
+        android:text="?"
+        android:textAlignment="center"
+        android:textColor="#186b8f"
+        android:textSize="22sp"
+        fonts:custom_font="@string/rubik_regular" />
+
+    <ImageView
+        android:id="@+id/usercapview"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/ic_bluecap"
+        app:layout_constraintLeft_toRightOf="@id/gdvHelmet1"
+        app:layout_constraintRight_toLeftOf="@id/gdvHelmet1"
+        app:layout_constraintBottom_toTopOf="@id/gdhImages"
+        android:layout_marginBottom="44dp"
+        android:contentDescription="" />
+
+    <ImageView
+        android:id="@+id/opponentcapview"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/ic_yellowcap"
+        app:layout_constraintLeft_toRightOf="@id/gdvHelmet2"
+        app:layout_constraintRight_toLeftOf="@id/gdvHelmet2"
+        app:layout_constraintBottom_toTopOf="@id/gdhImages"
+        android:layout_marginBottom="44dp"
+        android:contentDescription="" />
+
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tv_vsview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        app:layout_constraintBottom_toTopOf="@id/gdhPitch"
+        app:layout_constraintTop_toBottomOf="@id/gdhPitch"
+        android:gravity="center"
+        android:text="vs"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        fonts:custom_font="@string/rubik_regular" />
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/timerview"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        app:layout_constraintBottom_toTopOf="@id/gdhPitch"
+        app:layout_constraintTop_toBottomOf="@id/gdhPitch"
+        android:gravity="center"
+        android:text="3"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        fonts:custom_font="@string/rubik_regular" />
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvWaitingForUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:text="Waiting for opponent to join..."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        fonts:custom_font="@string/rubik_medium" />
+
+    <ImageView
+        android:id="@+id/ivEndAnim"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/gdhPitch"
+        app:layout_constraintBottom_toTopOf="@id/gdhPitch"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"/>
+
+    <ImageView
+        android:id="@+id/ivBall"
+        android:visibility="invisible"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/ic_white_ball_small"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        app:layout_constraintTop_toBottomOf="@id/ivPitch"
+        android:contentDescription="" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhImages"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.55"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdvHelmet1"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.30"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdvHelmet2"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.70"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhPitch"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhMid"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhstumps"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.2"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhGround"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.3"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhTop"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdvLeft"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdvRight"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhBottomMid"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.74"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdvMid"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+  <!--  <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:scaleX="-1"
+        app:srcCompat="@drawable/ic_bg" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="@dimen/size_of_value_sixteen">
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvFAQItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/rule_book"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_bold"
+                android:layout_centerVertical="true"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/rlRuleBookBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back_black"
+                android:contentDescription="@string/app_name"
+                android:padding="1dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E1E2"/>
+
+        <RelativeLayout
+            android:id="@+id/rlSuperOver"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/size_of_value_five"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvSuperOver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/size_of_value_six"
+                android:fontFamily="@font/rubik_regular"
+                android:text="Super Over"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/size_of_value_five"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/chevron_right"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+       <!-- <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutRuleBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/white"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/yellow_100"
+            app:tabTextColor="@color/yellow_38" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerRuleBook"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="60"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+
+    </LinearLayout>
+
+</RelativeLayout>

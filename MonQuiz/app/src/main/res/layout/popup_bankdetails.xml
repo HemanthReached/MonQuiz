@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/tools"
+    android:background="@drawable/bg_white_curve"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/close_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_close_black"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/popupheadingtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/close_popup"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp"
+        android:text="Account Details"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        fonts:custom_font="@string/rubik_bold"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/popupdesctv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/popupheadingtv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp"
+        android:text="@string/account_desc"
+        android:textColor="@color/textcolor1"
+        android:textSize="12sp"
+        fonts:custom_font="@string/rubik_medium"
+        android:layout_marginEnd="80dp"/>
+
+    <TextView
+        android:id="@+id/amountdesctv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/popupdesctv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp"
+        android:text="Redeem Amount"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        fonts:custom_font="@string/rubik_bold"
+        android:layout_marginEnd="80dp"/>
+
+    <EditText
+        android:id="@+id/amountet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/amountdesctv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Amount"
+        android:textColorHint="#BEBEBE"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        fonts:custom_font="@string/rubik_bold"
+        android:textStyle="bold"
+        android:background="@drawable/edittextbg1"
+        android:padding="10dp"
+        android:inputType="number"
+        android:digits="1234567890"/>
+
+    <TextView
+        android:id="@+id/accnumberdesctv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/amountet"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp"
+        android:text="Account Number"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        fonts:custom_font="@string/rubik_bold"
+        android:layout_marginEnd="80dp"/>
+
+    <EditText
+        android:id="@+id/accnumberet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/accnumberdesctv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:hint="Account Number"
+        android:textColorHint="#BEBEBE"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        fonts:custom_font="@string/rubik_bold"
+        android:textStyle="bold"
+        android:background="@drawable/edittextbg1"
+        android:padding="10dp"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/ifscnumberdesctv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/accnumberet"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp"
+        android:text="Bank IFSC Code"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        fonts:custom_font="@string/rubik_bold"
+        android:layout_marginEnd="80dp"/>
+
+    <RelativeLayout
+        android:id="@+id/ifscnumberlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ifscnumberdesctv"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittextbg1"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/ifscnumberet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="IFSC Code"
+            android:textColorHint="#BEBEBE"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            fonts:custom_font="@string/rubik_bold"
+            android:textStyle="bold"
+            android:background="@color/transparent"
+            android:maxLength="11"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/card_Iv"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/card_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/submit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ifscnumberlayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
+        android:text="Confirm"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textAllCaps="true"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        fonts:custom_font="@string/rubik_regular"
+        android:background="@drawable/bluebg_curved"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

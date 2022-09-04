@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="clr_bg_gradient_start">#181818</color>
+    <color name="clr_bg_gradient_end">#4B4B4B</color>
+
+    <!--splash gradient -->
+    <color name="clr_splash_gradient_start">#4B4B4B</color>
+    <color name="clr_splash_gradient_end">#2C2A2A</color>
+
+    <color name="blue_100">@color/white_54</color>
+    <color name="blue_50">#0143b5</color>
+    <color name="blue_38">@color/white_38</color>
+
+    <color name="clr_navigation_item_blue">@color/clr_bg_gradient_end</color>
+    <color name="clr_stakes_layout_background">#7a636363</color>
+    <color name="clr_stakes_layout_border">#7a636363</color>
+    <color name="leader_board_primary_color">#373737</color>
+    <!--<color name="leader_board_secondary_color">#4B4B4B</color>-->
+    <color name="leader_board_secondary_color">#4b4b54</color>
+    <color name="leader_board_rank_color">#FFFFFF</color>
+    <color name="leader_board_games_won_color">#4b4b54</color>
+    <color name="leader_board_games_won_text_color">#FFFFFF</color>
+    <color name="profile_icons_color">#FABB18</color>
+    <color name="coin_shop_clr">@color/clr_splash_gradient_start</color>
+    <color name="coin_shop_money_text_clr">@color/white_87</color>
+    <color name="splash_logo_text">#D9D1D0D0</color>
+
+</resources>

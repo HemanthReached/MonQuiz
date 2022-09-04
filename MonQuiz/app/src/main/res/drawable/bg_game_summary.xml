@@ -1,0 +1,8 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_game_summary_blue" />
+    <item android:drawable="@drawable/ic_bg" />
+    <!--<item>-->
+    <!--<bitmap android:src="@drawable/ic_bg"-->
+    <!--android:alpha="0.6" />-->
+    <!--</item>-->
+</layer-list>

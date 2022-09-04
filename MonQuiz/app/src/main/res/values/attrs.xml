@@ -1,0 +1,20 @@
+<resources>
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="moneyGame">
+        <attr name="custom_font" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomOverlay">
+        <attr name="co_left" format="dimension"  />
+        <attr name="co_right" format="dimension" />
+        <attr name="co_top" format="dimension" />
+        <attr name="co_bottom" format="dimension" />
+    </declare-styleable>
+
+    <attr name="backgroundColor" format="color"/>
+
+</resources>

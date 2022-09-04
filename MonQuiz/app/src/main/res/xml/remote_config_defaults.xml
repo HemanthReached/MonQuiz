@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>primaryColorDark_blue</key>
+        <value>@color/primaryColorDark_blue</value>
+    </entry>
+    <entry>
+        <key>message</key>
+        <value>Welcome to my awesome app!</value>
+    </entry>
+</defaultsMap><!-- END xml_defaults -->

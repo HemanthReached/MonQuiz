@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    android:background="#E8EFF2">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/header_banner"
+            android:layout_width="580dp"
+            android:layout_height="580dp"
+            android:layout_marginStart="-80dp"
+            android:layout_marginTop="-340dp"
+            android:layout_marginEnd="-80dp"
+            app:srcCompat="@drawable/hero_banner_green" />
+
+        <ImageView
+            android:id="@+id/header_sunrise"
+            android:layout_width="580dp"
+            android:layout_height="580dp"
+            android:layout_marginStart="-80dp"
+            android:layout_marginTop="-350dp"
+            android:layout_marginEnd="-80dp"
+            app:srcCompat="@drawable/ic_sunbursts" />
+
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvmessage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:layout_centerHorizontal="true"
+            android:text="Congrats!"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            fonts:custom_font="@string/rubik_medium"/>
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvmessage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvmessage1"
+            android:layout_marginStart="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="That was spectacular."
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            fonts:custom_font="@string/rubik_medium"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/results_close"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:srcCompat="@drawable/ic_close_white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="4dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="20dp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        app:lottie_rawRes="@raw/coins"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        app:layout_constraintBottom_toTopOf="@id/ivUserPic"
+        android:layout_marginBottom="0dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserPic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        app:layout_constraintTop_toBottomOf="@id/header_layout"
+        app:layout_constraintBottom_toBottomOf="@id/header_layout"
+        android:src="@drawable/ic_default_icon"
+        app:civ_border_color="@color/clr_bg_gradient_start"
+        app:civ_border_width="1.5dp"
+        app:civ_fill_color="@color/white" />
+
+    <!--<ImageView
+        android:id="@+id/ivHelmet"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/ic_bluecap"
+        android:layout_marginBottom="38dp"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        app:layout_constraintBottom_toTopOf="@id/tvUserName"
+        android:contentDescription="" />-->
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ivUserPic"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        android:text="You"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        fonts:custom_font="@string/rubik_regular" />
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvUserScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvUserName"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        android:layout_marginTop="5dp"
+        android:text="24 Runs"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        fonts:custom_font="@string/rubik_regular" />
+
+    <LinearLayout
+        android:id="@+id/llOpponentDetails"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_opponent_card_superover"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        app:layout_constraintBottom_toTopOf="@id/ivStadium">
+
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvResultamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹18 Earned"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            fonts:custom_font="@string/rubik_medium" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivResultSplash"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        app:layout_constraintBottom_toTopOf="@id/llOpponentDetails"
+        app:layout_constraintTop_toBottomOf="@id/gdhSplashTop"
+        app:srcCompat="@drawable/ic_result_win_splash" />
+
+    <ImageView
+        android:id="@+id/ivLoseSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@id/gdvMarginOops"
+        app:layout_constraintRight_toLeftOf="@id/gdvMarginOops"
+        app:layout_constraintTop_toTopOf="@id/ivResultSplash"
+        app:layout_constraintBottom_toTopOf="@id/tvScoreLostMargin"
+        app:srcCompat="@drawable/ic_result_lose" />
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvScoreLostMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/llOpponentDetails"
+        app:layout_constraintLeft_toRightOf="@id/gdvMarginOops"
+        app:layout_constraintRight_toLeftOf="@id/gdvMarginOops"
+        android:layout_marginBottom="10dp"
+        android:text="Lost by 10 runs"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        fonts:custom_font="@string/rubik_medium" />
+
+    <ImageView
+        android:id="@+id/ivWonSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@id/gdvMargin"
+        app:layout_constraintRight_toLeftOf="@id/gdvMargin"
+        app:layout_constraintTop_toTopOf="@id/ivResultSplash"
+        app:layout_constraintBottom_toBottomOf="@id/tvScoreWonMargin"
+        app:srcCompat="@drawable/ic_result_win" />
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvScoreWonMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/ivStadium"
+        app:layout_constraintTop_toBottomOf="@id/ivResultSplash"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintLeft_toRightOf="@id/gdvMargin"
+        app:layout_constraintRight_toLeftOf="@id/gdvMargin"
+        android:text="by 10 runs"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        fonts:custom_font="@string/rubik_medium" />
+
+    <LinearLayout
+        android:id="@+id/ivStadium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:background="@drawable/whitebg_topradius">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="25dp"
+            android:layout_gravity="center_horizontal">
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/playfor_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play another game for"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                fonts:custom_font="@string/rubik_medium"/>
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/play_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/playfor_desc"
+                app:layout_constraintStart_toEndOf="@id/playfor_desc"
+                android:layout_marginStart="10dp"
+                android:text="₹20"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlue"
+                android:textStyle="bold"
+                fonts:custom_font="@string/rubik_medium"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlNextGameTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bluebg_curved">
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvSuperoverNextGameTimer"
+                style="?borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fonts:custom_font="@string/rubik_medium"
+                android:gravity="center"
+                android:text="@string/join_next_game_"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvGoToHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fonts:custom_font="@string/rubik_medium"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="NAH, GO HOME"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="1.5"
+            android:shadowRadius="2"
+            android:textColor="@color/colorBlue"
+            android:layout_marginBottom="28dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/rlNextGameTimer"
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintTop_toBottomOf="@id/gdhBottom"
+        app:layout_constraintBottom_toTopOf="@id/gdhBottomMost"
+        app:layout_constraintVertical_bias="0.7"
+        android:layout_gravity="center">
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvSuperoverNextGameTimer"
+            style="?borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fonts:custom_font="@string/rubik_medium"
+            android:gravity="center"
+            android:text="@string/join_next_game_"
+            android:textSize="15sp"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvGoToHome"
+        style="?borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/gdvMid"
+        app:layout_constraintLeft_toRightOf="@id/gdvMid"
+        app:layout_constraintTop_toBottomOf="@id/rlNextGameTimer"
+        app:layout_constraintBottom_toTopOf="@id/gdhBottomMost"
+        fonts:custom_font="@string/rubik_medium"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="GO HOME"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1.5"
+        android:shadowRadius="2"
+        android:textColor="@color/white" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/clSuperOverParent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhTopCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhSplashTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdhBottomMost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdvMid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdvMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.53"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdvMarginOops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.515"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

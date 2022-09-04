@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="@dimen/size_of_value_sixteen">
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvFAQItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Personal Details"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:fontFamily="@font/rubik_bold"
+                android:layout_centerVertical="true"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/ivDetailsClose"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back_black"
+                android:contentDescription="@string/app_name"
+                android:padding="1dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E1E2"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="40dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlPanDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/size_of_value_five"
+                    android:orientation="horizontal">
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvPan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/size_of_value_six"
+                        android:text="PAN"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_centerVertical="true"/>
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvPanStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/size_of_value_six"
+                        android:gravity="center"
+                        android:text="Not Verified"
+                        android:textColor="#FF8800"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_centerVertical="true"
+                        android:drawableEnd="@drawable/alert_icon"
+                        android:drawablePadding="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_toStartOf="@id/pan_rightIcon"/>
+
+                    <ImageView
+                        android:id="@+id/pan_rightIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/size_of_value_five"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/chevron_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#20000000" />
+
+                <RelativeLayout
+                    android:id="@+id/rlBankDetails"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/size_of_value_five">
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvBankDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/size_of_value_six"
+                        android:text="Bank Details"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/size_of_value_five"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/chevron_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#20000000" />
+
+            <RelativeLayout
+                android:id="@+id/rlUserDetails"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/size_of_value_five">
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/tvUserDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/size_of_value_six"
+                    android:text="Change User Name"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/size_of_value_five"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/chevron_right"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_sheet_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="@null"
+            app:behavior_skipCollapsed="true"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:paddingTop="30dp"
+            android:background="#40000000">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pandetais_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:visibility="gone"
+                android:background="@drawable/whitebg_topradius1">
+
+                <ImageView
+                    android:id="@+id/close_popup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_close_black"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/popupheadingtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/close_popup"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="PAN Card Details"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/popupdesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/popupheadingtv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/pan_card_desc"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="13sp"
+                    app:custom_font="@string/rubik_medium"
+                    android:layout_marginEnd="40dp"/>
+
+                <TextView
+                    android:id="@+id/namedesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/popupdesctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="45dp"
+                    android:text="@string/full_name_card"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:layout_marginEnd="80dp"/>
+
+                <EditText
+                    android:id="@+id/nameet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/namedesctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:hint="Full Name"
+                    android:textColorHint="#BEBEBE"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:textStyle="bold"
+                    android:background="@drawable/edittextbg1"
+                    android:padding="12dp"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/cardnumberdesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/nameet"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="PAN Card Number"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:layout_marginEnd="80dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/cardnumberlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/cardnumberdesctv"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittextbg1"
+                    android:padding="12dp">
+
+                    <EditText
+                        android:id="@+id/cardnumberet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Card Number"
+                        android:textColorHint="#BEBEBE"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:custom_font="@string/rubik_bold"
+                        android:textStyle="bold"
+                        android:background="@color/transparent"
+                        android:maxLength="10"
+                        android:digits="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:inputType="textCapCharacters"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"/>
+
+                    <ImageView
+                        android:id="@+id/card_Iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        app:srcCompat="@drawable/card_icon"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/submit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/cardnumberlayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="Confirm"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:custom_font="@string/rubik_regular"
+                    android:background="@drawable/bluebg_curved"/>
+
+                <LinearLayout
+                    android:id="@+id/saved_layout"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:clickable="false"
+                    app:layout_constraintTop_toBottomOf="@id/popupdesctv">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animationView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="100dp"
+                        android:visibility="visible"
+                        android:layout_gravity="center"
+                        app:lottie_rawRes="@raw/check"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="false"
+                        android:layout_marginBottom="0dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:text="Card details saved."
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginEnd="80dp"
+                        android:gravity="center"
+                        android:text="Post verification you will be able to withdraw cash."
+                        android:textColor="#70000000"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="120dp"
+                        android:text="You can check the status under"
+                        android:textColor="#AEAEAE"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="40dp"
+                        android:text="Profile / Settings / Personal Details"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/redeem_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:background="@drawable/whitebg_topradius1">
+
+                <ImageView
+                    android:id="@+id/close_popup_redeem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_close_black"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/popupheadingtv_redeem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/close_popup_redeem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="Account Details"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/popupdesctv_redeem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/popupheadingtv_redeem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/account_desc"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="12sp"
+                    app:custom_font="@string/rubik_medium"
+                    android:layout_marginEnd="80dp"/>
+
+                <TextView
+                    android:id="@+id/amountdesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/popupdesctv_redeem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="Redeem Amount"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:layout_marginEnd="80dp"/>
+
+                <EditText
+                    android:id="@+id/amountet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/amountdesctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:hint="Enter Amount"
+                    android:textColorHint="#BEBEBE"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:textStyle="bold"
+                    android:background="@drawable/edittextbg1"
+                    android:padding="10dp"
+                    android:inputType="number"
+                    android:digits="1234567890"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/accnumberdesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/amountet"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="Account Number"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:layout_marginEnd="80dp"/>
+
+                <EditText
+                    android:id="@+id/accnumberet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/accnumberdesctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:hint="Account Number"
+                    android:textColorHint="#BEBEBE"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:textStyle="bold"
+                    android:background="@drawable/edittextbg1"
+                    android:padding="10dp"
+                    android:inputType="number"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/ifscnumberdesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/accnumberet"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="Bank IFSC Code"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:layout_marginEnd="80dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/ifscnumberlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/ifscnumberdesctv"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittextbg1"
+                    android:padding="10dp">
+
+                    <EditText
+                        android:id="@+id/ifscnumberet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="IFSC Code"
+                        android:textColorHint="#BEBEBE"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:custom_font="@string/rubik_bold"
+                        android:textStyle="bold"
+                        android:background="@color/transparent"
+                        android:maxLength="11"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"/>
+
+                    <ImageView
+                        android:id="@+id/card_Iv_redeem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/card_icon"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"/>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/submit_btn_redeem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="30dp"
+                    android:text="Confirm"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:custom_font="@string/rubik_regular"
+                    android:background="@drawable/bluebg_curved"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <!-- <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/username_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:background="@drawable/whitebg_topradius1">
+
+                <ImageView
+                    android:id="@+id/close_popup_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_close_black"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/popupheadingtv_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/close_popup_username"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="User Details"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/popupdesctv_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/popupheadingtv_user"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/account_desc"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="12sp"
+                    app:custom_font="@string/rubik_medium"
+                    android:layout_marginEnd="80dp"/>
+
+                <TextView
+                    android:id="@+id/userFullNameDesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/popupdesctv_user"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="Account Number"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:layout_marginEnd="80dp"/>
+
+                <EditText
+                    android:id="@+id/userFullNameet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/userFullNameDesctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:hint="Account Number"
+                    android:textColorHint="#BEBEBE"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:textStyle="bold"
+                    android:background="@drawable/edittextbg1"
+                    android:padding="10dp"
+                    android:inputType="number"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/userNamedesctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/userFullNameet"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:text="Bank IFSC Code"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:custom_font="@string/rubik_bold"
+                    android:layout_marginEnd="80dp"/>
+
+
+                    <EditText
+                        android:id="@+id/userNameet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="IFSC Code"
+                        android:textColorHint="#BEBEBE"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:custom_font="@string/rubik_bold"
+                        android:textStyle="bold"
+                        android:maxLength="11"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"
+                        app:layout_constraintTop_toBottomOf="@id/userNamedesctv"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittextbg1"
+                        android:padding="10dp"/>
+
+
+
+                <TextView
+                    android:id="@+id/submit_btn_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="30dp"
+                    android:text="Confirm"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:custom_font="@string/rubik_regular"
+                    android:background="@drawable/bluebg_curved"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

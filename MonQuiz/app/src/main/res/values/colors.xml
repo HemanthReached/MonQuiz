@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#303F9F</color>
+    <color name="colorPrimaryDark">#80006C8E</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="orange">#FF6C00</color>
+    <color name="green">#389f3b</color>
+    <color name="red">#e21310</color>
+    <color name="grey">#617DBFFF</color>
+
+    <color name="clr_bg_gradient_start">#FF043A7A</color>
+    <color name="clr_bg_gradient_end">#0069CA</color>
+
+    <color name="green_bg_gradient_start">#FF047A3A</color>
+    <color name="green_bg_gradient_end">#00CA69</color>
+
+    <color name="bg_gradient_start1">#087A4D</color>
+    <color name="bg_gradient_end1">#0E6E5F</color>
+
+    <color name="blue_100">#FF7DBFFF</color>
+    <color name="blue_87">#DE7DBFFF</color>
+    <color name="blue_38">#617DBFFF</color>
+
+    <color name="very_light_grey">#E0E0E0</color>
+    <color name="light_cream">#55ffffff</color>
+    <color name="charcoal_grey">#3b3b3c</color>
+    <color name="dark_orange">#f96366</color>
+    <color name="faint_orange">#E08183</color>
+    <color name="clr_btn_background">#FFFF4E52</color>
+    <color name="dark_chocolate">#2E2B25</color>
+    <color name="clr_player_joined_user_name">#FF037F4C</color>
+    <color name="dark_blue">#0143b5</color>
+    <color name="clr_navigation_item_blue">#FF457EBB</color>
+    <color name="yellow_faint">#FFFFD845</color>
+
+    <!--  color resources - -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_90">#E6FFFFFF</color>
+    <color name="white_87">#DEFFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="white_54">#8AFFFFFF</color>
+    <color name="white_38">#5CFFFFFF</color>
+    <color name="white_10">#1AFFFFFF</color>
+
+    <color name="black_100">#FF000000</color>
+    <color name="black_87">#DE000000</color>
+    <color name="black_80">#CC000000</color>
+    <color name="black_60">#66000000</color>
+    <color name="black_54">#8A000000</color>
+    <color name="black_20">#33000000</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="yellow_100">#FFFFC600</color>
+    <color name="yellow_38">#60FFC600</color>
+
+    <color name="super_over_brown">#745633</color>
+
+    <color name="grey_300">#E0E0E0</color>
+    <color name="violet">#9a5ae6</color>
+    <color name="clr_stakes_layout_background">#8A006BD2</color>
+    <color name="clr_stakes_layout_border">#8a016dd6</color>
+    <color name="questionBackground">#d9d7d7</color>
+    <color name="golden">#FFFCBE00</color>
+    <color name="dark_red_clock_hook_clr">#9B3032</color>
+    <color name="clr_daily_quiz_results_bg">#FF0374FC</color>
+    <color name="leader_board_primary_color">@color/colorPrimary</color>
+    <color name="leader_board_secondary_color">#1C4A9B</color>
+    <color name="leader_board_games_won_color">#2280D8</color>
+    <color name="leader_board_games_won_text_color">@color/black_100</color>
+    <color name="leader_board_rank_color">#c1c0c0</color>
+    <color name="profile_icons_color">#FABB18</color>
+    <color name="clr_splash_gradient_start">#0D79DD</color>
+    <color name="clr_splash_gradient_end">#0B4486</color>
+    <color name="splash_logo_text">#D97DBFFF</color>
+
+    <color name="transaction_history_bg_clr">@color/black_60</color>
+    <color name="coin_shop_clr">@color/blue_100</color>
+    <color name="coin_shop_money_text_clr">@color/dark_blue</color>
+
+    <!--for our theme as of now primary color is transparent-->
+    <color name="primaryColor_blue">#00000000</color>
+    <color name="primaryColorDark_blue">#1976D2</color>
+    <color name="primaryAccent_blue">#E3F2FD</color>
+
+    <!--for our theme as of now primary color is transparent-->
+    <color name="primaryColor_red">#00000000</color>
+    <color name="primaryColorDark_red">#D32F2F</color>
+    <color name="primaryAccent_red">#FFEBEE</color>
+    <color name="quiz_master_question_blue">#1078DF</color>
+    <color name="bg_color_toast">#DAB13962</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="black_40">#40000000</color>
+
+    <color name="color1">#ECE8F2</color>
+    <color name="color2">#61419C</color>
+    <color name="colorBackground">#E8EFF2</color>
+    <color name="colorViolet1">#1C0C35</color>
+    <color name="colorusernameBg">#7DC2AA</color>
+    <color name="bgcolor1">#CFB182</color>
+    <color name="bgcolor2">#4F9B8B</color>
+    <color name="bgcolor3">#9BBB81</color>
+    <color name="colorgray1">#303030</color>
+    <color name="colorlightgray1">#50303030</color>
+    <color name="textcolor1">#666666</color>
+    <color name="textColor2">#979797</color>
+    <color name="textColor3">#776D86</color>
+    <color name="colorBlue">#006C8E</color>
+    <color name="colorGreen">#4FC166</color>
+    <color name="colorAlert">#f80</color>
+    <color name="colorDisable">#7e7e7e</color>
+    <color name="colorBg1">#6C8E80</color>
+    <color name="GreenGradientStartColor">#0E6E5F</color>
+
+</resources>

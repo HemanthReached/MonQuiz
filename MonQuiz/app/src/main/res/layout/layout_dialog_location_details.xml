@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:fitsSystemWindows="true"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/lllview"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/llcliamedpopup"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_below="@+id/lllview"
+        android:layout_marginStart="@dimen/size_of_value_ten"
+        android:layout_marginLeft="@dimen/size_of_value_ten"
+        android:layout_marginEnd="@dimen/size_of_value_sixteen"
+        android:layout_marginRight="@dimen/size_of_value_sixteen"
+        android:background="@drawable/bg_white_curve"
+        android:orientation="vertical"
+        tools:ignore="RtlSymmetry">
+
+        <com.monquiz.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/llLocatiostateNames"
+            android:gravity="center"
+            android:text="Sorry!"
+            android:textColor="@color/red"
+            android:textSize="@dimen/font_size_of_value_eighteen"
+
+            fonts:custom_font="@string/rubik_bold" />
+
+        <LinearLayout
+            android:id="@+id/llLocatiostateNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvDialogClaimedPopUpTextview"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_of_value_sixteen"
+                android:layout_marginLeft="@dimen/size_of_value_sixteen"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/size_of_value_eight"
+                android:weightSum="3">
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/tvDialogLocationStateAssam"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:text="Assam"
+                    android:textSize="13sp" />
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/tvDialogLocationStateNagaland"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:text="Nagaland"
+                    android:textSize="13sp" />
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/tvDialogLocationStateOdisha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:text="Odisha"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.monquiz.customviews.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textAlignment="center" />
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/tvDialogLocationStateTamilNadu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:gravity="start|center"
+                    android:text="Tamil Nadu"
+                    android:textSize="13sp" />
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/tvDialogLocationStateTelangana"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:gravity="start|center"
+                    android:text="Telangana"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvDialogClaimedPopUpTextview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_of_value_hundred"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:padding="@dimen/size_of_value_sixteen"
+            android:text="@string/restrict_game_text"
+            android:textAlignment="center"
+            android:textColor="@color/black_54"
+            android:textSize="@dimen/font_size_of_value_fourteen" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgLoc"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:contentDescription="@string/app_name"
+        android:paddingStart="-40dp"
+        android:paddingLeft="-40dp"
+        android:src="@drawable/ic_popup_location"
+        tools:ignore="RtlSymmetry" />
+
+    <RelativeLayout
+        android:id="@+id/rlDialogLocationDamn"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
+        android:layout_below="@+id/llcliamedpopup"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/ic_popup_damn_button"
+        android:gravity="center">
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvDialogLocationDamn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAMN!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_of_value_fourteen"
+            android:textStyle="bold"
+            fonts:custom_font="@string/rubik_bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

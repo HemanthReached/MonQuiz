@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.monquiz.customviews.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Share With.."
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        fonts:custom_font="@string/rubik_regular" />
+
+    <LinearLayout
+        android:id="@+id/llDialogGameUserProfileStatsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivShareDialogWhatsApp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:padding="16dp"
+                android:src="@drawable/ic_whatsapp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivShareDialogFacebook"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:padding="16dp"
+                android:src="@drawable/ic_facebook" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivShareDialogMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:padding="16dp"
+                android:src="@drawable/ic_messaging" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="WhatsApp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:visibility="gone"
+                android:text="Facebook"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="Message"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                fonts:custom_font="@string/rubik_regular" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

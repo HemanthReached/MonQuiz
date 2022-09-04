@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">MonQuiz</string>
+    <string name="_10">\u20B9 10</string>
+    <string name="_20">\u20B9 20</string>
+    <string name="_50">\u20B9 50</string>
+    <string name="_100">\u20B9 100</string>
+
+    <string name="ruppee">\u20B9\u0020</string>
+    <string name="coins_won"></string>
+
+    <!--Api links for pro version-->
+    <string name="api_get_daily_stats_summary">dailyStatsSummaryRmg</string>
+    <string name="api_get_overall_stats_summary">overallStatsSummaryRmg</string>
+    <string name="api_all_user_stats">userStatsRmg</string>
+    <string name="api_player_of_the_day">dailyStatsHistoryRmg/%s</string>
+    <string name="api_all_user_daily_stats">dailyStatsRmg</string>
+    <string name="api_set_referral_to_db">userQueuesRmg/%s/referral</string>
+    <string name="api_tables">tablesRmg</string>
+    <string name="api_user_balance">usersWalletBalanceRmg/%s/balance</string>
+    <string name="api_base_url_users_wallet_balance">usersWalletBalanceRmg/%s/</string>
+    <string name="api_get_user_stats">userStatsRmg/%s/</string>
+    <string name="api_get_over_all_ranks">overallRanksRmg/%s/</string>
+    <string name="api_get_joined_users_in_the_table">tablesRmg/%s/users</string>
+    <string name="api_get_game_questions">tablesRmg/%s/game_questions</string>
+    <string name="api_join_table">userQueuesRmg/joinTable/%s</string>
+    <string name="api_get_noraml_quiz_scoreboard_data">tablesRmg/%s/leaderBoard_NEW</string>
+    <string name="api_stalkers">tablesRmg/%s/stalkers</string>
+    <string name="api_submission_answers">tablesRmg/%s/users/%s/submission/%d</string>
+    <string name="api_submission_reference">"tablesRmg/%s/users/%s/submission/%d</string>
+    <string name="api_submission_score">tablesRmg/%s/users/%s/score</string>
+    <string name="api_users_history">usersHistoryRmg/%s</string>
+    <string name="api_set_daily_reward_details">usersDailyDetailsRmg/%s/</string>
+    <string name="api_check_daily_reward_details">usersDailyDetailsRmg/%s/</string>
+    <string name="api_set_user_daily_reward_collected">usersDailyDetailsRmg/%s/dailyRewardCollected</string>
+    <string name="api_user_daily_play_limit">usersDailyDetailsRmg/%s/playDailyLimit</string>
+    <string name="api_normal_quiz_user_ask_query">quizUserQueryRmg/%s/%s/%d</string>
+    <string name="api_normal_quiz_get_game_status_table">tablesRmg/%s/status</string>
+
+    <string name="api_quiz_master_send_ask_your_question">tablesQmRmg/%s/game_questions/%d</string>
+    <string name="api_quiz_master_join_table">userQueuesRmg/joinTableQm/%s</string>
+    <string name="api_quiz_master_get_joined_users_in_the_table">tablesQmRmg/%s/users</string>
+    <string name="api_quiz_master_get_game_status_table">tablesQmRmg/%s/</string>
+
+    <string name="api_quiz_master_get_question">tablesQmRmg/%s/game_questions</string>
+    <string name="api_quiz_master_submission_answers">tablesQmRmg/%s/users/%s/submission/%d</string>
+    <string name="api_quiz_master_leaderboard">tablesQmRmg/%s/leaderBoard</string>
+
+    <string name="api_user_transactions">usersWalletBalanceRmg/%s/transactions</string>
+    <string name="api_get_notifications">notificationsRmg/%s</string>
+    <string name="api_base_url_faqs">faqsRmg</string>
+    <string name="invitation_message_free">Join me on MonQuiz, the ultimate quiz game. Download now! %s put my Referral Code </string>
+    <string name="invitation_message_pro">Join me on MonQuiz, the ultimate quiz game. Download now! %s or %s put my Referral Code </string>
+
+    <!--file provider authority string-->
+    <string name="file_provider_authority">com.event.eventexplorer.pro.fileprovider</string>
+
+</resources>

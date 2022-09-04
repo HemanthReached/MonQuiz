@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/tools"
+    app:ignore="NamespaceTypo">
+
+    <TextView
+        android:id="@+id/monthname_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fonts:layout_constraintTop_toTopOf="parent"
+        fonts:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Feb 2022"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/rubik_regular"
+        android:visibility="gone"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_white_curve1"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        fonts:layout_constraintTop_toBottomOf="@id/monthname_view">
+
+
+    <ImageView
+        android:id="@+id/ivTransaction_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/super_over_category1"
+        fonts:layout_constraintStart_toStartOf="parent"
+        fonts:layout_constraintTop_toTopOf="@id/basicdetails_layout"/>
+
+    <RelativeLayout
+            android:id="@+id/basicdetails_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            fonts:layout_constraintTop_toTopOf="parent"
+            fonts:layout_constraintStart_toEndOf="@id/ivTransaction_type"
+            fonts:layout_constraintEnd_toStartOf="@id/ivDetails_arrow"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:id="@+id/tvTransaction_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SuperOver"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/rubik_medium"/>
+
+                <TextView
+                    android:id="@+id/transactionTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="27 Mar 10:54"
+                    android:textSize="12sp"
+                    android:textColor="#50000000"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_below="@id/tvTransaction_type"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tvTransaction_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ \u20B9 10"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/rubik_medium" />
+
+            <TextView
+                android:id="@+id/transaction_status"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Success"
+                android:textSize="12sp"
+                android:textColor="#50000000"
+                android:textStyle="bold"
+                android:fontFamily="@font/rubik_regular" />
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/imageClickLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            fonts:layout_constraintEnd_toEndOf="parent"
+            fonts:layout_constraintTop_toTopOf="@id/basicdetails_layout"
+            fonts:layout_constraintBottom_toBottomOf="@id/basicdetails_layout"
+            fonts:layout_constraintStart_toEndOf="@id/gdvClick">
+
+        </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivDetails_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fonts:layout_constraintEnd_toEndOf="parent"
+        fonts:layout_constraintTop_toTopOf="@id/basicdetails_layout"
+        fonts:layout_constraintBottom_toBottomOf="@id/basicdetails_layout"
+        fonts:srcCompat="@drawable/arrowdown_outlined"
+        android:padding="10dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tDetails_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        fonts:layout_constraintTop_toBottomOf="@id/basicdetails_layout"
+        fonts:layout_constraintStart_toStartOf="@id/basicdetails_layout"
+        fonts:layout_constraintEnd_toEndOf="@id/basicdetails_layout"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                fonts:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#10000000"/>
+
+            <TextView
+                android:id="@+id/tvTransaction_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fonts:layout_constraintTop_toTopOf="parent"
+                fonts:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:text="h2gst802wbthappr82ane219lndhtddwq"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rubik_regular"/>
+
+            <TextView
+                android:id="@+id/transaction_Id_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fonts:layout_constraintStart_toStartOf="parent"
+                fonts:layout_constraintTop_toBottomOf="@id/tvTransaction_Id"
+                android:text="Transaction ID"
+                android:textSize="10sp"
+                android:textColor="#50000000"
+                android:fontFamily="@font/rubik_regular"
+                android:layout_marginTop="5dp"/>
+
+            <ImageView
+                android:id="@+id/ivTID_copy"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                fonts:srcCompat="@drawable/ic_copy_icon"
+                android:layout_marginStart="15dp"
+                fonts:layout_constraintTop_toTopOf="@id/tvTransaction_Id"
+                fonts:layout_constraintStart_toEndOf="@id/tvTransaction_Id"
+                fonts:layout_constraintBottom_toBottomOf="@id/tvTransaction_Id"
+                android:padding="4dp"/>
+
+            <TextView
+                android:id="@+id/tvGame_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                fonts:layout_constraintStart_toStartOf="parent"
+                fonts:layout_constraintTop_toBottomOf="@id/transaction_Id_desc"
+                android:text="y002hj2881"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rubik_regular"/>
+
+            <ImageView
+                android:id="@+id/ivGID_copy"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                fonts:srcCompat="@drawable/ic_copy_icon"
+                android:layout_marginStart="15dp"
+                fonts:layout_constraintTop_toTopOf="@id/tvGame_Id"
+                fonts:layout_constraintStart_toEndOf="@id/tvGame_Id"
+                fonts:layout_constraintBottom_toBottomOf="@id/tvGame_Id"
+                android:padding="4dp"/>
+
+            <TextView
+                android:id="@+id/tvGameId_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fonts:layout_constraintStart_toStartOf="parent"
+                fonts:layout_constraintTop_toBottomOf="@id/tvGame_Id"
+                android:text="Game ID"
+                android:textSize="10sp"
+                android:textColor="#50000000"
+                android:fontFamily="@font/rubik_regular"
+                android:layout_marginTop="5dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdvClick"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.75"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <!-- <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Date"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white_54"
+                android:textSize="@dimen/font_size_of_value_twelve"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvTransHistoryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="cshdchjsd"
+                android:textAlignment="center"
+                android:textColor="@color/white_87"
+                android:textSize="@dimen/font_size_of_value_twelve"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Credit"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white_54"
+                android:textSize="@dimen/font_size_of_value_twelve"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvTransHistoryCredit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/credited"
+                android:textAlignment="center"
+                android:textColor="@color/white_87"
+                android:textSize="@dimen/font_size_of_value_twelve"
+                android:visibility="visible"
+                fonts:custom_font="@string/rubik_regular" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="45"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Txn. Id"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white_54"
+                android:textSize="@dimen/font_size_of_value_twelve"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvTransHistoryOrderId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="sdjcbscbckbdsckbsdk"
+                android:textAlignment="center"
+                android:textColor="@color/white_87"
+                android:textSize="@dimen/font_size_of_value_twelve"
+                fonts:custom_font="@string/rubik_bold"
+                android:singleLine="true"/>
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Debit"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white_54"
+                android:textSize="@dimen/font_size_of_value_twelve"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvTransHistoryDebit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="cbsd csd"
+                android:textAlignment="center"
+                android:textColor="@color/white_87"
+                android:textSize="@dimen/font_size_of_value_twelve"
+                android:visibility="visible"
+                fonts:custom_font="@string/rubik_regular" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="30"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Type"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white_54"
+                android:textSize="@dimen/font_size_of_value_twelve"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvTransHistoryType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="cshdchjsksndckjsndd"
+                android:textAlignment="center"
+                android:textColor="@color/white_87"
+                android:textSize="@dimen/font_size_of_value_twelve"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Status"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white_54"
+                android:textSize="@dimen/font_size_of_value_twelve"
+                android:visibility="visible"
+                fonts:custom_font="@string/rubik_regular" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvTransHistoryStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="scjdcbjsd"
+                android:textAlignment="center"
+                android:textColor="@color/white_87"
+                android:textSize="@dimen/font_size_of_value_twelve"
+                fonts:custom_font="@string/rubik_bold" />
+        </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

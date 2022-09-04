@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="true"
+        android:drawable="@drawable/monkey_headnav"/>
+    <item android:state_checked="false"
+        android:drawable="@drawable/monkey_headnav1" />
+    <item android:state_selected="true"
+        android:drawable="@drawable/monkey_headnav"/>
+    <item android:state_selected="false"
+        android:drawable="@drawable/monkey_headnav1" />
+
+</selector>

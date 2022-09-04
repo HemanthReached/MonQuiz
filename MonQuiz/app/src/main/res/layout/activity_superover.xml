@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/tools">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/superovergradientbg">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_close_icon"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="12dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_bg_symbols"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:srcCompat="@drawable/batsmen_icon"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toEndOf="@id/ivsuperover"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/gdhOption2" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvgamedesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:text="6 balls of cricketing questions."
+                app:layout_constraintTop_toTopOf="@id/gdhOption2"
+                app:layout_constraintBottom_toBottomOf="@id/gdhOption2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/light_cream"
+                android:textSize="14sp"
+                android:fontFamily="@font/rubik_light"/>
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvgamename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginBottom="6dp"
+                android:text="SuperOver"
+                app:layout_constraintBottom_toTopOf="@+id/tvgamedesc"
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:fontFamily="@font/rubik_regular"/>
+
+            <ImageView
+                android:id="@+id/ivsuperover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/super_over_category"
+                app:layout_constraintBottom_toTopOf="@+id/tvgamename"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stakeselction_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/gdhOption1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/sostakesbg"
+                android:visibility="visible">
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/headingdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="30dp"
+                    android:text="Play For"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorgray1"
+                    android:textSize="26sp"
+                    android:fontFamily="@font/rubik_medium"/>
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/tvplaygame"
+                    android:layout_width="220dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Play Game"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/rubik_regular"
+                    android:background="@drawable/bg_bluecurved"/>
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/stakeselctiondesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Playing Super Over for 10 ₹"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray_444444"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/rubik_light"
+                    app:layout_constraintBottom_toTopOf="@+id/tvplaygame"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="15dp"/>
+
+                <LinearLayout
+                    android:id="@+id/stakeslayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/headingdesc"
+                    app:layout_constraintBottom_toTopOf="@+id/stakeselctiondesc"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp">
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvstake1"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:text="10 ₹"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubik_light"
+                        android:background="@drawable/ic_stake_selected"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.1"/>
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvstake2"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:text="20 ₹"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorgray1"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubik_light"
+                        android:background="@drawable/ic_stake_unselected"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.1"/>
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvstake3"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:text="30 ₹"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorgray1"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubik_light"
+                        android:background="@drawable/ic_stake_unselected"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.1"/>
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvstake4"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:text="50 ₹"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorgray1"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubik_light"
+                        android:background="@drawable/ic_stake_unselected"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.1"
+                        android:visibility="gone"/>
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvstake5"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:visibility="gone"
+                        android:text="100 ₹"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorgray1"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubik_light"
+                        android:background="@drawable/ic_stake_unselected"/>
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/walletselection_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/gdhOption3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/whitebg_topleftradius">
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/playfor_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="Playing for"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/rubik_medium"/>
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/playfor_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/playfor_desc"
+                    app:layout_constraintStart_toEndOf="@id/playfor_desc"
+                    android:layout_marginStart="10dp"
+                    android:text="20"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorBlue"
+                    android:fontFamily="@font/rubik_medium"/>
+
+                <LinearLayout
+                    android:id="@+id/winningsLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/playfor_desc"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical">
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Winners get"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/rubik_regular"/>
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/winning_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="₹20"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/rubik_medium"
+                        android:background="@drawable/bg_violetcornered"
+                        android:padding="4dp"/>
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="@id/playfor_desc"
+                        app:layout_constraintStart_toEndOf="@id/playfor_desc"
+                        android:layout_marginStart="5dp"
+                        android:text="80% more"
+                        android:textSize="12sp"
+                        android:textColor="#60000000"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/rubik_regular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/winningsLayout"
+                    app:layout_constraintBottom_toTopOf="@id/gdhOption4"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="30dp">
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/gamewallet_percentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="50%"
+                            android:textSize="12sp"
+                            android:textColor="@color/textColor2"
+                            android:fontFamily="@font/rubik_regular"/>
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="Game Wallet"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor2"
+                            android:fontFamily="@font/rubik_regular"/>
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/gamewallet_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="10"
+                            android:textSize="24sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/rubik_medium"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="end"
+                        android:layout_marginEnd="30dp">
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/bonuswallet_percentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="40dp"
+                            android:text="50%"
+                            android:textSize="12sp"
+                            android:textColor="#4061419C"
+                            android:fontFamily="@font/rubik_regular"/>
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="40dp"
+                            android:text="Bonus Wallet"
+                            android:textSize="16sp"
+                            android:textColor="@color/color2"
+                            android:fontFamily="@font/rubik_regular"/>
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/bonuswallet_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="40dp"
+                            android:text="10"
+                            android:textSize="24sp"
+                            android:textColor="@color/color2"
+                            android:fontFamily="@font/rubik_medium"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toBottomOf="@id/gdhOption4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/violetbg_topleftradius">
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/walletHeading_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/info_icon"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="How much you want to opt from your"
+                        android:textSize="13sp"
+                        android:textColor="#60FFFFFF"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/rubik_regular"/>
+
+                    <ImageView
+                        android:id="@+id/info_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_feather_info"
+                        app:layout_constraintTop_toTopOf="@id/walletHeading_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="10dp"
+                        android:paddingHorizontal="12dp"
+                        android:paddingBottom="12dp"/>
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/bonuswallet_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/walletHeading_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Bonus Wallet?"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/rubik_regular"/>
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/walletContinue_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginBottom="40dp"
+                        android:layout_marginEnd="30dp"
+                        android:text="Confirm"
+                        android:textAllCaps="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlue"
+                        android:fontFamily="@font/rubik_regular"
+                        android:background="@drawable/bg_btn_white"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="@id/walletContinue_btn"
+                        app:layout_constraintBottom_toBottomOf="@id/walletContinue_btn"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="30dp">
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bonus Wallet Balance"
+                        android:textSize="12sp"
+                        android:textColor="#40FFFFFF"
+                        android:fontFamily="@font/rubik_regular"/>
+
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/bonuswallet_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹20"
+                        android:textSize="16sp"
+                        android:textColor="#40FFFFFF"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginTop="2dp"/>
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="25dp"
+                        app:layout_constraintBottom_toTopOf="@id/walletContinue_btn"
+                        app:layout_constraintTop_toBottomOf="@id/bonuswallet_text">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingTop="20dp"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:paddingBottom="10dp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="parent">
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="40dp"
+                                android:background="@color/textColor3" />
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:id="@+id/zero_percent_amount"
+                                android:layout_width="22dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="₹0"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/textColor3"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/rubik_regular" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@color/textColor3"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/linearLayout"
+                            app:layout_constraintStart_toEndOf="@id/linearLayout2"
+                            app:layout_constraintTop_toBottomOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingTop="20dp"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:paddingBottom="10dp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+                            app:layout_constraintTop_toBottomOf="parent">
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="40dp"
+                                android:background="@color/textColor3" />
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:id="@+id/ten_percent_amount"
+                                android:layout_width="22dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center_horizontal"
+                                android:text="10"
+                                android:textColor="@color/textColor3"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/rubik_regular" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@color/textColor3"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/linearLayout3"
+                            app:layout_constraintStart_toEndOf="@id/linearLayout"
+                            app:layout_constraintTop_toBottomOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingTop="20dp"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:paddingBottom="10dp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+                            app:layout_constraintTop_toBottomOf="parent">
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="40dp"
+                                android:background="@color/textColor3" />
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:id="@+id/twenty_percent_amount"
+                                android:layout_width="22dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center_horizontal"
+                                android:text="20"
+                                android:textColor="@color/textColor3"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/rubik_regular" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@color/textColor3"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/linearLayout4"
+                            app:layout_constraintStart_toEndOf="@id/linearLayout3"
+                            app:layout_constraintTop_toBottomOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingTop="20dp"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:paddingBottom="10dp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout3"
+                            app:layout_constraintTop_toBottomOf="parent">
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="40dp"
+                                android:background="@color/textColor3" />
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:id="@+id/thirty_percent_amount"
+                                android:layout_width="22dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center_horizontal"
+                                android:text="30"
+                                android:textColor="@color/textColor3"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/rubik_regular" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@color/textColor3"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/linearLayout5"
+                            app:layout_constraintStart_toEndOf="@id/linearLayout4"
+                            app:layout_constraintTop_toBottomOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingTop="20dp"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:paddingBottom="10dp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+                            app:layout_constraintTop_toBottomOf="parent">
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="40dp"
+                                android:background="@color/textColor3" />
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:id="@+id/forty_percent_amount"
+                                android:layout_width="22dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center_horizontal"
+                                android:text="40"
+                                android:textColor="@color/textColor3"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/rubik_regular" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@color/textColor3"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/linearLayout6"
+                            app:layout_constraintStart_toEndOf="@id/linearLayout5"
+                            app:layout_constraintTop_toBottomOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingTop="20dp"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:paddingBottom="10dp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+                            app:layout_constraintTop_toBottomOf="parent">
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="40dp"
+                                android:background="@color/textColor3" />
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:id="@+id/fifty_percent_amount"
+                                android:layout_width="22dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center_horizontal"
+                                android:text="50"
+                                android:textColor="@color/textColor3"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/rubik_regular" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/selection_view"
+                            android:layout_width="36dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/lightbluebg_curved"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="@id/linearLayout2"
+                            app:layout_constraintStart_toStartOf="@id/linearLayout2"
+                            app:layout_constraintTop_toTopOf="@id/linearLayout2" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gdhOption4"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintGuide_percent="0.40"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdhOption1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.62"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdhOption2"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.55"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdhOption3"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.32"/>
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bottom_sheet_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:behavior_hideable="true"
+                    app:behavior_peekHeight="@null"
+                    app:behavior_skipCollapsed="true"
+                    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingTop="30dp"
+                    android:background="#40000000">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/rules_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:background="@drawable/whitebg_topradius1"
+                        android:backgroundTint="@color/black">
+
+                        <LinearLayout
+                            android:id="@+id/header_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="@dimen/size_of_value_sixteen"
+                            android:orientation="vertical"
+                            android:padding="@dimen/size_of_value_sixteen">
+
+                            <ImageView
+                                android:id="@+id/ivCloserules"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_close_black"
+                                android:backgroundTint="@color/white"
+                                android:contentDescription="@string/app_name" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/balance_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginEnd="25dp"
+                            android:layout_marginTop="35dp"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@id/header_layout">
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bonus Wallet"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/rubik_medium"/>
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="All the money given to the player from MonQuiz in the event of promotional campaigns or referral system goes into Bonus Wallet. It is a non-redeemable wallet. You can play with this money."
+                                android:gravity="start"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_marginTop="30dp"/>
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="45dp"
+                                android:text="Usage of Bonus Wallet in a Game"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/rubik_medium"/>
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/bwallet_hint1"
+                                android:gravity="start"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_marginTop="15dp"/>
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="For more detailed explanation, please read"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_marginTop="30dp"/>
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:id="@+id/tvsuperoverRules"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Super Over Rules"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_marginTop="5dp"/>
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

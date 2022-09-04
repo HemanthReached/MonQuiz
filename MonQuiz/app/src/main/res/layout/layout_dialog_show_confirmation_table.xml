@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlDialogPlayGameBackground"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/ivShowConfirmBg"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            fonts:srcCompat="@drawable/pro_ic_dialog_wallet100" />
+
+        <LinearLayout
+            android:id="@+id/rlPayingMoney"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:layout_weight="5">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_landing_amount_debit_circle" />
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvPaying"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tvPayingMoney"
+                        android:text="@string/paying"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        fonts:custom_font="@string/rubik_light" />
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvPayingMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tvPlayGameText"
+                        android:text="₹100"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/golden"
+                        android:textSize="25sp"
+                        fonts:custom_font="@string/rubik_medium" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--<com.owlizz.customviews.CustomTextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="+"-->
+                <!--android:gravity="center"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="#FF043A7A"-->
+                <!--android:textSize="50sp"-->
+                <!--fonts:custom_font="@string/rubik_light" />-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="4"-->
+                <!--android:gravity="center|start"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_height="match_parent">-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<com.owlizz.customviews.CustomTextView-->
+                        <!--android:id="@+id/tvPayingCredits"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="0"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textColor="#FF043A7A"-->
+                        <!--android:textSize="30sp"-->
+                        <!--fonts:custom_font="@string/rubik_light" />-->
+                    <!--<com.owlizz.customviews.CustomTextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="CREDITS"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textColor="#FF043A7A"-->
+                        <!--android:textSize="15sp"-->
+                        <!--fonts:custom_font="@string/rubik_bold" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvPlayGameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlPayingMoney"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingEnd="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/game_money_deduction"
+            android:textAlignment="center"
+            android:textColor="@color/black_100"
+            android:textSize="@dimen/font_size_of_value_sixteen"
+            fonts:custom_font="@string/rubik_medium" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="20" />
+
+                <Button
+                    android:id="@+id/btnDeductAmount"
+                    style="@style/Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_weight="60"
+                    android:text="@string/pay_now" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="20" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

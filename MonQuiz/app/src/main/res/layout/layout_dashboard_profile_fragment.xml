@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8EFF2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/size_of_value_sixteen"
+        android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/ivProfileQuestionMark"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_help_icon1"
+                    android:scaleType="centerCrop"
+                    android:layout_marginStart="10dp"/>
+
+                <ImageView
+                    android:id="@+id/ivProfileSetting"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/settings_icon1"
+                    android:layout_marginEnd="10dp" />
+
+            </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlProfileImageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfileUserImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_pro_pic"
+                    app:civ_border_color="#E0E0E0"
+                    app:civ_border_width="@dimen/size_of_value_one"
+                    app:civ_fill_color="@color/white"
+                    app:paddingStart="@dimen/size_of_value_thirty"
+                    tools:ignore="MissingClass" />
+
+                <ImageView
+                    android:id="@+id/edit_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:padding="14dp"
+                    android:src="@drawable/edit_icon"
+                    android:background="@drawable/bg_btn_white"
+                    android:layout_alignEnd="@id/ivProfileUserImage"
+                    android:layout_alignBottom="@id/ivProfileUserImage"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="-10dp"/>
+            </RelativeLayout>
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvProfileUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_dashboard_profile_username"
+                fonts:custom_font="@string/rubik_bold"
+                android:layout_marginTop="10dp"/>
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvProfileUserMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_dashboard_profile_mobilenumber"
+                fonts:custom_font="@string/rubik_light" />
+
+            <LinearLayout
+                android:id="@+id/llProfileReferralLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:padding="@dimen/size_of_value_ten">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bluebg_curved"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp">
+
+                   <!-- <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/ic_refer" />-->
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvProfileReferralCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="VK1385"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        fonts:custom_font="@string/rubik_bold" />
+
+                    <ImageView
+                        android:id="@+id/ivProfileShareAppLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/ic_share_black" />
+
+                </LinearLayout>
+
+                <com.monquiz.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/refer_a_friend"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_100"
+                    android:textSize="14sp"
+                    fonts:custom_font="@string/rubik_regular"
+                    android:layout_marginTop="12dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llProfileMyGameStats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:srcCompat="@drawable/ic_played_white" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:orientation="vertical"
+                    app:srcCompat="@drawable/ic_won_white" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:srcCompat="@drawable/ic_earned_white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:padding="10dp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_played_white" />
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvProfileStatsPlayed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:visibility="visible"
+                        fonts:custom_font="@string/rubik_regular" />
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Games"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        fonts:custom_font="@string/rubik_light" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:background="#507E7E7E"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/size_of_value_five"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:padding="10dp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_won_white" />
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvProfileStatsWon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:visibility="visible"
+                        fonts:custom_font="@string/rubik_regular" />
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/won"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        fonts:custom_font="@string/rubik_light" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:background="#507E7E7E"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/size_of_value_five"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_earned_white" />
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/tvProfileStatsEarned"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:visibility="visible"
+                        fonts:custom_font="@string/rubik_regular" />
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:id="@+id/winorlosetextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/earned"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        fonts:custom_font="@string/rubik_light" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.2"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rlProfileLeaderBoard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/violetbg_cornered"
+                        android:contentDescription="@string/app_name"
+                        android:layout_alignBottom="@id/ivLeaderBoardView"
+                        android:layout_alignTop="@id/ivLeaderBoardView"
+                        android:layout_marginTop="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/ivLeaderBoardView">
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/tvProfilePositioned"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/rubik_semibold" />
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Leader board \nStanding"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/rubik_regular" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivLeaderBoardView"
+                        android:layout_width="138dp"
+                        android:layout_height="145dp"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/ic_leaderboard1"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="40dp"/>
+
+                </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_sheet_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="@null"
+            app:behavior_skipCollapsed="true"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:paddingTop="20dp"
+            android:background="#40000000">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/bluebg_topradius">
+
+                <ImageView
+                    android:id="@+id/ivShareClose"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    app:srcCompat="@drawable/ic_close_black"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="17dp"
+                    app:tint="@color/white"
+                    android:padding="10dp"/>
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/ivShareClose"
+                    android:gravity="start"
+                    android:text="Share the excitement"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/rubik_medium" />
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/tv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="start"
+                    android:text="and get bonus reward."
+                    android:textColor="#40FFFFFF"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/rubik_regular" />
+
+                <com.monquiz.customviews.CustomTextView
+                    android:id="@+id/tv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv2"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="90dp"
+                    android:gravity="start"
+                    android:text="@string/share_desc"
+                    android:textColor="#40FFFFFF"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/rubik_regular"/>
+
+                <LinearLayout
+                    android:id="@+id/ReferralLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv3">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:background="@drawable/bg_btn_white"
+                        android:gravity="center_vertical">
+
+                        <com.monquiz.customviews.CustomTextView
+                            android:id="@+id/tvReferralCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="VK1385"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorBlue"
+                            android:textSize="18sp"
+                            fonts:custom_font="@string/rubik_bold" />
+
+                        <ImageView
+                            android:id="@+id/copyRefferalView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_copy_"
+                            android:layout_marginStart="10dp"/>
+
+                    </LinearLayout>
+
+
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="16dp"
+                        android:gravity="start"
+                        android:text="Share your code"
+                        android:textColor="#40FFFFFF"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/ReferralLayout"
+                    android:layout_marginTop="60dp"
+                    android:background="@color/white"
+                    android:paddingVertical="40dp">
+
+                    <com.monquiz.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:gravity="start"
+                        android:text="Share to your friend via"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+                    <LinearLayout
+                        android:id="@+id/llDialogGameUserProfileStatsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="16dp">
+
+                        <LinearLayout
+                            android:id="@+id/llShareWhatsApp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_whatsapp" />
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="WhatsApp"
+                                android:layout_gravity="center_horizontal"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/rubik_regular"/>
+
+                            <!--<de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ivShareDialogFacebook"
+                                android:visibility="gone"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="@string/app_name"
+                                android:padding="16dp"
+                                android:src="@drawable/ic_facebook" />-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llShareMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="40dp">
+
+                           <!-- <com.monquiz.customviews.CustomTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:visibility="gone"
+                                android:text="Facebook"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                fonts:custom_font="@string/rubik_regular" />-->
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_chat1" />
+
+                            <com.monquiz.customviews.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="SMS"
+                                android:textAlignment="center"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/rubik_regular" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

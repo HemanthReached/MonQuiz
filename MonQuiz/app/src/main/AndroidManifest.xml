@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.monquiz">
+
+    <uses-sdk tools:overrideLibrary="pl.droidsonroids.gif" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- <uses-permission android:name="android.permission.READ_SMS" /> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <application
+        android:name="com.monquiz.utils.OwlizApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/launchericon1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/launchericon1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:theme">
+        <activity
+            android:name="com.monquiz.ui.FAQSubActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.FAQActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.RuleBookActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.AddMoneyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.AddProfilePicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.UsernameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.OTPVerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.ShowTextDocumentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            tools:ignore="LockedOrientationActivity">
+           <!-- <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />-->
+        </activity>
+        <activity
+            android:name="com.monquiz.ui.SplashScreen"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.monquiz.ui.SplashScreen1"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.monquiz.ui.games.superover.SuperOverLobbyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.games.superover.SuperOverQuestionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.games.superover.SuperOverScoreboardActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.BaseActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.PersonalDetailsActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.SuperOverRulesActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.monquiz.ui.games.superover.SuperOverActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.monquiz.MainActivity"
+            android:exported="true" />
+        
+        <provider
+            android:authorities="@string/file_provider_authority"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name="com.monquiz.utils.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.monquiz.services.SoundService" />
+
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="rzp.device_token.share" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/CheckoutTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <data
+                    android:host="rzp.io"
+                    android:scheme="io.rzp" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_nastejQfZCOgFR" />
+
+        <receiver android:name=".services.ActionReceiver" />
+
+       <!-- rzp_live_nastejQfZCOgFR-->
+
+    </application>
+
+</manifest>

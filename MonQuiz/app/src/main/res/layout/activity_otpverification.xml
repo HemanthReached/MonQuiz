@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:clickable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_of_value_sixteen"
+        android:orientation="horizontal"
+        android:padding="@dimen/size_of_value_sixteen"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivOtpVerifyBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/size_of_value_ten"
+            android:layout_marginRight="@dimen/size_of_value_ten"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_arrow_back_black" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="65"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/header_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/optscreen_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/gdhOption1"
+        app:layout_constraintBottom_toBottomOf="@id/gdhOption1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/header_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.monquiz.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verification"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:fontFamily="@font/rubik_bold"/>
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvOtpVerifyVerificationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/size_of_value_twenty"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:gravity="center"
+            android:text="Enter the 6 digit number that was sent to "
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/rubik_regular" />
+
+    </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdhOption1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.40"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdhOption2"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.60"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/otplayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="35"
+        app:layout_constraintTop_toBottomOf="@id/gdhOption2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/whitebg_topradius"
+        android:padding="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+                <com.mukesh.OtpView
+                    android:id="@+id/otpViewOtpVerify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:clickable="true"
+                    android:cursorVisible="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    app:itemCount="6"
+                    app:lineColor="#3D5872"
+                    app:viewType="line"
+                    app:cursorColor="#3D5872"
+                    app:itemSpacing="10dp"
+                    app:itemWidth="40dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="#3D5872"
+                    android:fontFamily="@font/rubik_bold"/>
+
+        </LinearLayout>
+
+
+            <com.monquiz.customviews.CustomButton
+                android:id="@+id/btnOtpVerifyDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tvOtpVerifyTimer"
+                android:background="@drawable/bluebg_curved"
+                android:enabled="false"
+                android:text="@string/verify"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/rubik_regular"
+                android:layout_marginBottom="35dp"
+                android:textAllCaps="false"/>
+
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvOtpVerifyTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/can_retry_in"
+            android:textAlignment="center"
+            android:fontFamily="@font/rubik_regular"
+            android:layout_alignParentBottom="true"
+            android:textColor="#3D5872"
+            android:layout_marginTop="15dp"/>
+
+      <!--  <LinearLayout
+            android:id="@+id/llOtpVerify"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/size_of_value_ten"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvOtpVerifyResend"
+                android:visibility="visible"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/resend_code"
+                android:textAlignment="center"
+                android:textColor="@color/blue_50"
+                fonts:custom_font="@string/rubik_bold" />
+
+            <com.monquiz.customviews.CustomTextView
+                android:id="@+id/tvOtpVerifyCallMe"
+                android:visibility="visible"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/call_me"
+                android:textAlignment="center"
+                android:textColor="@color/blue_50"
+                fonts:custom_font="@string/rubik_bold" />
+        </LinearLayout>-->
+
+
+    </RelativeLayout>
+
+</LinearLayout>

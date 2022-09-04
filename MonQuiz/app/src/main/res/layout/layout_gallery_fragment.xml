@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                app:layout_collapseMode="pin">
+
+                <FrameLayout
+                    android:id="@+id/top_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.fenchtose.nocropper.CropperView
+                        android:id="@+id/cropperView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ff282828"
+                        app:nocropper__grid_color="@color/colorAccent"
+                        app:nocropper__grid_opacity="0.8"
+                        app:nocropper__grid_thickness="0.8dp"
+                        app:nocropper__padding_color="@color/colorAccent" />
+
+                    <ImageView
+                        android:id="@+id/ivEnlarge"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left|bottom"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/black_transp_circ_ripple"
+                        android:contentDescription="@string/app_name"
+                        android:padding="8dp"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_strech" />
+
+                    <ImageView
+                        android:id="@+id/ivRotate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="right|bottom"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/black_transp_circ_ripple"
+                        android:contentDescription="@string/app_name"
+                        android:padding="8dp"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_rotate" />
+
+                </FrameLayout>
+            </RelativeLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.monquiz.customviews.CustomTextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/size_of_value_twenty"
+        android:layout_marginLeft="@dimen/size_of_value_twenty"
+        android:layout_marginRight="@dimen/size_of_value_twenty"
+        android:layout_marginStart="@dimen/size_of_value_twenty"
+        android:gravity="center"
+        android:text="@string/no_data_available"
+        android:textColor="@color/black_100"
+        android:visibility="gone"
+        fonts:custom_font="@string/rubik_regular" />
+
+</com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout>

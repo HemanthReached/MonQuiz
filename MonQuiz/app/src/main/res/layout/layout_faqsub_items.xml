@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fonts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lltvFaqSubQuestionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvFaqSubQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_expand_more_black"
+            android:drawableLeft="@drawable/ic_expand_more_black"
+            android:drawablePadding="@dimen/size_of_value_six"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:text="TextAppearance.AppCompat.MediumTextAppearance.AppCompat.Medium"
+            android:textSize="@dimen/font_size_of_value_sixteen"
+            fonts:custom_font="@string/rubik_regular" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lltvFaqSubAnswerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_87"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.monquiz.customviews.CustomTextView
+            android:id="@+id/tvFaqSubAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="32dp"
+            android:paddingLeft="32dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:text="TextAppearance.AppCompat.MediumTextAppearance.AppCompat.Medium"
+            android:textSize="@dimen/font_size_of_value_sixteen"
+            fonts:custom_font="@string/rubik_regular" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_20" />
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+{
+   "FAQ's":[
+      {
+         "Heading":"TROUBLE WHILE REGISTERING",
+         "QAs":[
+            {
+               "Q":" I was trying to sign in, but I did not receive the OTP for a long time?",
+               "A":" Just click on resend, and you'll receive another OTP. If the problem still persists,  please contact out customer support"
+            },
+            {
+               "Q":" While signing in, I entered the wrong mobile number?",
+               "A":" No Problem just go back to the previous screen and re-enter your number and we'll  send the OTP again."
+            }
+         ]
+      },
+      {
+         "Heading":"PAYMENT ISSUES",
+         "QAs":[
+            {
+               "Q":" Is doing online payment safe?",
+               "A":" Off course it’s safe. The transactions are encrypted and protected with multiple  layers of security."
+            },
+            {
+               "Q":" I made a payment, the amount got deducted from my account but didn't receive it in  my game wallet",
+               "A":" In such case, please contact our Customer Support team."
+            },
+            {
+               "Q":" What happens if paid the amount and don't want to play the Game",
+               "A":" Sorry, nothing can be done in this scenario."
+            }
+         ]
+      },
+      {
+         "Heading":"PROBLEM IN REDEEMING CASH",
+         "QAs":[
+            {
+               "Q":" How do I claim my winnings?",
+               "A":" Just click on the redeem button in the wallet"
+            },
+            {
+               "Q":" Do I need to give any ID while redeeming my winnings?",
+               "A":" Yes, you'll have to submit your pan Card/Govt Id while redeeming cash"
+            },
+            {
+               "Q":" Is there a limit on how much I can redeem?",
+               "A":" You need to have minimum Rs 100 in your wallet to withdraw & You can withdraw a  maximum of 10K in one go"
+            },
+            {
+               "Q":" Can I redeem the cash immediately after winning the game?",
+               "A":" Sorry, you'll have to wait for 12 hours as the winnings will be subjected to clearing.  Government rules but it’s for your safeguard only so that no one else can hack or  fraudulently benefit from someone else's winning"
+            },
+            {
+               "Q":" Till when can I claim my winnings?",
+               "A":" You can keep your winning in your PayTM wallet as long as you want."
+            }
+         ]
+      },
+      {
+         "Heading":"QUESTIONS REGARDING GAME",
+         "QAs":[
+            {
+               "Q":" Can I play alone?",
+               "A":" You can play a free game alone, but for cash games you'll require competitors"
+            },
+            {
+               "Q":" How do I win a game?",
+               "A":" Players with the highest number of Correct answers and the best time will win the  game. You can see the respective payout for the rank in the Lobby section before the  game starts."
+            },
+            {
+               "Q":" How many questions should be answered correctly to win a Game? ",
+               "A":" Just Answering correctly won't suffice here, you'll have to beat your opponent’s time as well"
+            },
+            {
+               "Q":" How is it decided who has won the Game?",
+               "A":" System decides the winner based on the correct answers and the quickest time"
+            },
+            {
+               "Q":" I didn't get the question?",
+               "A":" Write to our customer support and we shall look into it."
+            },
+            {
+               "Q":" How many games can I play in a day?",
+               "A":" Win or lose, you cannot transact more than Rs 500 in a day. When we say transaction,  it means from your wallet to the game."
+            }
+         ]
+      },
+      {
+         "Heading":"OTHER QUERIES",
+         "QAs":[
+            {
+               "Q":" How does the referral system work?",
+               "A":" Please copy the link and forward it to your friends and family, if they download and  transact in the game you get your bonus"
+            },
+            {
+               "Q":" Where can I check my performance?",
+               "A":" In the Profile tab at the bottom of your Screen"
+            },
+            {
+               "Q":" Where can I check my balance & game history?",
+               "A":" In your Game Wallet, you will be able to see all the transactions done through your game wallet"
+            },
+            {
+               "Q":" Do I need the Internet to play the game?",
+               "A":" Yes, a good internet connection is required to enjoy the app."
+            },
+            {
+               "Q":" I am not receiving notifications. What should I do?",
+               "A":" You Should talk to Chetan (Developer), he said no one's ever going to miss a notification."
+            },
+            {
+               "Q":" How can I delete my account?",
+               "A":" In the Profile tab at the bottom of your Screen you'll find the delete account option"
+            },
+            {
+               "Q":" Can I transfer The Game wallet amount to my Paytm wallet?",
+               "A":" Just click on the redeem button in your wallet and we'll process the transfer"
+            },
+            {
+               "Q":" How do I Report incorrect questions?",
+               "A":" Click on the Report Question button in Answer Summary Screen and you can  submit the incorrect questions"
+            },
+            {
+               "Q":" How will I know if I have won a game?",
+               "A":" You'll get the game result after every game you play "
+            }
+         ]
+      },
+      {
+         "Heading":"CHEATING PROBLEMS",
+         "QAs":[
+            {
+               "Q":"Using multiple IDs to play the Game?",
+               "A":" Any user account trying to cheat or manipulate the game, when found appropriate action  will be taken against those accounts."
+            }
+         ]
+      }
+   ]
+}
