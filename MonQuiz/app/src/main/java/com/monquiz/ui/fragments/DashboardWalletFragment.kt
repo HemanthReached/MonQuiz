@@ -55,6 +55,8 @@ import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.math.RoundingMode
+import java.text.DecimalFormat
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -494,7 +496,13 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
               //  requireActivity().finish()
             }
             R.id.btnAddMoneyNext -> { goNext() }
-            R.id.filter_view -> { configureFiltersUI() }
+            R.id.filter_view -> {
+                if (listOfUserHistory.isNullOrEmpty()){
+                    Toasty.warning(requireContext(),"No transactions to filter",Toasty.LENGTH_SHORT).show()
+                }else {
+                    configureFiltersUI()
+                }
+            }
             else -> {}
         }
     }
@@ -936,8 +944,10 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
                     val resp = response.body()
                     Log.i("getWalletBalance", "GetWalletResponse:// $resp")
                     if (resp!!.status==200){
-                        walletBalance = resp.responseData!!.walletBalance!!.toDouble()
-                        referralBalance = resp.responseData!!.referralBalance!!
+                        val df = DecimalFormat("#.##")
+                        df.roundingMode = RoundingMode.DOWN
+                        walletBalance = df.format(resp.responseData!!.walletBalance!!.toDouble()).toDouble()
+                        referralBalance = df.format(resp.responseData!!.referralBalance!!).toDouble()
                         if (!BuildConfig.PRO_VERSION) {
                             total_balance!!.text = "\u20B9\u0020" + (walletBalance + referralBalance)
                             game_balance!!.text = "\u20B9\u0020" + walletBalance

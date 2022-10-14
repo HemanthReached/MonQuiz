@@ -57,7 +57,10 @@
                 android:text="\u20B9 0.00"
                 android:textColor="@color/white"
                 android:textSize="36sp"
-                android:fontFamily="@font/rubik_light"/>
+                android:fontFamily="@font/rubik_light"
+                android:maxLength="11"
+                android:maxWidth="220dp"
+                android:gravity="center"/>
 
             <ImageView
                 android:id="@+id/arrow_view"
@@ -103,6 +106,7 @@
                     android:text="\u20B9 0.00"
                     android:textColor="@color/white"
                     android:textSize="24sp"
+                    android:maxLength="15"
                     android:fontFamily="@font/rubik_light"/>
 
                 <TextView
@@ -140,6 +144,7 @@
                     android:layout_marginTop="30dp"
                     android:text="\u20B9 0.00"
                     android:textColor="@color/white"
+                    android:maxLength="15"
                     android:textSize="24sp"
                     android:fontFamily="@font/rubik_light"/>
 
@@ -469,7 +474,7 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/bottom_sheet_layout"

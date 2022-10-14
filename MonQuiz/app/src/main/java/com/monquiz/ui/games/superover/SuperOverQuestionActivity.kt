@@ -406,7 +406,12 @@ class SuperOverQuestionActivity : BaseActivity(),SuperOver_QtnDataInterface{
        // for (i in res.questions!!.indices){ }
         val questionsss: String? = qtnslists[questionNumber].question
         val answers: String? = qtnslists[questionNumber].answer
-        optionss = qtnslists[questionNumber].options!!.map { it.valX!! to it.text!! }.toMap()
+        val optns = qtnslists[questionNumber].options
+        if (optns.isNullOrEmpty()){
+            optionss = mapOf("A" to "","B" to "","C" to "","D" to "").toMap()
+        }else{
+            optionss = optns.map { it.valX!! to it.text!! }.toMap()
+        }
 
         qutionss = if (queTimer != null){
             Question(questionsss,optionss,answers,"","",

@@ -43,6 +43,7 @@
     <color name="white_38">#5CFFFFFF</color>
     <color name="white_10">#1AFFFFFF</color>
 
+    <color name="black">#000000</color>
     <color name="black_100">#FF000000</color>
     <color name="black_87">#DE000000</color>
     <color name="black_80">#CC000000</color>

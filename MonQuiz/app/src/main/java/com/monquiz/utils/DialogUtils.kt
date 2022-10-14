@@ -1,24 +1,22 @@
 package com.monquiz.utils
 
-import android.annotation.TargetApi
 import android.app.Dialog
 import android.content.Context
-import android.view.WindowManager
-import com.monquiz.R
-import android.widget.TextView
 import android.content.DialogInterface
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.os.Handler
+import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
-import android.text.Spannable
-import android.graphics.drawable.ColorDrawable
-import android.os.Build
-import android.os.Handler
 import android.view.View
 import android.view.Window
+import android.view.WindowManager
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import com.monquiz.BuildConfig
+import com.monquiz.R
 import com.monquiz.ui.BaseActivity.Companion.hideStatusBarForDialog
-import java.lang.Exception
 import java.util.logging.Level
 import java.util.logging.Logger
 
@@ -35,7 +33,6 @@ class DialogUtils {
      * @param message title of dialog
      * @return dialog object
      */
-    @TargetApi(Build.VERSION_CODES.KITKAT)
     fun progressDialog(context: Context, message: String): Dialog? {
         dialog = null
         try {
@@ -77,7 +74,7 @@ class DialogUtils {
         handlerBlink!!.postDelayed(runnableBlink!!, 500)
     }
 
-    fun doTask(titleTV: TextView, context: Context, message: String) {
+    private fun doTask(titleTV: TextView, context: Context, message: String) {
         if (initialState) {
             // Reverse the boolean
             initialState = false
@@ -91,7 +88,7 @@ class DialogUtils {
             initialState = true
             // Change the TextView color to initial State
             val spannableColorString1 = SpannableString(message)
-            spannableColorString1.setSpan(ForegroundColorSpan(context.resources.getColor(R.color.dark_orange)),
+            spannableColorString1.setSpan(ForegroundColorSpan(ContextCompat.getColor(context,R.color.dark_orange)),
                 message.length - 1, message.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
             titleTV.text = spannableColorString1
         }

@@ -14,7 +14,6 @@ import com.monquiz.ui.DashboardActivity
 import android.graphics.BitmapFactory
 import android.util.Log
 import android.view.View
-import android.view.WindowManager
 import android.view.animation.Animation
 import android.widget.*
 import androidx.appcompat.content.res.AppCompatResources
@@ -502,15 +501,20 @@ class SuperOverScoreboardActivity : BaseActivity(), View.OnClickListener {
                     val resp = response.body()
                     val data = resp!!.responseData
                     Log.e("Scoreboard", "GamesResponse:// $resp")
-                    val jsonobj = JSONObject(data.toString())
-                    val winnerid = jsonobj.getString("winnerId")
-                    val winnerscore = jsonobj.getString("winnerScore")
-                    val looserid = jsonobj.getString("looserId")
-                    val looserscore = jsonobj.getString("looserScore")
-                    /*val winbyscore = jsonobj.getString("winByScore")
-                    val losebyscore = jsonobj.getString("looseByScore")*/
+                    if (data != null){
+                        val jsonObj = JSONObject(data.toString())
+                        val winnerId = jsonObj.getString("winnerId")
+                        val winnerScore = jsonObj.getString("winnerScore")
+                        val looserId = jsonObj.getString("looserId")
+                        val looserScore = jsonObj.getString("looserScore")
+                        /*val winbyscore = jsonobj.getString("winByScore")
+                        val losebyscore = jsonobj.getString("looseByScore")*/
 
-                    findTheWinnerFromUserDetails(winnerid,winnerscore,looserid,looserscore)
+                        findTheWinnerFromUserDetails(winnerId,winnerScore,looserId,looserScore)
+                    }else{
+                        Toasty.error(applicationContext, "Something Went Wrong",
+                            Toasty.LENGTH_SHORT).show()
+                    }
                 } else{
                     closeProgressbar()
                     Log.i("CustomerSetting","ResponseLangError:// ${response.errorBody().toString()}")

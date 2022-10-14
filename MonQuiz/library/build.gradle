@@ -4,13 +4,11 @@ plugins {
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 30
+    compileSdk 33
 
     defaultConfig {
         minSdk 23
-        targetSdk 30
-        versionCode 1
-        versionName "1.0"
+        targetSdk 33
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
        // consumerProguardFiles "consumer-rules.pro"
@@ -33,24 +31,25 @@ android {
         main.java.srcDirs += 'src/main/api21'
         main.java.srcDirs += 'src/main/api23'
     }
+    namespace 'com.google.android.cameraview'
 }
 
 dependencies {
  /*   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })*/
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.annotation:annotation:1.5.0'
 
     //implementation 'com.android.support:appcompat-v7:28.0.0'
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
    // androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    androidTestImplementation('com.android.support.test:runner:0.5') {
+    androidTestImplementation('com.android.support.test:runner:1.0.2') {
         exclude module: 'support-annotations'
     }
-    implementation "androidx.core:core-ktx:+"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.core:core-ktx:1.9.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"
 }
 repositories {
     mavenCentral()

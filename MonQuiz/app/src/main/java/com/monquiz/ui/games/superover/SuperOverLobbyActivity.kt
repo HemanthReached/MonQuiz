@@ -7,10 +7,8 @@ import android.os.CountDownTimer
 import android.os.Handler
 import android.util.Log
 import android.view.View
-import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -66,7 +64,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
     private lateinit var internetchecker : InternetStateChecker
     private var bwalletpercentage = 0
     private var isExiting  = false
-    private var isConnectedtoUser = false
+    private var isConnectedToUser = false
     var hits : Int = 0
     var stake = "0"
     var gameid = "0"
@@ -74,7 +72,12 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
     val handler = Handler()
     val  runnable = Runnable {
         if (statuscode != 1001){
-            if(hits < 6){ hits++;lobby() }else{ exitlobby() }
+            if(hits < 6){
+                hits++;
+                lobby()
+            }else{
+                exitLobby()
+            }
         }
     }
 
@@ -99,7 +102,6 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
         listnerqtn= this
         internetchecker = InternetStateChecker.Builder(this).setCancelable(true).build()
         initializeUi()
-      //  initializeListeners()
     }
 
     private fun initializeUi() {
@@ -131,7 +133,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
             PrefsHelper().savePref(OwlizConstants.SuperOVer_RoomIDs,Game_RoomId)
             EventBus.getDefault().post(SuperOver_Game_Event(responsedata!!,qtnslistdata))
             hits = 0
-            isConnectedtoUser = false
+            isConnectedToUser = false
             val i=Intent(applicationContext,SuperOverQuestionActivity::class.java)
             i.putExtra(OwlizConstants.SuperOVer_RoomID,Game_RoomId)
             i.putExtra(OwlizConstants.stake_amount, stake)
@@ -147,7 +149,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
         //showProgressBar(getString(R.string.loading_please_wait))
         val stakeamount:Int = stake.toInt()
         var addbot = false
-        if (hits >= 5){ addbot = true }
+       // if (hits >= 5){ addbot = true }
 
         val userdata = SuperOver_JoinLobby_Input(stakeamount, gameid , stakeId ,bwalletpercentage,
             PrefsHelper().getPref(OwlizConstants.user_id), addbot)
@@ -160,7 +162,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
              //   closeProgressbar()
                 Log.e("SuperOverLobby","FailureResponse $t")
                 Toasty.error(applicationContext,"Request Failed", Toasty.LENGTH_SHORT).show()
-                exitlobby()
+                exitLobby()
             }
             override fun onResponse(call: Call<GameJoin_Response>, response: Response<GameJoin_Response>) {
                 if(response.isSuccessful) {
@@ -170,7 +172,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
                     Log.e("StatusCode : ","${resp!!.code}")
                     if (resp!!.code == 1001){
                         statuscode = 1001
-                        isConnectedtoUser = true
+                        isConnectedToUser = true
                         handler.removeCallbacks(runnable)
                         responsedata= resp!!.responseData
                         qtnslistdata=resp!!.responseData!!.questions!!.toMutableList()
@@ -283,7 +285,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
         timer.start()
     }
 
-    fun exitlobby(){
+    fun exitLobby(){
        showProgressBar(getString(R.string.loading_please_wait))
         val userdata= Game_Lobby_Exit_Input(PrefsHelper().getPref(OwlizConstants.user_id))
 
@@ -292,7 +294,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
         requestCall.enqueue(object : Callback<GameExit_Response> {
             override fun onFailure(call: Call<GameExit_Response>, t: Throwable) {
                  closeProgressbar()
-                Log.i("exitlobby","FailureResponse $t")
+                Log.i("exitLobby","FailureResponse $t")
                 Toasty.error(applicationContext,"Request Failed", Toasty.LENGTH_SHORT).show()
             }
             override fun onResponse(call: Call<GameExit_Response>, response: Response<GameExit_Response>) {
@@ -300,25 +302,15 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
                     isExiting = true
                     closeProgressbar()
                     val resp = response.body()
-                    Log.i("exitlobby", "GamesResponseLangLobby:// ${resp.toString()}")
-                   /* val i= Intent(applicationContext,DashboardActivity::class.java)
-                    startActivity(i)*/
+                    Log.i("exitLobby", "GamesResponseLangLobby:// ${resp.toString()}")
+                    Toasty.warning(this@SuperOverLobbyActivity,
+                        "No players available to connect",Toasty.LENGTH_SHORT).show()
                     finish()
                 } else{
                     closeProgressbar()
-                    Log.i("exitlobby","ResponseLangError:// ${response.errorBody().toString()}")
+                    Log.i("exitLobby","ResponseLangError:// ${response.errorBody().toString()}")
                     Toasty.error(applicationContext, "Something Went Wrong",
                         Toasty.LENGTH_SHORT).show()
-                /*when (response.code()) {
-                        404 -> Toasty.error(applicationContext, "not found",
-                            Toasty.LENGTH_SHORT).show()
-                        500 -> Toasty.warning(applicationContext, "server broken",
-                            Toasty.LENGTH_SHORT).show()
-                        502 -> Toasty.warning(applicationContext, "Bad GateWay",
-                            Toasty.LENGTH_SHORT).show()
-                        else -> Toasty.warning(applicationContext, "unknown error",
-                            Toasty.LENGTH_SHORT).show()
-                    }*/
                 }
             }
         })
@@ -328,11 +320,12 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
       Log.i("TAF","lobbyqtnsData:$qtnslist")
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         // super.onBackPressed()
         handler.removeCallbacks(runnable)
-        if (!isConnectedtoUser){
-            exitlobby()
+        if (!isConnectedToUser){
+            exitLobby()
         }else{
             Toasty.warning(applicationContext,"Match started cannot exit now",
                 Toasty.LENGTH_SHORT).show()

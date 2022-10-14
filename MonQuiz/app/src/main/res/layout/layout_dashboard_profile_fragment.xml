@@ -60,9 +60,8 @@
                     android:src="@drawable/ic_pro_pic"
                     app:civ_border_color="#E0E0E0"
                     app:civ_border_width="@dimen/size_of_value_one"
-                    app:civ_fill_color="@color/white"
-                    app:paddingStart="@dimen/size_of_value_thirty"
-                    tools:ignore="MissingClass" />
+                    app:civ_circle_background_color="@color/white"
+                    app:paddingStart="@dimen/size_of_value_thirty" />
 
                 <ImageView
                     android:id="@+id/edit_view"

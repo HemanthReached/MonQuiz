@@ -11,6 +11,7 @@
     <color name="blue_100">@color/white_54</color>
     <color name="blue_50">#0143b5</color>
     <color name="blue_38">@color/white_38</color>
+    <color name="black">#000000</color>
 
     <color name="clr_navigation_item_blue">@color/clr_bg_gradient_end</color>
     <color name="clr_stakes_layout_background">#7a636363</color>

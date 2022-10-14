@@ -31,21 +31,16 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
-        Log.e("MyFirebase", "onMessageReceived: FROM: "
-                    + remoteMessage.from.toString() +
+        Log.e("MyFirebase", "onMessageReceived: FROM: " + remoteMessage.from.toString() +
                 " \n DATA: " + remoteMessage.notification?.title)
-        remoteMessage.notification?.let {
-            Log.d("Message","${it.body}")
-        }
-        sendNotification(applicationContext, remoteMessage)
+        remoteMessage.notification?.let { Log.d("Message","${it.body}") }
+        sendNotification(remoteMessage)
     }
 
     @SuppressLint("UnspecifiedImmutableFlag")
-    private fun sendNotification(context: Context, remoteMessage: RemoteMessage) {
+    private fun sendNotification(remoteMessage: RemoteMessage) {
         val channelId = "MonQuiz"
-        val notificationManager = /*NotificationManagerCompat.from(context)*/
-            applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        Log.e("notification" ,"1")
+        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         // Since android Oreo notification channel is needed.
         val channel = NotificationChannel(channelId, "MonQuizNotifications",
             NotificationManager.IMPORTANCE_HIGH)
@@ -54,27 +49,15 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         channel.enableVibration(true)
         notificationManager.createNotificationChannel(channel)
 
-        val intentAction =  Intent(context, ActionReceiver::class.java)
-        val pIntentlogin = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-            PendingIntent.getBroadcast(context,System.currentTimeMillis().toInt(),
-                intentAction,PendingIntent.FLAG_IMMUTABLE)
-        }else{
-            PendingIntent.getBroadcast(context,System.currentTimeMillis().toInt(),
-                intentAction,PendingIntent.FLAG_ONE_SHOT)
-        }
-
-        Log.e("notification" ,"2")
         val intent = Intent(this, SplashScreen1::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
         }
         val flags =  PendingIntent.FLAG_IMMUTABLE
         val pendingIntent: PendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-            PendingIntent.getActivity(context, System.currentTimeMillis().toInt(), intent, flags)
+            PendingIntent.getActivity(this, 0, intent, flags)
         }else{
-            PendingIntent.getActivity(context, System.currentTimeMillis().toInt(),
-                intent, PendingIntent.FLAG_ONE_SHOT)
+            PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
         }
-        Log.e("notification" ,"3")
         val notificationBuilder = NotificationCompat.Builder(applicationContext,
             channelId).apply {
             setSmallIcon(R.mipmap.launchericon1)
@@ -88,9 +71,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             setAutoCancel(true)
             setContentIntent(pendingIntent)
         }
-        Log.e("notification" ,"4")
         notificationManager.notify(NotificationID.iD, notificationBuilder.build())
-        Log.e("notification" ,"5")
     }
 }
 

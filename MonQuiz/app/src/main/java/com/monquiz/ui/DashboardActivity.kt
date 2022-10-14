@@ -16,10 +16,7 @@ import android.os.AsyncTask
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
-import android.view.MenuItem
-import android.view.View
-import android.view.Window
-import android.view.WindowManager
+import android.view.*
 import android.widget.*
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.app.ActivityCompat
@@ -125,7 +122,6 @@ class DashboardActivity : BaseActivity(), BottomNavigationView.OnNavigationItemS
                 or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 or View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
         decorView.systemUiVisibility = uiOptions
-
        // window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         internetchecker = InternetStateChecker.Builder(this).setCancelable(true).build()
         setContentView(R.layout.layout_dashboard)
@@ -229,7 +225,7 @@ class DashboardActivity : BaseActivity(), BottomNavigationView.OnNavigationItemS
                         addresses = geocoder.getFromLocation(location.latitude,
                             location.longitude, 1)!!
                         // Here 1 represent max category_location result to returned, by documents it recommended 1 to 5
-                        val address = addresses[0].getAddressLine(0)
+                       // val address = addresses[0].getAddressLine(0)
                         // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
                         val city = addresses[0].locality
                         val state = addresses[0].adminArea
