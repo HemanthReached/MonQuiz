@@ -76,7 +76,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
                 hits++;
                 lobby()
             }else{
-                exitLobby()
+                exitLobby(true)
             }
         }
     }
@@ -162,7 +162,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
              //   closeProgressbar()
                 Log.e("SuperOverLobby","FailureResponse $t")
                 Toasty.error(applicationContext,"Request Failed", Toasty.LENGTH_SHORT).show()
-                exitLobby()
+                exitLobby(false)
             }
             override fun onResponse(call: Call<GameJoin_Response>, response: Response<GameJoin_Response>) {
                 if(response.isSuccessful) {
@@ -206,7 +206,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
                             tvQuestionMark!!.visibility = View.INVISIBLE
                             tvLobbyOpponentName!!.text = oppdss_name
                            // String dp = mapOfUserDetails.get(key).displayPicture;
-                            Glide.with(applicationContext).load(EndPoints.Base_Urlimage+oppdss_photo)
+                            Glide.with(applicationContext).load(EndPoints.Base_UrlImage+oppdss_photo)
                                 .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                                 .error(R.drawable.ic_default_icon).into(ivLobbyOpponentPic!!)
                             PrefsHelper().savePref(OwlizConstants.oponentname,oppdss_name)
@@ -285,7 +285,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
         timer.start()
     }
 
-    fun exitLobby(){
+    fun exitLobby(b: Boolean) {
        showProgressBar(getString(R.string.loading_please_wait))
         val userdata= Game_Lobby_Exit_Input(PrefsHelper().getPref(OwlizConstants.user_id))
 
@@ -303,8 +303,11 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
                     closeProgressbar()
                     val resp = response.body()
                     Log.i("exitLobby", "GamesResponseLangLobby:// ${resp.toString()}")
-                    Toasty.warning(this@SuperOverLobbyActivity,
-                        "No players available to connect",Toasty.LENGTH_SHORT).show()
+                    if (b){
+                        Toasty.warning(this@SuperOverLobbyActivity,
+                            "No players available to connect",
+                            Toasty.LENGTH_SHORT).show()
+                    }
                     finish()
                 } else{
                     closeProgressbar()
@@ -325,7 +328,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
         // super.onBackPressed()
         handler.removeCallbacks(runnable)
         if (!isConnectedToUser){
-            exitLobby()
+            exitLobby(false)
         }else{
             Toasty.warning(applicationContext,"Match started cannot exit now",
                 Toasty.LENGTH_SHORT).show()

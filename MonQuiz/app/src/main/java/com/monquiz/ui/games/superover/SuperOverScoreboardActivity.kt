@@ -95,13 +95,9 @@ class SuperOverScoreboardActivity : BaseActivity(), View.OnClickListener {
         }
         internetchecker = InternetStateChecker.Builder(this).setCancelable(true).build()
         initializeUi()
-        // initializeFields();
         initializeListeners()
         loadUsersDetails()
-       // prepareCelebratoryBitmaps()
         getScoresFromApi()
-
-      //  startSpiralAnimation()
     }
 
     private fun initializeUi() {
@@ -148,17 +144,6 @@ class SuperOverScoreboardActivity : BaseActivity(), View.OnClickListener {
         resultsClose!!.setOnClickListener { onBackPressed() }
     }
 
-    private fun startSpiralAnimation() {
-        val rotateAnimation = RotateAnimation(0f, 360f,
-            Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
-        if (userWon) { rotateAnimation.duration = 10000 }
-        else { rotateAnimation.duration = 30000 }
-        rotateAnimation.repeatCount = Animation.INFINITE
-        rotateAnimation.interpolator = LinearInterpolator()
-        rotateAnimation.startOffset = 0
-        headerSunrise!!.startAnimation(rotateAnimation)
-    }
-
     @SuppressLint("SetTextI18n")
     override fun onClick(v: View) {
         when (v.id) {
@@ -185,33 +170,6 @@ class SuperOverScoreboardActivity : BaseActivity(), View.OnClickListener {
     private fun launchDashboardActivity() { exitLobby("dashboard") }
     private fun yesRejoin() { exitLobby("rejoin") }
 
-    private fun prepareCelebratoryBitmaps() {
-        val options = BitmapFactory.Options()
-        options.inScaled = false
-        options.inDither = false
-        options.inPreferredConfig = Bitmap.Config.ARGB_8888
-        val bitti1 = BitmapFactory.decodeResource(resources, R.drawable.confetti_blue1, options)
-        val bitti2 = BitmapFactory.decodeResource(resources, R.drawable.confetti_blue2, options)
-        val bitti3 = BitmapFactory.decodeResource(resources, R.drawable.confetti_green1, options)
-        val bitti4 = BitmapFactory.decodeResource(resources, R.drawable.confetti_green2, options)
-        val bitti5 = BitmapFactory.decodeResource(resources, R.drawable.confetti_pink1, options)
-        val bitti6 = BitmapFactory.decodeResource(resources, R.drawable.confetti_pink2, options)
-        val bitti7 = BitmapFactory.decodeResource(resources, R.drawable.confetti_red1, options)
-        val bitti8 = BitmapFactory.decodeResource(resources, R.drawable.confetti_red2, options)
-        val bitti9 = BitmapFactory.decodeResource(resources, R.drawable.confetti_yellow1, options)
-        val bitti10 = BitmapFactory.decodeResource(resources, R.drawable.confetti_yellow2, options)
-        allPossibleConfetti.add(bitti1)
-        allPossibleConfetti.add(bitti2)
-        allPossibleConfetti.add(bitti3)
-        allPossibleConfetti.add(bitti4)
-        allPossibleConfetti.add(bitti5)
-        allPossibleConfetti.add(bitti6)
-        allPossibleConfetti.add(bitti7)
-        allPossibleConfetti.add(bitti8)
-        allPossibleConfetti.add(bitti9)
-        allPossibleConfetti.add(bitti10)
-    }
-
     @SuppressLint("SetTextI18n")
     private fun findTheWinnerFromUserDetails(winnerid: String, winnerscore: String,looserid: String,
                                              looserscore: String) {
@@ -230,7 +188,7 @@ class SuperOverScoreboardActivity : BaseActivity(), View.OnClickListener {
         headerLayout!!.visibility = View.VISIBLE
         when {
             userScore > opponentScore -> {
-                leaderBoardApi(looserid,looserscore.toInt(),winnerid,winnerscore.toInt())
+              //  leaderBoardApi(looserid,looserscore.toInt(),winnerid,winnerscore.toInt())
              //   blastConfettiAtCenter()
                 llOpponentDetails!!.visibility = View.VISIBLE
                 headerBanner!!.setImageDrawable(AppCompatResources.getDrawable(this,
@@ -262,7 +220,7 @@ class SuperOverScoreboardActivity : BaseActivity(), View.OnClickListener {
                 tvMessage2!!.text = "You gave your best."
                 val amt: Double = ((stake.toDouble() * 90) /100)
                 tvResultamount!!.text = "₹$amt Refunded"
-                leaderBoardApi(looserid,looserscore.toInt(),winnerid,winnerscore.toInt())
+             //   leaderBoardApi(looserid,looserscore.toInt(),winnerid,winnerscore.toInt())
             }
             else -> {
                 headerBanner!!.setImageDrawable(AppCompatResources.getDrawable(this,
@@ -277,105 +235,10 @@ class SuperOverScoreboardActivity : BaseActivity(), View.OnClickListener {
                 tvMessage1!!.text = "Hard Luck"
                 tvMessage2!!.text = "You gave your best."
                 tvResultamount!!.text = "₹$stake Spent"
-                leaderBoardApi(looserid,looserscore.toInt(),winnerid,winnerscore.toInt())
+              //  leaderBoardApi(looserid,looserscore.toInt(),winnerid,winnerscore.toInt())
             }
         }
         closeProgressbar()
-    }
-
-    private fun blastConfettiAtCenter() {
-        clSuperOverParent!!.postDelayed({
-            val containerMiddleX = clSuperOverParent!!.width
-            val containerMiddleY = clSuperOverParent!!.height
-            val confettiSourceMiddle = ConfettiSource(0, 0, containerMiddleX, 0)
-            val confettoGenerator: ConfettoGenerator = getConfettiGenerator()
-            val confettiManager = ConfettiManager(this, confettoGenerator,
-                confettiSourceMiddle, clSuperOverParent)
-                .setEmissionDuration(1000).setNumInitialCount(10)
-                .setEmissionRate(100f).setVelocityX(0f, 40f)
-                .setAccelerationX(0f, 0f)
-                .setVelocityY(500f, 0f)
-                .setAccelerationY(-300f, 300f)
-                .setTargetVelocityY(50f)
-                .setRotationalVelocity(0f, 50f)
-            confettiManager.animate()
-        }, 100)
-        clSuperOverParent!!.postDelayed({
-            val containerMiddleX = clSuperOverParent!!.width
-            val containerMiddleY = clSuperOverParent!!.height
-            val confettiSourceMiddle = ConfettiSource(0, 0, containerMiddleX / 4, 0)
-            val confettoGenerator: ConfettoGenerator = getConfettiGenerator()
-            val confettiManager = ConfettiManager(
-                this, confettoGenerator, confettiSourceMiddle, clSuperOverParent)
-                .setEmissionDuration(1000).setNumInitialCount(10)
-                .setEmissionRate(30f).setVelocityX(0f, 40f)
-                .setAccelerationX(0f, 0f)
-                .setVelocityY(550f, 0f)
-                .setAccelerationY(-300f, 50f).setTargetVelocityY(50f)
-                .setRotationalVelocity(0f, 50f)
-            confettiManager.animate()
-        }, 100)
-        clSuperOverParent!!.postDelayed({
-            val containerMiddleX = clSuperOverParent!!.width
-            val containerMiddleY = clSuperOverParent!!.height
-            val confettiSourceMiddle = ConfettiSource(0, 0, 3 * containerMiddleX / 4, 0)
-            val confettoGenerator: ConfettoGenerator = getConfettiGenerator()
-            val confettiManager = ConfettiManager(
-                this, confettoGenerator, confettiSourceMiddle, clSuperOverParent)
-                .setEmissionDuration(1000).setNumInitialCount(10).setEmissionRate(30f)
-                .setVelocityX(0f, 40f)
-                .setAccelerationX(0f, 0f)
-                .setVelocityY(550f, 0f)
-                .setAccelerationY(-300f, 50f).setTargetVelocityY(50f)
-                .setRotationalVelocity(0f, 50f)
-            confettiManager.animate()
-        }, 100)
-        clSuperOverParent!!.postDelayed({
-            val containerMiddleX = clSuperOverParent!!.width
-            val containerMiddleY = clSuperOverParent!!.height
-            val confettiSourceMiddle = ConfettiSource(0, 0, 50, 0)
-            val confettoGenerator: ConfettoGenerator = getConfettiGenerator()
-            val confettiManager = ConfettiManager(
-                this, confettoGenerator, confettiSourceMiddle, clSuperOverParent)
-                .setEmissionDuration(1000).setNumInitialCount(10).setEmissionRate(30f)
-                .setVelocityX(0f, 40f)
-                .setAccelerationX(0f, 0f)
-                .setVelocityY(600f, 0f)
-                .setAccelerationY(-300f, 50f).setTargetVelocityY(50f)
-                .setRotationalVelocity(0f, 50f)
-            confettiManager.animate()
-        }, 100)
-        clSuperOverParent!!.postDelayed({
-            val containerMiddleX = clSuperOverParent!!.width
-            val containerMiddleY = clSuperOverParent!!.height
-            val confettiSourceMiddle =
-                ConfettiSource(containerMiddleX - 50, 0, containerMiddleX, 0)
-            val confettoGenerator: ConfettoGenerator = getConfettiGenerator()
-            val confettiManager = ConfettiManager(
-                this, confettoGenerator, confettiSourceMiddle, clSuperOverParent)
-                .setEmissionDuration(1000).setNumInitialCount(10).setEmissionRate(30f)
-                .setVelocityX(0f, 40f)
-                .setAccelerationX(0f, 0f)
-                .setVelocityY(600f, 0f)
-                .setAccelerationY(-300f, 50f).setTargetVelocityY(50f)
-                .setRotationalVelocity(0f, 50f)
-            confettiManager.animate()
-        }, 100)
-    }
-
-    private fun blastConfetti() {
-        clSuperOverParent!!.postDelayed({
-            val source = ConfettiSource(0, clSuperOverParent!!.height / 2,
-                clSuperOverParent!!.width, clSuperOverParent!!.height / 2)
-            val confettoGenerator = getConfettiGenerator()
-            val confettiManager =
-                ConfettiManager(this, confettoGenerator, source, clSuperOverParent)
-                    .setVelocityX(0f, 20f)
-                    .setVelocityY(-100f, -30f)
-                    .setRotationalVelocity(0f, 20f)
-                    .setTouchEnabled(true)
-            confettiManager.setNumInitialCount(50).setEmissionDuration(500).animate()
-        }, 100)
     }
 
     private fun getConfettiGenerator(): ConfettoGenerator {
@@ -439,43 +302,6 @@ class SuperOverScoreboardActivity : BaseActivity(), View.OnClickListener {
                         else -> Toasty.warning(applicationContext,
                             "unknown error", Toasty.LENGTH_SHORT).show()
                     }
-                }
-            }
-        })
-    }
-
-    private fun leaderBoardApi(looserId:String, looserScore:Int, WinnerId:String, WinnerScore:Int){
-        //showProgressBar(getString(R.string.loading_please_wait))
-        val stakes=PrefsHelper().getPref(OwlizConstants.stake_amount,"0").toInt()
-        val userdata= LeaderBoard_InputData(looserId,looserScore,PrefsHelper().getPref(
-            OwlizConstants.SuperOVer_RoomIDs),WinnerId,WinnerScore,stakes)
-
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
-        val requestCall = destinationService.leaderBoard(userdata)
-        requestCall.enqueue(object : Callback<LeaderBoard_Resp> {
-            override fun onFailure(call: Call<LeaderBoard_Resp>, t: Throwable) {
-             //   closeProgressbar()
-                Log.i("customerSettingData","FailureResponse $t")
-                Toasty.error(applicationContext,"Request Failed", Toasty.LENGTH_SHORT).show()
-            }
-            override fun onResponse(call: Call<LeaderBoard_Resp>, response: Response<LeaderBoard_Resp>) {
-                if(response.isSuccessful) {
-                  //  closeProgressbar()
-                    val resp = response.body()
-                    Log.i("getAllGames", "GamesResponseLangLobby:// ${resp.toString()}")
-                } else{
-                    closeProgressbar()
-                    Log.i("CustomerSetting","ResponseLangError:// ${response.errorBody().toString()}")
-                    /*when (response.code()) {
-                        404 -> Toasty.error(applicationContext,
-                            "not found", Toasty.LENGTH_SHORT).show()
-                        500 -> Toasty.warning(applicationContext,
-                            "server broken", Toasty.LENGTH_SHORT).show()
-                        502 -> Toasty.warning(applicationContext,
-                            "Bad GateWay", Toasty.LENGTH_SHORT).show()
-                        else -> Toasty.warning(applicationContext,
-                            "unknown error", Toasty.LENGTH_SHORT).show()
-                    }*/
                 }
             }
         })

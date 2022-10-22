@@ -14,7 +14,6 @@ import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.view.Window
-import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.LinearInterpolator
 import android.view.animation.TranslateAnimation
@@ -150,7 +149,7 @@ class SuperOverQuestionActivity : BaseActivity(),SuperOver_QtnDataInterface{
         oppPhoto = PrefsHelper().getPref(OwlizConstants.oponentProfilepic)
         Glide.with(this).load(userPhoto).diskCacheStrategy(DiskCacheStrategy.RESOURCE)
             .error(R.drawable.ic_default_icon).into(ivLobbyUserPic!!)
-        Glide.with(applicationContext).load(EndPoints.Base_Urlimage+oppPhoto)
+        Glide.with(applicationContext).load(EndPoints.Base_UrlImage+oppPhoto)
             .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
             .error(R.drawable.ic_default_icon).into(ivLobbyOpponentPic!!)
         //  listenToJoinedTable()

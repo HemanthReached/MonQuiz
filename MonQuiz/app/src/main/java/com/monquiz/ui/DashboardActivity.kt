@@ -520,7 +520,7 @@ class DashboardActivity : BaseActivity(), BottomNavigationView.OnNavigationItemS
                             getString(R.string.user_name), userName)
                         if (resp.responseData.photo!=""){
                             PreferenceConnector.writeString(this@DashboardActivity,
-                                getString(R.string.user_profile_pic), EndPoints.Base_Urlimage+resp.responseData.photo)
+                                getString(R.string.user_profile_pic), EndPoints.Base_UrlImage+resp.responseData.photo)
                         }
                         if (resp.responseData.isReferredUser){ referralCheck() }
                     } else{

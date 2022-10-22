@@ -1,5 +1,5 @@
 
-package com.julius66.auprisdriver.util
+package com.monquiz.network
 
 import java.io.IOException
 

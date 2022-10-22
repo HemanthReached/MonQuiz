@@ -62,7 +62,7 @@ class RandomPageFragment : Fragment() {
         }
 
         fun initializeImageView(imageView: ImageView, id: String,context: Context?) {
-var id= EndPoints.Base_Urlimage+id
+var id= EndPoints.Base_UrlImage+id
             Log.i("TAG","IDimage:$id")
             Glide
                 .with(context!!)

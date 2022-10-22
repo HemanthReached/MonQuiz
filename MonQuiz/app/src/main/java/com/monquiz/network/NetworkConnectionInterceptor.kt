@@ -3,7 +3,7 @@ package com.julius66.auprisdriver.network
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import com.julius66.auprisdriver.util.NoInternetException
+import com.monquiz.network.NoInternetException
 
 import okhttp3.Interceptor
 import okhttp3.Response
