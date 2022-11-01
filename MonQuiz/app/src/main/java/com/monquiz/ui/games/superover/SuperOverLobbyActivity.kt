@@ -149,7 +149,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
         //showProgressBar(getString(R.string.loading_please_wait))
         val stakeamount:Int = stake.toInt()
         var addbot = false
-       // if (hits >= 5){ addbot = true }
+        if (hits >= 4){ addbot = true }
 
         val userdata = SuperOver_JoinLobby_Input(stakeamount, gameid , stakeId ,bwalletpercentage,
             PrefsHelper().getPref(OwlizConstants.user_id), addbot)
@@ -248,6 +248,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
                         else -> Toasty.warning(applicationContext,
                             "unknown error", Toasty.LENGTH_SHORT).show()
                     }
+                    onBackPressed()
                 }
             }
         })
