@@ -306,7 +306,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
                     Log.i("exitLobby", "GamesResponseLangLobby:// ${resp.toString()}")
                     if (b){
                         Toasty.warning(this@SuperOverLobbyActivity,
-                            "No players available to connect",
+                            "No user free to play the game now",
                             Toasty.LENGTH_SHORT).show()
                     }
                     finish()
