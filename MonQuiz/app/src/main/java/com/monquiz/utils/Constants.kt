@@ -2,6 +2,7 @@ package com.monquiz.utils
 
 object Constants {
     const val SPLASH_TIME_OUT: Long = 5000
+    const val SPLASH_TIME_OUT1: Long = 3000
 
     const val Otp:String="OTP"
     // Firebase references

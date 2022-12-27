@@ -31,6 +31,7 @@ import com.monquiz.response.superover.qtns.submit.SuperOverQtn_Submit
 import com.monquiz.response.superover.qtns.submit.resp.SuperOver_QtnSubmitResponse
 import com.monquiz.response.transactionaapi.TransactionApi_Response
 import com.monquiz.response.transactionaapi.input.TransactionApi_Input
+import com.monquiz.response.updatecheck.UpdateResponse
 import com.monquiz.response.updateprofile.Update_ProfileResponse
 import com.monquiz.response.verifyotp_packageresponse.VerifyOtp_Response
 import com.monquiz.response.wallet.input.WalletInput
@@ -183,5 +184,10 @@ interface Retrofitapi {
     // api/v1/payout
     @POST("v1/payout")
     fun RedeemCash(@Body requestBody: RequestBody) : Call<ResponseBody>
+
+    // api/v1/getLatestVersion
+    @POST("v1/getLatestVersion")
+    fun updateCheck() : Call<UpdateResponse>
+
 }
 

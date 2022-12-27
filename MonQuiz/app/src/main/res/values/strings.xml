@@ -483,6 +483,7 @@
     <string name="share_desc">Share the code to at least 3 friends and get an amount of 25 bonus wallet when your friends play at least 1 game with game wallet money.</string>
    <!-- Match is set. Be ready.-->
     <string name="your_string_here"><u>Super Over Rules</u>.</string>
+    <string name="updateText">Looks like you have an older version of the app. Please update to get latest features and best experience.</string>
     <string name="bwallet_hint1">Players can use a maximum of 50% of stake money from bonus wallet while playing a game. \n\nFor example: \nFor a game with stake Rs50, a maximum of Rs25 (50%) can be utilised from Bonus Wallet if available. On winning or a tie situation, the amount utilised from Bonus Wallet would be placed back on to the Bonus Wallet. \n\nFor the above example, Rs25 would go into the Bonus Wallet and the remaining winning amount would go into Game Wallet.</string>
 </resources>
 

@@ -60,7 +60,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         }
         val notificationBuilder = NotificationCompat.Builder(applicationContext,
             channelId).apply {
-            setSmallIcon(R.mipmap.launchericon1)
+            setSmallIcon(R.mipmap.ic_launcher)
             setLights(Color.BLUE, 500, 500)
             setVibrate(longArrayOf(500, 500, 500))
             priority = NotificationCompat.PRIORITY_DEFAULT
