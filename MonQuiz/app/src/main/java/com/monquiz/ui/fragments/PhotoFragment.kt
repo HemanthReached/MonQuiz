@@ -43,7 +43,7 @@ class PhotoFragment : BaseFragment(), View.OnClickListener {
         @Nullable savedInstanceState: Bundle?
     ): View? {
         var view: View? = null
-        view = if (Permissions.checkPermissionForAccessCamera(getActivity())) {
+        view = if (Permissions.checkPermissionForAccessCamera(activity)) {
             inflater.inflate(R.layout.layout_photo_fragment, container, false)
         } else {
             inflater.inflate(R.layout.layout_photo_fragment_without_camera_view, container, false)

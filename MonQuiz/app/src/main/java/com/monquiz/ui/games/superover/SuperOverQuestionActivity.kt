@@ -25,7 +25,7 @@ import com.monquiz.R
 import com.monquiz.interfaces.SuperOver_QtnDataInterface
 import com.monquiz.network.EndPoints
 import com.monquiz.network.InternetStateChecker
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
 import com.monquiz.response.leftroom.input.LeftLobyy_Input
 import com.monquiz.response.superover.exit.GameExit_Response
@@ -475,7 +475,7 @@ class SuperOverQuestionActivity : BaseActivity(),SuperOver_QtnDataInterface{
         val userdata = SuperOverQtn_Submit(answerStatus,roomID,
             PrefsHelper().getPref(OwlizConstants.user_id),fScore)
         Log.e("scoreData:","$fScore ,,,, $roomID")
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.superOverSubmitQuestions(userdata)
         requestCall.enqueue(object : Callback<SuperOver_QtnSubmitResponse> {
             override fun onFailure(call: Call<SuperOver_QtnSubmitResponse>, t: Throwable) {
@@ -691,7 +691,7 @@ class SuperOverQuestionActivity : BaseActivity(),SuperOver_QtnDataInterface{
         showProgressBar(getString(R.string.loading_please_wait))
         val userdata= LeftLobyy_Input(roomID,PrefsHelper().getPref(OwlizConstants.user_id))
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.leftLobby(userdata)
         requestCall.enqueue(object : Callback<GameExit_Response> {
             override fun onFailure(call: Call<GameExit_Response>, t: Throwable) {

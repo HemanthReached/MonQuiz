@@ -4,8 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.text.*
-import android.text.method.LinkMovementMethod
-import android.text.style.ClickableSpan
 import android.util.Log
 import android.view.KeyEvent
 import android.view.View
@@ -17,7 +15,7 @@ import com.monquiz.R
 import com.monquiz.model.inputdata.LoginOTpSend_Data
 import com.monquiz.network.InternetStateChecker
 import com.monquiz.response.login.LoginResponseOtp
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
 import com.monquiz.utils.AppUtils
 import com.monquiz.utils.FirebaseToken
@@ -259,7 +257,7 @@ class SignUpActivity : BaseActivity(), View.OnClickListener {
         showProgressBar(getString(R.string.loading_please_wait))
         val userdata= LoginOTpSend_Data(countryCode, mobileNumber,token,referralCode)
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.login_phone(userdata)
         requestCall.enqueue(object : Callback<LoginResponseOtp> {
             override fun onFailure(call: Call<LoginResponseOtp>, t: Throwable) {

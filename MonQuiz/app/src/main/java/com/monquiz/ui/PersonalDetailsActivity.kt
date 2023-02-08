@@ -1,7 +1,6 @@
 package com.monquiz.ui
 
 import android.annotation.SuppressLint
-import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.text.Spannable
@@ -10,7 +9,6 @@ import android.text.method.LinkMovementMethod
 import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.View
-import android.view.WindowManager
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.RelativeLayout
@@ -20,7 +18,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.monquiz.R
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
 import com.monquiz.response.bankdetails.input.BankDetailsInput
 import com.monquiz.response.bankdetails.response.BankDetailsResponse
@@ -30,7 +28,6 @@ import com.monquiz.response.wallet.input.WalletInput
 import com.monquiz.response.wallet.input.verifyInput
 import com.monquiz.response.wallet.response.VerifyResponse
 import com.monquiz.utils.AppUtils
-import com.monquiz.utils.DialogUtils
 import com.monquiz.utils.OwlizConstants
 import com.monquiz.utils.PrefsHelper
 import es.dmoral.toasty.Toasty
@@ -136,7 +133,7 @@ class PersonalDetailsActivity : BaseActivity() {
         showProgressBar(getString(R.string.loading_please_wait))
         val userdata : String = PrefsHelper().getPref(OwlizConstants.user_id)
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.getBankDetails(WalletInput(userdata))
         requestCall.enqueue(object : Callback<GetBankDetailsResponse> {
             override fun onFailure(call: Call<GetBankDetailsResponse>, t: Throwable) {
@@ -241,7 +238,7 @@ class PersonalDetailsActivity : BaseActivity() {
     }
 
     private fun initAccountDetailsUi() {
-        submitBtnRedeem = findViewById<TextView>(R.id.submit_btn_redeem)
+        submitBtnRedeem = findViewById<TextView>(R.id.submit_btn_redeem1)
         closeViewRedeem = findViewById<ImageView>(R.id.close_popup_redeem)
         amountDescTv = findViewById<TextView>(R.id.amountdesctv)
         amountET = findViewById<EditText>(R.id.amountet)
@@ -263,8 +260,9 @@ class PersonalDetailsActivity : BaseActivity() {
             val accnumber = accountNumberET!!.text.trim().toString()
             val ifsccode  = ifscNumberET!!.text.trim().toString()
             if (isValidForm(accnumber,ifsccode)){
-                if (accountDetails!!.bankDetails.isNullOrEmpty()){
-                    saveBankDetails(accnumber,ifsccode) }
+               // if (accountDetails!!.bankDetails.isNullOrEmpty()){
+                    saveBankDetails(accnumber,ifsccode)
+            //}
             }
         }
         closeViewRedeem!!.setOnClickListener {
@@ -298,7 +296,7 @@ class PersonalDetailsActivity : BaseActivity() {
         showProgressBar(getString(R.string.loading_please_wait))
         val userdata : String = PrefsHelper().getPref(OwlizConstants.user_id)
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.verifyPan(verifyInput(userdata,name ,panNumber))
         requestCall.enqueue(object : Callback<VerifyResponse> {
             override fun onFailure(call: Call<VerifyResponse>, t: Throwable) {
@@ -340,7 +338,7 @@ class PersonalDetailsActivity : BaseActivity() {
         showProgressBar(getString(R.string.loading_please_wait))
         val userdata : String = PrefsHelper().getPref(OwlizConstants.user_id)
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.saveBankDetails(BankDetailsInput(userdata,"",accNumber ,ifscCode))
         requestCall.enqueue(object : Callback<BankDetailsResponse> {
             override fun onFailure(call: Call<BankDetailsResponse>, t: Throwable) {

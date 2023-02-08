@@ -7,29 +7,21 @@ import android.os.Bundle
 import com.monquiz.utils.PreferenceConnector
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import android.view.animation.RotateAnimation
-import android.view.animation.LinearInterpolator
 import android.content.Intent
 import com.monquiz.ui.DashboardActivity
-import android.graphics.BitmapFactory
 import android.util.Log
 import android.view.View
-import android.view.animation.Animation
 import android.widget.*
 import androidx.appcompat.content.res.AppCompatResources
 import com.airbnb.lottie.LottieAnimationView
-import com.github.jinatonic.confetti.ConfettiSource
 import com.github.jinatonic.confetti.ConfettoGenerator
-import com.github.jinatonic.confetti.ConfettiManager
 import com.github.jinatonic.confetti.confetto.BitmapConfetto
 import com.monquiz.R
 import com.monquiz.network.InternetStateChecker
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
 import com.monquiz.response.leaderboard.FinalScore_Input
-import com.monquiz.response.leaderboard.input.LeaderBoard_InputData
 import com.monquiz.response.leaderboard.resp.CheckSum_Resp
-import com.monquiz.response.leaderboard.resp.LeaderBoard_Resp
 import com.monquiz.response.superover.exit.GameExit_Response
 import com.monquiz.response.superover.exit.Game_Lobby_Exit_Input
 import com.monquiz.utils.Constants
@@ -257,7 +249,7 @@ class SuperOverScoreboardActivity : BaseActivity(), View.OnClickListener {
         showProgressBar(getString(R.string.loading_please_wait))
         val userdata= Game_Lobby_Exit_Input(PrefsHelper().getPref(OwlizConstants.user_id))
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.ExitFrom_Game(userdata)
         requestCall.enqueue(object : Callback<GameExit_Response> {
             override fun onFailure(call: Call<GameExit_Response>, t: Throwable) {
@@ -313,7 +305,7 @@ class SuperOverScoreboardActivity : BaseActivity(), View.OnClickListener {
             PrefsHelper().getPref(OwlizConstants.SuperOVer_RoomIDs))
         val token = "Bearer " + PrefsHelper().getPref(OwlizConstants.token)
         Log.e("inputData","$token roomID ;;; ${userdata.playRoomId}  userId ::: ${userdata.userId}")
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.getscores(userdata)
         requestCall.enqueue(object : Callback<CheckSum_Resp> {
             override fun onFailure(call: Call<CheckSum_Resp>, t: Throwable) {

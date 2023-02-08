@@ -54,13 +54,13 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:exported="true"
             tools:ignore="LockedOrientationActivity"/>
-        <activity
+        <!--<activity
             android:name="com.monquiz.ui.AddMoneyActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize"
             android:exported="true"
-            tools:ignore="LockedOrientationActivity"/>
+            tools:ignore="LockedOrientationActivity"/>-->
         <activity
             android:name="com.monquiz.ui.SettingsActivity"
             android:screenOrientation="portrait"
@@ -130,7 +130,7 @@
             </intent-filter>
         </activity>
 
-        <activity
+        <!--<activity
             android:name="com.monquiz.ui.SplashScreen1"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
@@ -142,7 +142,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>
+        </activity>-->
 
         <activity android:name="com.monquiz.ui.games.superover.SuperOverLobbyActivity"
             android:screenOrientation="portrait"

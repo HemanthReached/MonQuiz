@@ -18,7 +18,7 @@ import com.monquiz.eventbus.SuperOver_Game_Event
 import com.monquiz.interfaces.SuperOver_QtnDataInterface
 import com.monquiz.network.EndPoints
 import com.monquiz.network.InternetStateChecker
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
 import com.monquiz.response.superover.exit.GameExit_Response
 import com.monquiz.response.superover.exit.Game_Lobby_Exit_Input
@@ -155,7 +155,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
             PrefsHelper().getPref(OwlizConstants.user_id), addbot)
         Log.e("Input",userdata.toString())
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.GameJoin_SuperOver(userdata)
         requestCall.enqueue(object : Callback<GameJoin_Response> {
             override fun onFailure(call: Call<GameJoin_Response>, t: Throwable) {
@@ -290,7 +290,7 @@ class SuperOverLobbyActivity : BaseActivity(),SuperOver_QtnDataInterface {
        showProgressBar(getString(R.string.loading_please_wait))
         val userdata= Game_Lobby_Exit_Input(PrefsHelper().getPref(OwlizConstants.user_id))
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.ExitFrom_Game(userdata)
         requestCall.enqueue(object : Callback<GameExit_Response> {
             override fun onFailure(call: Call<GameExit_Response>, t: Throwable) {

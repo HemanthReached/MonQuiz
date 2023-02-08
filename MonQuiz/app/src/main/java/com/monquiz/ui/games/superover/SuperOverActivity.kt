@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
-import android.text.Html
 import android.text.SpannableString
 import android.text.style.UnderlineSpan
 import android.util.Log
@@ -20,7 +19,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.monquiz.BuildConfig
 import com.monquiz.R
 import com.monquiz.network.InternetStateChecker
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
 import com.monquiz.response.getstakesresp.GetAll_StakesResponse
 import com.monquiz.response.getstakesresp.ResponseData
@@ -582,7 +581,7 @@ class SuperOverActivity : BaseActivity() {
     private fun getStakes(){
         showProgressBar(getString(R.string.loading_please_wait))
         //val userdata = GetUserProfileInput(PrefsHelper().getPref(OwlizConstants.user_id))
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.getAllStacks()
         requestCall.enqueue(object : Callback<GetAll_StakesResponse> {
             override fun onFailure(call: Call<GetAll_StakesResponse>, t: Throwable) {
@@ -645,7 +644,7 @@ class SuperOverActivity : BaseActivity() {
         showProgressBar(getString(R.string.loading_please_wait))
         val userdata= WalletInput(PrefsHelper().getPref(OwlizConstants.user_id))
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.getWalletData(userdata)
         requestCall.enqueue(object : Callback<Wallet_Response> {
             override fun onFailure(call: Call<Wallet_Response>, t: Throwable) {

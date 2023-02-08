@@ -6,28 +6,19 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
-import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.DefaultItemAnimator
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.monquiz.BuildConfig
 import com.monquiz.R
-import com.monquiz.adapter.AdapterAvatars
-import com.monquiz.model.inputdata.updateprofile.GetUserProfileInput
 import com.monquiz.network.InternetStateChecker
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
-import com.monquiz.response.leaderboard.resp.GetLeaderBoardPositionResponse
 import com.monquiz.response.updatecheck.UpdateResponse
 import com.monquiz.utils.Constants
 import com.monquiz.utils.Constants.APK_WEBSITE_URL_PRO
@@ -38,7 +29,6 @@ import es.dmoral.toasty.Toasty
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import javax.xml.transform.OutputKeys.VERSION
 
 class SplashScreen : BaseActivity() {
 
@@ -141,7 +131,7 @@ class SplashScreen : BaseActivity() {
 
     private fun checkForUpdate(){
         showProgressBar("Checking for updates")
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.updateCheck()
 
         requestCall.enqueue(object : Callback<UpdateResponse> {

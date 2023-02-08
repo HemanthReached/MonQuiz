@@ -16,9 +16,7 @@ import android.content.*
 import android.content.pm.PackageManager
 import android.provider.MediaStore
 import android.graphics.BitmapFactory
-import android.media.MediaScannerConnection
 import android.net.Uri
-import android.os.Environment
 import android.provider.Settings
 import android.util.Log
 import android.view.View
@@ -28,7 +26,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
-import androidx.core.net.toUri
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -37,7 +34,7 @@ import com.monquiz.BuildConfig
 import com.monquiz.adapter.AdapterAvatars
 import com.monquiz.interfaces.AdapterCallback
 import com.monquiz.model.inputdata.updateprofile.GetUserProfileInput
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
 import com.monquiz.response.leaderboard.resp.GetLeaderBoardPositionResponse
 import com.monquiz.response.wallet.res.GameDetails_Response
@@ -73,7 +70,6 @@ class DashboardProfileFragment : BaseFragment(), View.OnClickListener, AdapterCa
     private var ivProfileQuestionMark: ImageView? = null
     private var ivProfileSetting: ImageView? = null
     private var ivProfileShareAppLink: ImageView? = null
-    private val ivProfileDummy: ImageView? = null
     private var tvProfileUserName: TextView? = null
     private var tvProfileUserMobileNumber: TextView? = null
     private var tvProfileReferralCode: TextView? = null
@@ -315,11 +311,6 @@ class DashboardProfileFragment : BaseFragment(), View.OnClickListener, AdapterCa
     }
 
     private fun initializeShare() {
-        /*if (Permissions.checkPermissionForAccessExternalStorage(activity)) {
-            configureShare()
-            //openDialogShare()
-        }
-        else { Permissions.requestPermissionForAccessExternalStorage(activity) }*/
         if (isStoragePermissionGranted()){
             configureShare()
         }
@@ -440,7 +431,7 @@ class DashboardProfileFragment : BaseFragment(), View.OnClickListener, AdapterCa
             builder.addFormDataPart("photo", file!!.name,
                 RequestBody.create("multipart/form-data".toMediaTypeOrNull(), file))
             val requestBody: MultipartBody = builder.build()
-            val service = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+            val service = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
             val call: Call<ResponseBody> = service.uploadDp(PrefsHelper().getPref(OwlizConstants.user_id,""), requestBody)
             call.enqueue(object : Callback<ResponseBody> {
                 override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
@@ -490,7 +481,7 @@ class DashboardProfileFragment : BaseFragment(), View.OnClickListener, AdapterCa
         val jsonObjectString = jsonObject.toString()
         val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.getPlayDetails(requestBody)
 
         requestCall.enqueue(object : Callback<GameDetails_Response> {
@@ -530,7 +521,7 @@ class DashboardProfileFragment : BaseFragment(), View.OnClickListener, AdapterCa
     private fun getLeaderBoardDetails(){
         showProgressBar(getString(R.string.loading_please_wait))
         val userid : String = PrefsHelper().getPref(OwlizConstants.user_id)
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.getLeaderBoard(GetUserProfileInput(userid))
 
         requestCall.enqueue(object : Callback<GetLeaderBoardPositionResponse> {

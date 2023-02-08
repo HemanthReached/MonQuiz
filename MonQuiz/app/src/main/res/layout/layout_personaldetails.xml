@@ -579,7 +579,7 @@
 
 
                 <TextView
-                    android:id="@+id/submit_btn_redeem"
+                    android:id="@+id/submit_btn_redeem1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"

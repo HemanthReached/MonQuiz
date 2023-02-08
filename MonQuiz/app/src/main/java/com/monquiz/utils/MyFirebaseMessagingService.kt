@@ -1,7 +1,6 @@
 package com.monquiz.utils
 
 import android.annotation.SuppressLint
-import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -11,13 +10,10 @@ import android.graphics.Color
 import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.monquiz.R
-import com.monquiz.services.ActionReceiver
 import com.monquiz.ui.SplashScreen
-import com.monquiz.ui.SplashScreen1
 import java.util.concurrent.atomic.AtomicInteger
 
 
@@ -49,7 +45,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         channel.enableVibration(true)
         notificationManager.createNotificationChannel(channel)
 
-        val intent = Intent(this, SplashScreen1::class.java).apply {
+        val intent = Intent(this, SplashScreen::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
         }
         val flags =  PendingIntent.FLAG_IMMUTABLE

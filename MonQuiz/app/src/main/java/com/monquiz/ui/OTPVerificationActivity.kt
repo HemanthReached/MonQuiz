@@ -1,6 +1,5 @@
 package com.monquiz.ui
 
-import android.widget.LinearLayout
 import com.mukesh.OtpView
 import android.widget.TextView
 import android.os.Bundle
@@ -22,7 +21,7 @@ import com.monquiz.model.inputdata.LoginOTpSend_Data
 import com.monquiz.model.verifyotpmodel.VerifyOTP_Data
 import com.monquiz.network.InternetStateChecker
 import com.monquiz.response.verifyotp_packageresponse.VerifyOtp_Response
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
 import com.monquiz.response.login.LoginResponseOtp
 import com.monquiz.utils.*
@@ -222,7 +221,7 @@ class OTPVerificationActivity : BaseActivity(), View.OnClickListener {
         showProgressBar(getString(R.string.loading_please_wait))
         val userdata= VerifyOTP_Data(countrycode!!, mobileNumber!!,code!!)
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.Verify_Otp(userdata)
         requestCall.enqueue(object : Callback<VerifyOtp_Response> {
             override fun onFailure(call: Call<VerifyOtp_Response>, t: Throwable) {
@@ -284,7 +283,7 @@ class OTPVerificationActivity : BaseActivity(), View.OnClickListener {
         showProgressBar(getString(R.string.loading_please_wait))
         val userdata= LoginOTpSend_Data(countryCode, mobileNumber,token,referralCode)
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.login_phone(userdata)
         requestCall.enqueue(object : Callback<LoginResponseOtp> {
             override fun onFailure(call: Call<LoginResponseOtp>, t: Throwable) {

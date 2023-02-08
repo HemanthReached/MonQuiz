@@ -28,7 +28,7 @@ import com.monquiz.adapter.TransactionsHistoryAdapter
 import com.monquiz.adapter.DetailsArrowClickListener
 import com.monquiz.customviews.CustomButton
 import com.monquiz.model.inputdata.updateprofile.GetUserProfileInput
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
 import com.monquiz.response.bankdetails.input.BankDetailsInput
 import com.monquiz.response.bankdetails.response.BankDetailsResponse
@@ -334,8 +334,22 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
                     "EEE MMM dd HH:mm:ss zzz yyyy", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
                 val pmonth1 = Calendar.getInstance()
                 pmonth1.add(Calendar.MONTH,-3)
-                previousMonth1 = AppUtils.convertDateFormat(pmonth1.time.toString(),
-                    "EEE MMM dd HH:mm:ss zzz yyyy", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+                try {
+                    previousMonth1 = AppUtils.convertDateFormat(pmonth1.time.toString(),
+                        "EEE MMM dd HH:mm:ss zzz yyyy", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+                }catch (e : Exception){
+                    e.printStackTrace()
+                    Log.e("Exception",e.toString())
+                    val day = if (pmonth1.get(Calendar.DAY_OF_MONTH).toString().length == 1)
+                        "0${pmonth1.get(Calendar.DAY_OF_MONTH)}" else pmonth1.get(Calendar.DAY_OF_MONTH).toString()
+                    val month = if ((pmonth1.get(Calendar.MONTH)+1).toString().length == 1)
+                        "0${pmonth1.get(Calendar.MONTH)+1}" else (pmonth1.get(Calendar.MONTH)+1).toString()
+                    val year = pmonth1.get(Calendar.YEAR).toString()
+
+                    previousMonth1 = AppUtils.convertDateFormat("$day-$month-$year","dd-MM-yyyy",
+                        "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+                }
+
             }else if (customDateRB!!.isChecked){
                 if (startDateView!!.text.toString().isEmpty()){
                     Toasty.error(requireContext(),"Please select start date",Toasty.LENGTH_SHORT).show()
@@ -433,18 +447,6 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
         }
     }
 
-  /*  override fun onClick(v: View) {
-        when (v.id) {
-            R.id.tvAddMoneyRs10 -> { setDefinedButtonValueToEditText(10.0) }
-            R.id.tvAddMoneyRs20 -> { setDefinedButtonValueToEditText(20.0) }
-            R.id.tvAddMoneyRs30 -> { setDefinedButtonValueToEditText(30.0) }
-            R.id.tvAddMoneyRs50 -> { setDefinedButtonValueToEditText(50.0) }
-            R.id.tvAddMoneyRs100 -> { setDefinedButtonValueToEditText(100.0) }
-            R.id.ivAddMoneyClose -> { finish() }
-            R.id.btnAddMoneyNext -> { goNext() }
-        }
-    }*/
-
     @SuppressLint("SetTextI18n")
     private fun setDefinedButtonValueToEditText(value: Double) {
         etAddMoneyAddedMoney!!.setText("" + value)
@@ -461,13 +463,7 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        if (checkInternet()){
-            try {
-            } catch (e : Exception){ Log.e("TAG",e.toString()) }
-        }
-    }
+    override fun onResume() { super.onResume() }
 
     override fun onClick(view: View) {
         when (view.id) {
@@ -547,8 +543,6 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
 
     @SuppressLint("SetTextI18n")
     private fun goToAddMoney() {
-        /*val addMoneyIntent = Intent(activity, AddMoneyActivity::class.java)
-        resultLauncher.launch(addMoneyIntent)*/
         if (bottomSheetBehavior.state == BottomSheetBehavior.STATE_EXPANDED)
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
         else {
@@ -593,7 +587,7 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
         val jsonObjectString = jsonObject.toString()
         val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.createOrder(requestBody)
 
         requestCall.enqueue(object : Callback<ResponseBody> {
@@ -687,7 +681,7 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
         val jsonObjectString = jsonObject.toString()
         val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.updateOrder(requestBody)
 
         requestCall.enqueue(object : Callback<ResponseBody> {
@@ -878,7 +872,7 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
         val jsonObjectString = jsonObject.toString()
         val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.RedeemCash(requestBody)
 
         requestCall.enqueue(object : Callback<ResponseBody> {
@@ -929,7 +923,7 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
         loadingServices++
         val userdata= WalletInput(PrefsHelper().getPref(OwlizConstants.user_id))
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.getWalletData(userdata)
         requestCall.enqueue(object : Callback<Wallet_Response> {
             override fun onFailure(call: Call<Wallet_Response>, t: Throwable) {
@@ -986,7 +980,7 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
         showProgressBar(getString(R.string.loading_please_wait))
         val userdata : String = PrefsHelper().getPref(OwlizConstants.user_id)
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.verifyPan(verifyInput(userdata,name ,panNumber))
         requestCall.enqueue(object : Callback<VerifyResponse> {
             override fun onFailure(call: Call<VerifyResponse>, t: Throwable) {
@@ -1032,7 +1026,7 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
        // showProgressBar(getString(R.string.loading_please_wait))
         val userdata : String = PrefsHelper().getPref(OwlizConstants.user_id)
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.saveBankDetails(BankDetailsInput(userdata,"",accNumber ,ifscCode))
         requestCall.enqueue(object : Callback<BankDetailsResponse> {
             override fun onFailure(call: Call<BankDetailsResponse>, t: Throwable) {
@@ -1071,7 +1065,7 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
         // showProgressBar(getString(R.string.loading_please_wait))
         val userdata : String = PrefsHelper().getPref(OwlizConstants.user_id)
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.getBankDetails(WalletInput(userdata))
         requestCall.enqueue(object : Callback<GetBankDetailsResponse> {
             override fun onFailure(call: Call<GetBankDetailsResponse>, t: Throwable) {
@@ -1116,7 +1110,7 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
         loadingServices++
         val userdata= TransactionApi_Input(PrefsHelper().getPref(OwlizConstants.user_id))
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.getTransactions(userdata)
         requestCall.enqueue(object : Callback<TransactionApi_Response> {
             override fun onFailure(call: Call<TransactionApi_Response>, t: Throwable) {
@@ -1170,7 +1164,7 @@ class DashboardWalletFragment : BaseFragment(), View.OnClickListener,
         val jsonObjectString = jsonObject.toString()
         val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.getPlayDetails(requestBody)
 
         requestCall.enqueue(object : Callback<GameDetails_Response> {

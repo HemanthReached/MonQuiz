@@ -34,7 +34,7 @@ import com.monquiz.interfaces.TimerCallBack
 import com.monquiz.model.inputdata.updateprofile.GetUserProfileInput
 import com.monquiz.network.EndPoints
 import com.monquiz.network.InternetStateChecker
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
 import com.monquiz.response.login.LoginResponseOtp
 import com.monquiz.ui.fragments.DashboardPlayFragment
@@ -494,7 +494,7 @@ class DashboardActivity : BaseActivity(), BottomNavigationView.OnNavigationItemS
     private fun getProfileData(){
         showProgressBar(getString(R.string.loading_please_wait))
         val userdata= GetUserProfileInput(PrefsHelper().getPref(OwlizConstants.user_id))
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.getProfile(userdata)
         requestCall.enqueue(object : Callback<LoginResponseOtp> {
             override fun onFailure(call: Call<LoginResponseOtp>, t: Throwable) {
@@ -547,7 +547,7 @@ class DashboardActivity : BaseActivity(), BottomNavigationView.OnNavigationItemS
 
     private fun referralCheck(){
             val userdata= GetUserProfileInput(PrefsHelper().getPref(OwlizConstants.user_id))
-            val service = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+            val service = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
             val call: Call<ResponseBody> = service.Referral(userdata)
             call.enqueue(object : Callback<ResponseBody> {
                 override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {

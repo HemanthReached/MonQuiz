@@ -47,7 +47,7 @@ import retrofit2.Call
 import retrofit2.http.*
 
 
-interface Retrofitapi {
+interface RetrofitApi {
 
     @POST("v1/login")
     fun login_phone(@Body loginOtpSend: LoginOTpSend_Data):Call<LoginResponseOtp>
@@ -120,12 +120,6 @@ interface Retrofitapi {
                               PrefsHelper().getPref(OwlizConstants.token)):Call<GameExit_Response>
 
 
-    //createOrUpdateReview
-    @POST("v1/createOrUpdateReview")
-    fun createReview(@Body input : CreateFeedBackInput,
-                     @Header("Authorization") token: String = "Bearer " +
-                             PrefsHelper().getPref(OwlizConstants.token)):Call<CreateFeedBackResponse>
-
     @POST("v1/submitLeaderBoardData")
     fun leaderBoard(@Body leaderboard:LeaderBoard_InputData,
                     @Header("Authorization") token: String = "Bearer " +
@@ -172,6 +166,11 @@ interface Retrofitapi {
     fun getscores(@Body finalScoreInput: FinalScore_Input,
                   @Header("Authorization") token: String = "Bearer " +
                           PrefsHelper().getPref(OwlizConstants.token)) : Call<CheckSum_Resp>
+    //createOrUpdateReview
+    @POST("v1/createOrUpdateReview")
+    fun createReview(@Body input : CreateFeedBackInput,
+                     @Header("Authorization") token: String = "Bearer " +
+                             PrefsHelper().getPref(OwlizConstants.token)):Call<CreateFeedBackResponse>
 
    // api/v1/order
    @POST("v1/order")

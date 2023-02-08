@@ -31,28 +31,12 @@ open class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
-    //    hideStatusBar()
-        //        activity = BaseActivity.this;
         if (activityManager == null) {
             activityManager = getSystemService(ACTIVITY_SERVICE) as ActivityManager
         }
         networkReceiver = NetworkChangeReceiver()
         registerNetworkBroadcastForNougat()
-        // firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-        // Fabric.with(this, new Crashlytics());
     }
-
-    /**
-     * Hide both the navigation bar and the status bar.
-     */
-  /*  private fun hideStatusBar() {
-        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
-                or View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
-                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
-    }*/
 
     /**
      * @param message message
@@ -72,125 +56,10 @@ open class BaseActivity : AppCompatActivity() {
         toast.show()
     }
 
-    /**
-     * @param message message
-     */
-    fun showToast(message: String?, duration: Int) {
-        val li = this.layoutInflater
-        val layout =
-            li.inflate(R.layout.layout_custom_toast, findViewById(R.id.customToastRootView))
-        val text = layout.findViewById<TextView>(R.id.customToastText)
-        text.text = message
-        val x = CommonMethods.getWidth(this)
-        val y = (CommonMethods.getHeight(this) / 4.5).toInt()
-        val toast = Toast(this)
-        toast.duration = duration
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, y)
-        toast.view = layout
-        toast.show()
-    }
-
-    /**
-     * @param message message
-     */
-    fun showToastCancellable(message: String?, duration: Int): Toast {
-        val li = this.layoutInflater
-        val layout =
-            li.inflate(R.layout.layout_custom_toast, findViewById(R.id.customToastRootView))
-        val text = layout.findViewById<TextView>(R.id.customToastText)
-        text.text = message
-        val x = CommonMethods.getWidth(this)
-        val y = (CommonMethods.getHeight(this) / 4.5).toInt()
-        val toast = Toast(this)
-        toast.duration = duration
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, y)
-        toast.view = layout
-        toast.show()
-        return toast
-    }
-
-    /**
-     * @param message  message
-     * @param fontSize font size
-     * @param yOffset  yoffset
-     * @return toast
-     */
-    fun showToast(message: String?, fontSize: Float, yOffset: Float): Toast {
-        val li = this.layoutInflater
-        val layout =
-            li.inflate(R.layout.layout_custom_toast_1, findViewById(R.id.customToastRootView))
-        //        final ViewGroup.LayoutParams layoutParams =  layout.getLayoutParams();
-//        layoutParams.height = (int) (getHeight(this)*heightFactor);
-//        layoutParams.width = (int) (getWidth(this)*widthFactor);
-//        layout.setLayoutParams(layoutParams);
-        val text = layout.findViewById<TextView>(R.id.customToastText)
-        text.text = message
-        text.textSize = fontSize
-        val x = CommonMethods.getWidth(this)
-        val y = (CommonMethods.getHeight(this) * yOffset).toInt()
-        val toast = Toast(this)
-        toast.duration = Toast.LENGTH_SHORT
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, y)
-        //        toast.setMargin(100,100);
-        toast.view = layout
-        toast.show()
-        return toast
-    }
-
-    /**
-     * @param message  message
-     * @param fontSize font size
-     * @param yOffset  yoffset
-     * @param color    color
-     * @return toast
-     */
-    fun showToast(message: String?, fontSize: Float, yOffset: Float, color: Int): Toast {
-        val li = this.layoutInflater
-        val layout =
-            li.inflate(R.layout.layout_custom_toast_1, findViewById(R.id.customToastRootView))
-        //        final ViewGroup.LayoutParams layoutParams =  layout.getLayoutParams();
-//        layoutParams.height = (int) (getHeight(this)*heightFactor);
-//        layoutParams.width = (int) (getWidth(this)*widthFactor);
-//        layout.setLayoutParams(layoutParams);
-        val text = layout.findViewById<TextView>(R.id.customToastText)
-        text.text = message
-        text.textSize = fontSize
-        text.setTextColor(color)
-        val x = CommonMethods.getWidth(this)
-        val y = (CommonMethods.getHeight(this) * yOffset).toInt()
-        val toast = Toast(this)
-        toast.duration = Toast.LENGTH_SHORT
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, y)
-        //        toast.setMargin(100,100);
-        toast.view = layout
-        toast.show()
-        return toast
-    }
-
     fun checkInternet(): Boolean {
         val isMobileNetworkAvail = NetworkDetection().isMobileNetworkAvailable(this@BaseActivity)
         val isWifiAvail = NetworkDetection().isWifiAvailable(this@BaseActivity)
-        //Toast.makeText(this, "network avail", Toast.LENGTH_SHORT).show();
         return isMobileNetworkAvail || isWifiAvail
-    }
-
-    fun updateTheme() {
-        if (CommonMethods.getTheme(applicationContext) <= THEME_BLUE) {
-            setTheme(R.style.AppTheme_Blue)
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.statusBarColor = resources.getColor(R.color.primaryColorDark_blue)
-        } else if (CommonMethods.getTheme(applicationContext) == THEME_RED) {
-            setTheme(R.style.AppTheme_Red)
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.statusBarColor = resources.getColor(R.color.primaryColorDark_red)
-        }
-    }
-
-    override fun onWindowFocusChanged(hasFocus: Boolean) {
-        super.onWindowFocusChanged(hasFocus)
-        //        removed the below condition check because, still want to hide System UI even if activity
-//        loses focus.Such as when spinner, dropdown list, dialog box is displayed, etc.
-     //   if (hasFocus) hideStatusBar()
     }
 
     fun showProgressBar(message: String?) {
@@ -213,22 +82,6 @@ open class BaseActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * @param completeString complete string
-     * @param color          color need to give
-     * @param stringStart    starting point
-     * @param stringEnd      end point
-     * @return spannable color string
-     */
-    fun getColorSpannable(completeString: String?, color: Int, stringStart: Int,
-        stringEnd: Int): SpannableString {
-        val spannableColorString = SpannableString(completeString)
-        spannableColorString.setSpan(
-            ForegroundColorSpan(color),
-            stringStart, stringEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
-        return spannableColorString
-    }
 
     fun dialog(value: Boolean, context: Context?) {
         try {
@@ -298,21 +151,6 @@ open class BaseActivity : AppCompatActivity() {
         super.onDestroy()
         unregisterNetworkChanges()
     }
-
-    /*
-    public void sendCrashlyticsDetails(Exception e) {
-        Crashlytics.setUserIdentifier(PreferenceConnector.readString(this, getString(R.string.user_id), ""));
-        Crashlytics.setString("game_number", PreferenceConnector.readString(this, getString(R.string.current_game_id), ""));
-        Crashlytics.logException(e);
-        Crashlytics.setUserName(PreferenceConnector.readString(this, getString(R.string.user_full_name), ""));
-    }
-
-    public void sendAnalyticsDetails(String eventType, Bundle bundle) {
-        firebaseAnalytics.logEvent(eventType, bundle);
-        firebaseAnalytics.setUserId(PreferenceConnector.readString(this, getString(R.string.user_id), ""));
-        firebaseAnalytics.setUserProperty("user_name", PreferenceConnector.readString(this, getString(R.string.user_full_name), ""));
-        firebaseAnalytics.setUserProperty("game_number", PreferenceConnector.readString(this, getString(R.string.current_game_id), ""));
-    }*/
 
     companion object {
         private const val THEME_BLUE = 1

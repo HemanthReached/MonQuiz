@@ -3,7 +3,6 @@ package com.monquiz.ui
 import android.app.Activity
 import android.app.Dialog
 
-import com.monquiz.interfaces.SelectedImageCallBack
 import com.monquiz.interfaces.AdapterCallback
 import android.os.Bundle
 import com.monquiz.R
@@ -16,8 +15,6 @@ import android.view.inputmethod.EditorInfo
 import android.text.TextWatcher
 import android.text.Editable
 import android.util.Log
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 
 import android.view.KeyEvent
 import android.view.View
@@ -28,21 +25,18 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.textfield.TextInputLayout
 import com.monquiz.adapter.AdapterAvatars
 import com.monquiz.model.inputdata.updateprofile.GetUserProfileInput
 import com.monquiz.model.inputdata.updateprofile.UpdateProfileInputBody
-import com.monquiz.network.EndPoints
 import com.monquiz.network.InternetStateChecker
 import com.monquiz.response.login.LoginResponseOtp
 import com.monquiz.response.updateprofile.Update_ProfileResponse
 import com.monquiz.utils.*
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
 import es.dmoral.toasty.Toasty
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
-import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.ResponseBody
 import org.json.JSONObject
@@ -519,7 +513,7 @@ class UsernameActivity : BaseActivity(), View.OnClickListener,/* SelectedImageCa
     private fun getProfileData(){
         showProgressBar(getString(R.string.loading_please_wait))
         val userdata= GetUserProfileInput(PrefsHelper().getPref(OwlizConstants.user_id))
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.getProfile(userdata)
         requestCall.enqueue(object : Callback<LoginResponseOtp> {
             override fun onFailure(call: Call<LoginResponseOtp>, t: Throwable) {
@@ -587,7 +581,7 @@ class UsernameActivity : BaseActivity(), View.OnClickListener,/* SelectedImageCa
         val userdata = UpdateProfileInputBody("",name,"", "","",
             username,PrefsHelper().getPref(OwlizConstants.user_id,""))
 
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.updateProfile(userdata)
         requestCall.enqueue(object : Callback<Update_ProfileResponse> {
             override fun onFailure(call: Call<Update_ProfileResponse>, t: Throwable) {
@@ -651,7 +645,7 @@ class UsernameActivity : BaseActivity(), View.OnClickListener,/* SelectedImageCa
                 file.asRequestBody("multipart/form-data".toMediaTypeOrNull())
             )
             val requestBody: MultipartBody = builder.build()
-            val service = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+            val service = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
             val call: Call<ResponseBody> = service.uploadDp(PrefsHelper().getPref(OwlizConstants.user_id,""), requestBody)
             call.enqueue(object : Callback<ResponseBody> {
                 override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {

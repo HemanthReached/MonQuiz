@@ -6,13 +6,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.view.WindowManager
 import android.widget.*
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.monquiz.R
-import com.monquiz.network.Retrofitapi
+import com.monquiz.network.RetrofitApi
 import com.monquiz.network.ServiceBuilderForLocalHost
 import com.monquiz.response.review.input.CreateFeedBackInput
 import com.monquiz.response.review.response.CreateFeedBackResponse
@@ -258,7 +257,7 @@ class SettingsActivity : BaseActivity(), View.OnClickListener,
     private fun saveFeedBack(feedback : String){
          showProgressBar(getString(R.string.loading_please_wait))
         val userdata : String = PrefsHelper().getPref(OwlizConstants.user_id)
-        val destinationService = ServiceBuilderForLocalHost.buildService(Retrofitapi::class.java)
+        val destinationService = ServiceBuilderForLocalHost.buildService(RetrofitApi::class.java)
         val requestCall = destinationService.createReview(CreateFeedBackInput(userdata,"",feedback))
         requestCall.enqueue(object : Callback<CreateFeedBackResponse> {
             override fun onFailure(call: Call<CreateFeedBackResponse>, t: Throwable) {

@@ -65,58 +65,7 @@ open class BaseFragment : Fragment() {
         return isMobileNetworkAvail || isWifiAvail
     }
 
-    /**
-     * @param message message
-     */
-    fun showToast(message: String?) {
-        if (activity == null) { return }
-        val li: LayoutInflater = requireActivity().layoutInflater
-        val layout: View = li.inflate(R.layout.layout_custom_toast,
-            requireActivity().findViewById(R.id.customToastRootView))
-        val text: TextView = layout.findViewById<TextView>(R.id.customToastText)
-        text.text = message
-        val x: Int = CommonMethods.getWidth(activity)
-        val y = (CommonMethods.getHeight(activity) / 4.5).toInt() as Int
-        val toast = Toast(activity)
-        toast.duration = Toast.LENGTH_SHORT
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, y)
-        toast.view = layout
-        toast.show()
-    }
-
-    /**
-     * @param message message
-     */
-    fun showToast(message: String?, duration: Int) {
-        if (activity == null) { return }
-        val li: LayoutInflater = requireActivity()!!.layoutInflater
-        val layout: View = li.inflate(R.layout.layout_custom_toast,
-            requireActivity().findViewById(R.id.customToastRootView))
-        val text: TextView = layout.findViewById<TextView>(R.id.customToastText)
-        text.text = message
-        val x: Int = CommonMethods.getWidth(activity)
-        val y = (CommonMethods.getHeight(activity) / 4.5) as Int
-        val toast = Toast(activity)
-        toast.duration = duration
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, y)
-        toast.view = layout
-        toast.show()
-    }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-    }
-
-    fun sendCrashlyticsDetails(e: Exception?) {
-        /* //   Crashlytics.setUserIdentifier(PreferenceConnector.readString(mContext, getString(R.string.user_id), ""));
-         // Crashlytics.setString("game_number", PreferenceConnector.readString(mContext, getString(R.string.current_game_id), ""));
-         // Crashlytics.logException(e);
-         // Crashlytics.setUserName(PreferenceConnector.readString(mContext, getString(R.string.user_full_name), ""));
-       public void sendAnalyticsDetails(String eventType, Bundle bundle) {
-         firebaseAnalytics.logEvent(eventType, bundle);
-         firebaseAnalytics.setUserId(PreferenceConnector.readString(mContext, getString(R.string.user_id), ""));
-         firebaseAnalytics.setUserProperty("user_name", PreferenceConnector.readString(mContext, getString(R.string.user_full_name), ""));
-         firebaseAnalytics.setUserProperty("game_number", PreferenceConnector.readString(mContext, getString(R.string.current_game_id), ""));
-     }*/
     }
 }
